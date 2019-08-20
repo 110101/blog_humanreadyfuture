@@ -1,2 +1,6 @@
 # ignore build folder in this repo
 _site/
+
+# ignore single files
+Gemfile.lock
+.DS_Store
