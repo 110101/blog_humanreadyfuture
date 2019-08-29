@@ -1,0 +1,37 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-nav">
+      <div class="">
+
+      </div>
+      <div class="">
+        <a href="#">Nach oben</a>
+      </div>
+    </div>
+    <div class="copyright  typeset">
+      <small class="small">&copy; {{ site.time | date: '%Y' }}, 2020, 3000 <a href="{{ site.baseurl }}/"><span class="logopre">HUMAN-READY </span><span class="logostatem">FUTURE</span></a></small>
+    </div>
+    {% include  nav-social.html %}
+
+
+    {% if site.navigation_footer %}
+    <nav class="nav  nav--footer">
+      <ul class="list list--nav">
+        {% for item in site.navigation_footer %}
+
+          {% if item.url contains '://' %}
+            {% assign url = item.url %}
+          {% else %}
+            {% assign url = item.url | relative_url %}
+          {% endif %}
+
+          <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
+            <a href="{{ url }}">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% endif %}
+  </div>
+</footer>
