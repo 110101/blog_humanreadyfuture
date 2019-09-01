@@ -3,16 +3,14 @@
   <ul class="list  list--nav">
     {% for item in site.navigation_header %}
 
-      <!-- {% if item.url contains '://' %}
+      {% if item.url contains '://' %}
         {% assign url = item.url %}
       {% else %}
         {% assign url = item.url | relative_url %}
-      {% endif %} -->
+      {% endif %}
 
-      <li class="item  item--nav{% if item.url == page.url or page.url contains '/categories/'%}  item--current{% endif %}">
+      <li class="item  item--nav{% if item.url == page.url or (item.url == "/categories/" and page.path == 'categories.md') %}  item--current{% endif %}">
         <a href="{{ url }}">{{ item.title }}</a>
-        <p> {{ page.url }} </p>
-        <p> {{ item.url }} </p>
       </li>
       <!-- <p>{{ item.url }}</p>
       <p>{{ page.url }}</p> -->
