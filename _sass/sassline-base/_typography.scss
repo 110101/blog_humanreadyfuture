@@ -47,13 +47,14 @@ a {
     //font-size: 1rem;
     line-height: 2rem;
     font-feature-settings: 'kern', 'onum', 'liga';
+    text-align: justify;
+
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
   h1, h2, h3, h4, h5, h6 {
     color: $headingColour;
     font-family: unquote(map-get($headingtype, font-family));
-    font-feature-settings: 'dlig', 'liga', 'lnum', 'kern';
     font-style: normal;
     font-weight: map-get($headingtype, bold);
   }
@@ -92,7 +93,8 @@ a {
 
   // Lists.
   ul, ol {
-    @include baseline(zeta, $bodytype, 2, 2, all);
+    @include baseline(zeta, $bodytype, 2, 0, all);
+    padding-top: 0;
 
     li {
       font-feature-settings: 'kern', 'onum', 'liga';
