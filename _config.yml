@@ -120,12 +120,12 @@ navigation_header:
   url: /contact/
 
 navigation_footer:
-- title: Created by David Darnes
-  url: https://darn.es
+- title: Crafted with &#9829; in Munich | Europe
+  copyright: Malte Kassen
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/DavidDarnes
-  LinkedIn: https://www.linkedin.com/in/daviddarnes
+  LinkedIn: https://www.linkedin.com/in/malte-kassen/
   GitHub: https://github.com/daviddarnes
   RSS: /feed.xml
 
