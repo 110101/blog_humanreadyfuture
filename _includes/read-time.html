@@ -1,5 +1,6 @@
-{% if post.layout != post %}
-  {% assign words = post.content | strip_html | number_of_words %}
+
+{% if paginator.posts %}
+  {% assign words = page.content | strip_html | number_of_words %}
   {% if words < 180 %}
     &nbsp;&middot;&nbsp; weniger als 1 Minute Lesezeit
   {% elsif words < 360 %}
@@ -7,10 +8,8 @@
   {% else %}
     &nbsp;&middot;&nbsp; {{ words | divided_by:180 }} Minuten Lesezeit
   {% endif %}
-{% endif %}
-
-{% if post.layout == post %}
-  {% assign words = content | number_of_words %}
+{% else %}
+  {% assign words = content | strip_html | number_of_words %}
   {% if words < 180 %}
     &nbsp;&middot;&nbsp; weniger als 1 Minute Lesezeit
   {% elsif words < 360 %}
