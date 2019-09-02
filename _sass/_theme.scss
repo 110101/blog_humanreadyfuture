@@ -109,7 +109,7 @@ body {
     font-weight: normal;
     font-size: 1rem;
     font-family: unquote(map-get($headingtype, font-family));
-    color: #000000;
+    color: $logoColour;
   }
 
   a:hover {
@@ -134,6 +134,7 @@ body {
 
 .text {
   margin-top: 0.625rem;
+  text-align: justify;
 }
 
 .heading {
@@ -148,15 +149,13 @@ body {
 
 .meta {
   text-align: center;
+  font-feature-settings: 'kern', 'onum', 'liga';
 }
 
 .small {
   padding-top: .8rem;
   color: $captionColour;
   display: inline-block;
-}
-
-.small {
   a {
     color: $captionColour;
   }
@@ -178,20 +177,44 @@ body {
   .container {
     @include flex-wrap(wrap);
     color: #000000;
+    margin-bottom: 1rem;
   }
 
   .copyright {
     display: inline-block;
+    width: 100%;
   }
 
   .nav {
     display: inline-block;
+    width: 100%;
   }
-  .small {
-    padding-top: 0;
-    display: inline-block;
+
+  .origin {
+    width:100%;
+    text-align: center;
+    font-size: 1rem;
+    color: $captionColour;
+  }
+
+  .copy {
+    float:left;
+    font-size: 1rem;
+    color: $captionColour;
+  }
+
+  .social {
+    float: right;
+  }
+
+  .toplink {
+    @include sassline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
+    text-align: center;
+    padding-top: 1rem;
   }
 }
+
+
 
 
 // Pagination nav
@@ -529,6 +552,9 @@ pre code {
   }
   hr {
     width: 100%;
+  }
+  ul {
+      padding-top: 0;
   }
   li {
     > p {
