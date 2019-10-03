@@ -36,7 +36,7 @@ body {
 
 // Header, feature and footer
 .header {
-  margin-bottom: 3.75rem;
+  margin-bottom: 5rem;
   border-bottom: 1px solid #EFEFEF;
 
   .nav {
@@ -94,6 +94,10 @@ body {
     font-size: 1.75rem;
     color: $logoColour;
   }
+
+  a:hover {
+    color: $headingHover;
+  }
 }
 
 .logopre{
@@ -114,11 +118,15 @@ body {
 
   a:hover {
     color: $hoverColour;
-    text-decoration: underline;
   }
   &--social a {
     display: inline-block;
     line-height: 1;
+  }
+  &--social a:hover {
+    display: inline-block;
+    line-height: 1;
+    background-image: none;
   }
 }
 
@@ -133,17 +141,26 @@ body {
 }
 
 .text {
-  margin-top: 0.625rem;
+  margin-top: 2rem;
   text-align: justify;
+}
+
+.textcategories {
+  margin: 0rem;
 }
 
 .heading {
   color: $headingColour;
   text-align: center;
 }
+
 .heading {
   a {
     color: $headingColour;
+  }
+  a:hover {
+    background-image: none;
+    color: $headingHover;
   }
 }
 
@@ -156,13 +173,21 @@ body {
   padding-top: .8rem;
   color: $captionColour;
   display: inline-block;
+  font-size: 80%;
   a {
     color: $captionColour;
   }
   &a:hover {
     color: $hoverColour;
-    text-decoration: underline;
   }
+}
+
+.aboutintro {
+  text-align: center;
+}
+
+.pagination--previous, .pagination-next {
+  color: $captionColour2;
 }
 
 .footer {
@@ -171,7 +196,7 @@ body {
   a {
     color: $captionColour;
     &:hover {
-      color: $backgroundColour;
+      color: $focusColour;
     }
   }
   .container {
@@ -211,25 +236,21 @@ body {
     @include sassline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
     text-align: center;
     padding-top: 1rem;
+
+    a:hover {
+      color: $focusColour2;
+      background-image: none;
+    }
   }
 }
 
-
-
-
-// Pagination nav
-.nav--paginator {
-  @include flexbox;
-  @include justify-content(space-between);
-  color: $captionColour;
-  text-align: center;
-  border-top: 1px dotted #e5e5e5;
-  padding-top: 30px;
+.nav--categories {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
-.pagination {
-  min-width: 20%;
-}
+
+
 
 
 // Main content
@@ -257,28 +278,6 @@ body {
   }
 }
 
-.aside {
-  @include breakpoint(break-1) {
-    max-width: 34%;
-    margin-left: 4%;
-    @include flex(1, 0, auto);
-    opacity: 0.5;
-    transition: opacity .1s;
-    .section {
-      position: sticky;
-      top: 0;
-    }
-    &--left {
-      margin-left: 0;
-      margin-right: 4%;
-      order: -1;
-    }
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
 .section {
   margin: 0;
 }
@@ -291,15 +290,30 @@ body {
     overflow: hidden;
     margin-bottom: var(--listHeight, 0);
   }
-  .item--post
-  .item--result,
+  .item--post {
+    margin-left: 0;
+  }
+
+  .item--postcategories {
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .item--result {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
   .item--category {
     margin-left: 0;
+    @include sassline($fontsize: delta, $font: $bodytype, $lineheight: 1, $below: 0, $breakpoint: all);
+    display: inline-block;
+    padding-right: 0.5rem
   }
 }
 
 .item--post {
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .item {
@@ -314,7 +328,7 @@ body {
   }
   &--current {
     a {
-      color: $captionColour;
+      color: $linkColour;
     }
   }
 }
@@ -421,6 +435,10 @@ select {
   .icon {
     margin: 0 0 .35rem;
   }
+}
+
+input[type="search"] {
+  margin-bottom: 2rem;
 }
 
 input[type="submit"],
@@ -569,6 +587,28 @@ pre code {
     margin-right: .2rem;
     font-weight: normal;
   }
+
+  // Pagination nav
+  .nav--paginator {
+    @include flexbox;
+    @include justify-content(space-between);
+    color: $headingHover;
+    text-align: center;
+
+  }
+
+
+  .pagination {
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    border-top: 1px dotted #e5e5e5;
+    padding-top: 30px;
+  }
+
+  .nav--paginator {
+    @include sassline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 0, $breakpoint: all);
+  }
+
 
   pre {
     white-space: pre;

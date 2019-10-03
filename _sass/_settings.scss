@@ -60,13 +60,16 @@ $accentColour: #579bdf !default;
 
 // Text colours
 $logoColour: #000000;
-$headingColour: #67796F !default;
+$headingColour: #000000 !default;
+$headingHover: #999999;
 $bodyColour: #444444 !default;
-$linkColour: #579bdf !default;
-$hoverColour: #67796F !default;
-$underlineColour: #579bdf;
-$focusColour: #579EDF !default;
+$linkColour: #088AD8 !default;
+$hoverColour: #088AD8 !default; // 033E61 67796F
+$underlineColour: #088AD8;
+$focusColour: #088AD8 !default;
+$focusColour2: #FF4900 !default;
 $captionColour: #a8adac !default;
+$captionColour2: #dfdfdf;
 $footer: #f9f9f9 !default;
 $white: #ffffff !default;
 

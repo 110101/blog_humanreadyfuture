@@ -14,5 +14,5 @@ At standard atmospheric pressure, alcohol boils at 78 °C (172 °F), while water
 
 
 The modern pot still is a descendant of the alembic, an earlier distillation device.
-
+<!-- more -->
 {% include video.html id="dQw4w9WgXcQ" %}

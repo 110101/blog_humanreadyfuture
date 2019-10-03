@@ -1,17 +1,19 @@
-<nav class="nav  nav--paginator">
+<div class="pagination">
+  <nav class="nav--paginator">
 
   {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination  pagination--previous">&larr; Neuer</a>
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&larr; Neuer</a>
   {% else %}
-    <span class="pagination  pagination--previous">&larr; Neuer</span>
+    <span class="pagination--previous">&larr; Neuer</span>
   {% endif %}
 
-  <span class="pagination  pagination--counter">{{ paginator.page }} von {{ paginator.total_pages }}</span>
+  <span class="pagination--counter">{{ paginator.page }} von {{ paginator.total_pages }}</span>
 
   {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination  pagination--next">Älter &rarr;</a>
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Älter &rarr;</a>
   {% else %}
-    <span class="pagination  pagination--next">Älter &rarr;</span>
+    <span class="pagination-next">Älter &rarr;</span>
   {% endif %}
 
-</nav>
+  </nav>
+</div>

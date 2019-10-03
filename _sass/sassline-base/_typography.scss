@@ -23,6 +23,10 @@ a {
   &:hover, &:active, &:focus {
     color: $hoverColour;
     text-decoration: none;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$hoverColour 50%);
+     background-position: 0 93%;
+     background-repeat: repeat-x;
+     background-size: 100% 0.15rem;
   }
 }
 
@@ -74,6 +78,7 @@ a {
   // Heading level 3.
   h3 {
     @include sassline(gamma, $headingtype, 3, 0, all);
+    font-weight: normal;
   }
 
   // Heading level 4.
@@ -84,6 +89,7 @@ a {
   // Heading level 5.
   h5, .epsilon {
     @include sassline(epsilon, $headingtype, 2, 0, all);
+    font-weight: normal;
   }
 
   // Heading level 6.
@@ -234,7 +240,7 @@ a {
 
   // Caption and inline small text.
   small, .caption {
-    @include sassline(theta, $headingtype, 1, 1.5, all);
+    @include sassline(theta, $headingtype, 1, 0, all);
 
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
@@ -299,13 +305,13 @@ a {
 
   // Horizontal rule.
   hr {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$captionColour 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, #EFEFEF 50%);
     background-position: 0 50%;
     background-repeat: repeat-x;
     background-size: 100% 0.15rem;
     border: 0;
     margin: 0;
-    padding-bottom: 6rem;
+    padding-bottom: 1rem;
     padding-top: 0rem;
   }
 
