@@ -1,6 +1,7 @@
 ---
-title: Impressum
-layout: default
+layout: page
 ---
 
-{% include site-search.html %}
+Markdown **dies ist ein Markdown test**
+
+_Originally from [Alembic - Wikipedia](https://en.wikipedia.org/wiki/Alembic)_

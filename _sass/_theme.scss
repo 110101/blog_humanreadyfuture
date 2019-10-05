@@ -119,7 +119,7 @@ body {
   &--social a:hover {
     display: inline-block;
     line-height: 1;
-    background-image: none;
+    background-image: none !important;
   }
 }
 
