@@ -2,17 +2,17 @@
   <nav class="nav--paginator">
 
   {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&larr; Neuer</a>
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}"><i class="fas fa-angle-left"></i> Neuer</a>
   {% else %}
-    <span class="pagination--previous">&larr; Neuer</span>
+    <span class="pagination--previous"><i class="fas fa-angle-left"></i> Neuer</span>
   {% endif %}
 
   <span class="pagination--counter">{{ paginator.page }} von {{ paginator.total_pages }}</span>
 
   {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Älter &rarr;</a>
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Älter <i class="fas fa-angle-right"></i></a>
   {% else %}
-    <span class="pagination-next">Älter &rarr;</span>
+    <span class="pagination-next">Älter <i class="fas fa-angle-right"></i></span>
   {% endif %}
 
   </nav>

@@ -1,48 +1,30 @@
 <!DOCTYPE html>
-<html lang="de-DE">
-
+<html lang="de">
   <head>
-    <!-- test -->
     <meta charset="utf-8">
-    <!-- General meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.indexing == false %}
-      <meta name="robots" content="noindex">
-    {% endif %}
 
     {% if page.collectionpage %}
-      <!--  seo title=false  -->
-
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
       <title>{{ site.title }}</title>
-
       <meta name="description" content="{{ collectiondata.description }}">
-      <meta property="og:description" content="{{ collectiondata.description }}">
 
     {% endif %}
-
+    <link rel="stylesheet" href="/assets/css/all.css">
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
-
-    <link rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    {% include site-favicons.html %}
-
-    {% if site.google_analytics %}{% include site-analytics.html %}{% endif %}
+    <link id="style" rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    {% include site-favicons.html %}
+    {% include site-analytics.html %}
     {% include site-before-start.html %}
   </head>
-
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
     {% include site-progress.html %}
-
     {% include site-icons.svg %}
-
     {% include site-header.html %}
 
     <main class="main  container">
-
       <div class="content">
 
         {{ content }}

@@ -6,7 +6,6 @@
 // Site-wide base styles.
 body {
   @include fontsize(zeta, all);
-
   font-family: unquote(map-get($bodytype, font-family));
   font-style: normal;
   font-weight: map-get($bodytype, regular);
@@ -72,6 +71,7 @@ a {
   // Heading level 2.
   h2 {
     @include sassline(beta, $headingtype, 3, 0.75, all);
+    color: $linkColour;
     font-weight: normal;
   }
 
@@ -234,7 +234,7 @@ a {
   }
 
   // Italic.
-  em, i, .italic {
+  em, .italic {
     font-style: map-get($bodytype, italic);
   }
 

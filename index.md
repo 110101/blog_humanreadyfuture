@@ -1,0 +1,51 @@
+---
+layout: default
+collectionpage: posts
+pagination:
+  enabled: true
+---
+
+
+
+{% if paginator.posts %}
+  <section class="section  typeset">
+    <ul class="list  list--posts">
+      {% for page in paginator.posts %}
+        <li class="item  item--post">
+          <article class="article  article--post">
+            <div class="heading">
+              <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+            </div>
+            <div class="meta">
+              {% include post-meta.html %}
+            </div>
+            <div class="text">
+              {{ page.excerpt | markdownify | truncatewords: 300 }}
+            </div>
+
+            <a href="{{ site.baseurl }}{{ page.url }}">weiter lesen</a>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+    {% include post-pagination.html %}
+  </section>
+{% else %}
+  <section class="section  typeset">
+    <ul class="list  list--posts">
+      {% for page in site.posts %}
+        <li class="item  item--post">
+          <article class="article  article--post">
+            <div class="heading">
+              <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+            </div>
+            {% include post-meta.html %}
+            {{ page.excerpt | markdownify | truncatewords: 300 }}
+
+
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

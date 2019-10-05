@@ -12,12 +12,10 @@
 # 1. Files excluded from Jekyll builds
 exclude:
 - README.md
-- screenshot.png
 - LICENSE
-- Gemfile
-- Gemfile.lock
-- alembic-jekyll-theme.gemspec
 - .jekyll-cache
+- .gitignore
+- .DS_Store
 
 # 2. Installed Gems
 plugins:
@@ -48,8 +46,7 @@ author: Malte K # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
   name: Malte K # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
-    - https://twitter.com/DavidDarnes
-    - https://www.linkedin.com/in/daviddarnes
+    - https://twitter.com/110101lab
     - https://github.com/110101
 # markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
 # commonmark:
@@ -82,7 +79,7 @@ defaults:
       image: "/assets/default-social-image.png" # Default image for sharing
 
 # 7. Site settings
-title: "human-ready future" # Site name or title, also used in jekyll-seo-tag
+title: "Human-Ready Future" # Site name or title, also used in jekyll-seo-tag
 # logo: "/assets/logos/logo.svg"  Site logo, also used in jekyll-seo-tag
 url: "https://humanreadyfuture.com" # Site url, also used in jekyll-seo-tag
 baseurl: ""
@@ -112,22 +109,19 @@ navigation_header:
   url: /categories/
 - title: Suche
   url: /search/
-- title: Kontakt
-  url: /contact/
 
 navigation_footer:
 - title: Crafted with &#9829; in Munich | Europe
   copyright: Malte Kassen
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/DavidDarnes
+  Twitter: https://twitter.com/110101lab
   LinkedIn: https://www.linkedin.com/in/malte-kassen/
-  GitHub: https://github.com/daviddarnes
-  RSS: /feed.xml
+  GitHub: https://github.com/110101
 
 sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
   Twitter: "#0d94e7"
-  facebook: "#3B5998"
-  GitHub: true
+  facebook: "#088AD8"
+  GitHub: "#FF3D00"
   LinkedIn: true
-  Email: true
+  Email: "#FFBB00"

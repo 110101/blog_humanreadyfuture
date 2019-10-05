@@ -1,19 +1,36 @@
 // Structural elements
 
 // Setting root sizes and base styles.
-html {
+html[data-theme="dark"]{
   @include rootsize;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background: $backgroundColourDark;
+  color: $bodyColourDark;
+}
+
+html[data-theme="light"]{
+  @include rootsize;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: $backgroundColour;
+  color: $bodyColour;
 }
 
 body {
-  background: $backgroundColour;
-  color: $bodyColour;
   height: 100%;
   display: flex;
   @include flex-direction(column);
   overflow-x: hidden;
+}
+
+
+.fas .fa {
+  font-family: 'Font Awesome 5 Free' !important;
+}
+
+i{
+  font-family: 'Font Awesome 5 Free' !important;
 }
 
 // reading progress bar at top of page
@@ -37,7 +54,7 @@ body {
 // Header, feature and footer
 .header {
   margin-bottom: 5rem;
-  border-bottom: 1px solid #EFEFEF;
+  border-bottom: 1px solid $borderColorHeader;
 
   .nav {
     text-align: right;
@@ -63,21 +80,6 @@ body {
   justify-content: flex-end;
   overflow: hidden;
 }
-
-// .feature {
-//  padding-bottom: .4rem;
-//  margin-bottom: 1.6rem;
-//  text-align: center;
-//  background: $featureBackgroundColour;
-//  background-size: cover;
-//  background-position: center;
-//  .container {
-//    min-height: 35vh;
-//    max-width: 60%;
-//    @include flex-direction(column);
-//    @include justify-content(center);
-//  }
-//}
 
 .logo {
   display: inline-block;
@@ -136,7 +138,12 @@ body {
     color: $linkColour;
   }
   a:hover {
-    color: $hoverColour;
+    color: $linkColour;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$linkColour 50%);
+     background-position: 0 93%;
+     background-repeat: repeat-x;
+     background-size: 100% 0.15rem;
   }
 }
 
@@ -186,6 +193,15 @@ body {
   text-align: center;
 }
 
+.aboutimage {
+  -webkit-border-radius: 50%;
+}
+
+.imprint-link {
+  text-align: center;
+  margin: 1.5rem 0rem 0rem 0rem;
+}
+
 .pagination--previous, .pagination-next {
   color: $captionColour2;
 }
@@ -222,20 +238,14 @@ body {
     color: $captionColour;
   }
 
-  .copy {
-    float:left;
-    font-size: 1rem;
-    color: $captionColour;
-  }
-
   .social {
     float: right;
   }
 
   .toplink {
-    @include sassline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
+    @include sassline($fontsize: delta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
     text-align: center;
-    padding-top: 1rem;
+    margin-top: 1rem;
 
     a:hover {
       color: $focusColour2;
@@ -333,6 +343,13 @@ body {
   }
 }
 
+.bright_dark {
+    cursor: pointer;
+    a {
+      background-image: none;
+    }
+  }
+
 // Links, icons and images
 a .icon {
   transition: fill .1s;
@@ -424,7 +441,7 @@ input[type="submit"],
 input[type="color"],
 textarea,
 select {
-  padding: .6rem 1.2rem;
+  padding: .2rem 0.6rem;
   margin-bottom: .6rem;
   transition: color .1s, background-color .1s, border .1s;
   line-height: inherit;
@@ -447,7 +464,7 @@ button,
   cursor: pointer;
   display: inline-block;
   color: $backgroundColour;
-  background: $accentColour;
+  background: $linkColour;
   transition: box-shadow .1s;
   will-change: box-shadow;
   box-shadow: inset 0 0 0 2rem transparent;
@@ -613,5 +630,11 @@ pre code {
   pre {
     white-space: pre;
     overflow-x: scroll;
+  }
+
+  //share navbar
+  .share{
+    margin: 2rem 0rem 1rem 0rem;
+    text-align: center;
   }
 }

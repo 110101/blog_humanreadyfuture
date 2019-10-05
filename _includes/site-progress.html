@@ -13,9 +13,14 @@
     progress.style.setProperty('--scroll', scroll + '%');
   });
 
-  $("#top").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
+  jQuery(document).ready(function() {
+
+    var btn = $('#top');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+
   });
 
 </script>

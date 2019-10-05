@@ -1,1 +1,9 @@
 <!-- Overwrite this file with code you want before the closing head tag -->
+<script type="text/javascript">
+  const theme = localStorage.getItem('theme');
+	if (theme === "dark") {
+    //document.getElementById('style').setAttribute('href', '/assets/styles_dark.css');
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('style').setAttribute('href', '/assets/styles_dark.css');
+	}
+</script>

@@ -54,24 +54,28 @@ $gutterwidths: (
 
 // Background colours
 $backgroundColour: #fcfcfc !default;
+$backgroundColourDark: #111111;
 $codeBackgroundColour: #eaeaea !default;
-//$featureBackgroundColour: #f9fafa !default;
-$accentColour: #579bdf !default;
+
+//Text dark
+$bodyColour: #444444 !default;
+$bodyColourDark: #E0E0E0;
 
 // Text colours
 $logoColour: #000000;
 $headingColour: #000000 !default;
 $headingHover: #999999;
-$bodyColour: #444444 !default;
-$linkColour: #088AD8 !default;
-$hoverColour: #088AD8 !default; // 033E61 67796F
-$underlineColour: #088AD8;
-$focusColour: #088AD8 !default;
-$focusColour2: #FF4900 !default;
+$linkColour: #00C7AC !default; //088AD8
+$hoverColour: #00C7AC !default; // 033E61 67796F
+$underlineColour: #00C7AC;
+$focusColour: #00C7AC !default;
+$focusColour2: #FF3D00 !default;
+$focusColour3: #FFBB00 !default;
 $captionColour: #a8adac !default;
 $captionColour2: #dfdfdf;
-$footer: #f9f9f9 !default;
+$footer: #f3f2f0 !default;
 $white: #ffffff !default;
+$borderColorHeader: #EFEFEF;
 
 // Typography
 $bodytype: (
