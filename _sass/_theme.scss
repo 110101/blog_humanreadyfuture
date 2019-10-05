@@ -24,15 +24,6 @@ body {
   overflow-x: hidden;
 }
 
-
-.fas .fa {
-  font-family: 'Font Awesome 5 Free' !important;
-}
-
-i{
-  font-family: 'Font Awesome 5 Free' !important;
-}
-
 // reading progress bar at top of page
 .progress {
   background: linear-gradient(to right, $focusColour var(--scroll), transparent 0);
@@ -148,7 +139,6 @@ i{
 }
 
 .text {
-  margin-top: 2rem;
   text-align: justify;
 }
 
@@ -158,7 +148,6 @@ i{
 
 .heading {
   color: $headingColour;
-  text-align: center;
 }
 
 .heading {
@@ -172,7 +161,6 @@ i{
 }
 
 .meta {
-  text-align: center;
   font-feature-settings: 'kern', 'onum', 'liga';
 }
 
