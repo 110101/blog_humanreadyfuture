@@ -6,7 +6,7 @@ pagination:
 
     <article class="article  article--page  typeset">
 
-      <p>{{ page.title }}:</p>
+      <div class="cattitle">{{ page.title }}:</div>
 
       <div class="nav--categories">
         <ul class="list  list--categories">
@@ -20,14 +20,16 @@ pagination:
       {% for category in site.categories %}
         {% assign category_name = category | first %}
         <section class="typeset">
-          <h4 id="{{ category_name | slugify }}" class="category_heading">{{ category_name }}:</h4>
+          <div class="category_heading">
+            <h4 id="{{ category_name | slugify }}">{{ category_name }}</h4>
+          </div>
           <ul class="list  list--posts">
             {% for page in site.categories[category_name] %}
               {% assign has_categories = true %}
               <li class="item  item--postcategories">
                 <article class="article  article--post  typeset">
                   <div class="heading">
-                    <h3><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h3>
+                    <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
                   </div>
                   <div class="meta">
                     {% include post-meta.html %}
