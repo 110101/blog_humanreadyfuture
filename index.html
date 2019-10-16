@@ -5,10 +5,13 @@ pagination:
   enabled: true
 ---
 
-
+{% if paginator.previous_page == null %}
+  {% include site-shortabout.html %}
+{% endif %}
 
 {% if paginator.posts %}
   <section class="section  typeset">
+    <div id="if"></div>
     <ul class="list  list--posts">
       {% for page in paginator.posts %}
         <li class="item  item--post">
@@ -31,7 +34,9 @@ pagination:
     {% include post-pagination.html %}
   </section>
 {% else %}
+
   <section class="section  typeset">
+    <div id="else"></div>
     <ul class="list  list--posts">
       {% for page in site.posts %}
         <li class="item  item--post">
