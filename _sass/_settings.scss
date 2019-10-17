@@ -7,7 +7,7 @@
 // Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
 $breakpoints: (
   break-0: 0,     // 0px       Mobile first
-  break-1: 450,   // smartphones
+  break-1: 540,   // smartphones
   break-2: 640,   // 640px   ~ Small tablet up
   break-3: 800,   // 800px   ~ Large tablet up
   break-4: 1024,  // 1024px  ~ Desktop up
@@ -68,11 +68,11 @@ $bodyColourDark: #E0E0E0;
 // Text colours
 $logoColour: #000000;
 $headingColour: #000000 !default;
-$headingHover: #999999;
-$linkColour: #4a86e0 !default; //00C7AC .--- 088AD8
-$hoverColour: #4a86e0 !default; // 033E61 67796F
-$underlineColour: #4a86e0;
-$focusColour: #4a86e0 !default;
+$headingHover: #00C7AC;
+$linkColour: #00C7AC !default; //00C7AC --- 088AD8
+$hoverColour: #00C7AC !default; // 67796F
+$underlineColour: #00C7AC;
+$focusColour: #00C7AC !default;
 $focusColour2: #FF3D00 !default;
 $focusColour3: #FFBB00 !default;
 $captionColour: #a8adac !default;

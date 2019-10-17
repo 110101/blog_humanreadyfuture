@@ -334,6 +334,7 @@ a {
   code {
     font-size: 1rem;
     line-height: 1rem;
+    @include fontsize($fontsize: eta, $breakpoint: all);
   }
 
   // Letter space those capitals people, Jan Tschichold would be proud.
