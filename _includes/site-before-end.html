@@ -36,13 +36,11 @@ function brightnnight() {
 	try {
     if (checkforcookie(name) == true)
     {
-      var cookiestrin = name + "=;path=" + path + ";domain=" + domain + ";expires=Thu, 01 Jan 1970 00:00:00 GMT;";
-      alert(cookiestrin);
-      document.cookie = cookiestrin;
+      document.cookie = name + "=; domain=" + domain + "; path=" + path + ";expires=Thu, 01 Jan 1970 00:00:00 GMT;";
     }
 	}
 	catch(err) {
-    alert('Please delete cookies manually through your browser settings menu.');
+    alert('Fehler: Bitte die Cookies manuell über das Menu deines Webbrowsers löschen.');
   }
 }
 
@@ -51,26 +49,25 @@ function brightnnight() {
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-150914856-1');
-    alert('activated');
+    gtag('config', 'UA-150914856-1', { 'anonymize_ip': true });
   }
 
   function cookierevoke () {
-    clearCookie('_ga','localhost','/');
-    clearCookie('_gat_gtag_UA_150914856_1','localhost','/');
-    clearCookie('_gid','localhost','/');
-    alert('revoked');
+    clearCookie('_ga','.localexample.net','/');
+    clearCookie('_gat_gtag_UA_150914856_1','.localexample.net','/');
+    clearCookie('_gid','.localexample.net','/');
   }
 
   // create consent cookie
   // Expire date one year
   function setConsentCookie(value) {
     var name = "cc_status";
-    var path = "localhost:4000"
+    var domain = ".localexample.net";
+    var path = "/";
     var days = 360;
     var d = new Date;
     d.setTime(d.getTime() + 24*60*60*1000*days);
-    document.cookie = name + "=" + value + ";path=" + path + "/;expires=" + d.toGMTString();
-    alert('cookie');
+    document.cookie = name + "=" + value + "; domain=" + domain + "; path=" + path + "; expires=" + d.toGMTString() + ";";
 }
 
   function iwantcookies() {
@@ -94,9 +91,13 @@ function brightnnight() {
     {
       document.getElementById('cookiebanner').style.visibility = 'visible';
     }
-    //alert(check);
   }
 
+  function reconsider() {
+    if (checkforcookie("cc_status") == true) {
+      dislikecookies();
+    }
+  }
   onInit();
 </script>
 

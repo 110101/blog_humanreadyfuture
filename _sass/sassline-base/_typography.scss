@@ -32,23 +32,9 @@ a {
 // Styles for typeset text.
 .typeset {
 
-  // Nice underlines for text links.
-  // p a, li a {
-  //  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$linkColour 50%);
-  //  background-position: 0 93%;
-  //  background-repeat: repeat-x;
-  //  background-size: 100% 0.15rem;
-
-  //  &:hover, &:active, &:focus {
-  //    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$hoverColour 50%);
-  //  }
-  // }
-
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
   p {
     @include sassline($fontsize: eta, $font: $bodytype, $lineheight: 2, $below: 1, $breakpoint: all);
-    //font-size: 1rem;
-    line-height: 2rem;
     font-feature-settings: 'kern', 'onum', 'liga';
     text-align: justify;
 
@@ -82,7 +68,7 @@ a {
   }
 
   // Heading level 4.
-  h4, .delta {
+  h4, {
     @include sassline(delta, $headingtype, 2, 0, all);
   }
 
@@ -242,20 +228,11 @@ a {
 
   .caption {
     @include baseline(theta, $headingtype, 2, 2, all);
-
+    margin-top: 0rem;
     color: $captionColour;
   }
 
-  // Nice spacing for captions.
-  // h1 + .caption, .alpha + .caption, h2 + .caption, .beta + .caption, h3 + .caption, .gamma + .caption {
-  //  margin-top: -1rem;
-  // }
-
-  .delta + .caption, .epsilon + .caption, .zeta + .caption {
-    margin-top: 0rem;
-  }
-
-  // Quotes.
+  // Quote styling
   blockquote {
 
     p {

@@ -16,10 +16,10 @@ $modular-scale: (
     iota:    11.5
   ),
   scale-1: (
-    alpha:   27.0, // h1
-    beta:    21.0, // h2
+    alpha:   27.0, // h1, page title
+    beta:    23.0, // h2, post head line
     gamma:   20.0, // logo, h3
-    delta:   20.0, // 1x nur für den top link, h4
+    delta:   20.0, // post meta, h4
     epsilon: 19.5, // kein mal // h5
     zeta:    18.5, // text standard
     eta:     18.0, // text standard
@@ -55,10 +55,10 @@ $modular-scale: (
     alpha:   75.0,
     beta:    45.0,
     gamma:   30.0,
-    delta:   28.5,
+    delta:   28.0,
     epsilon: 26.5,
-    zeta:    25.0,
-    eta:     23.0,
+    zeta:    22.0,
+    eta:     22.0,
     theta:   19.0,
     iota:    15.0
   ),
