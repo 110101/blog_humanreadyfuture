@@ -100,6 +100,15 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   180: '/assets/favicons/logo@180px.png'
   512: '/assets/favicons/logo@512px.png'
   1024: '/assets/favicons/logo@1024px.png'
+  a16: '/assets/favicons/apple/logo@16px.png'
+  a32: '/assets/favicons/apple/logo@32px.png'
+  a96: '/assets/favicons/apple/logo@96px.png'
+  a120: '/assets/favicons/apple/logo@120px.png'
+  a144: '/assets/favicons/apple/logo@144px.png'
+  a180: '/assets/favicons/apple/logo@180px.png'
+  a512: '/assets/favicons/apple/logo@512px.png'
+  a1024: '/assets/favicons/apple/logo@1024px.png'
+
 
 # 9. Site navigation
 navigation_header:
@@ -109,10 +118,6 @@ navigation_header:
   url: /categories/
 - title: Suche
   url: /search/
-
-navigation_footer:
-- title: Crafted with &#9829; in Munich | Europe
-  copyright: 110101 Lab - Malte K
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/110101lab

@@ -86,17 +86,6 @@ a {
     @include sassline(delta, $headingtype, 2, 0, all);
   }
 
-  // Heading level 5.
-  h5, .epsilon {
-    @include sassline(epsilon, $headingtype, 2, 0, all);
-    font-weight: normal;
-  }
-
-  // Heading level 6.
-  h6, .zeta {
-    @include sassline(zeta, $headingtype, 2, 0, all);
-  }
-
   // Lists.
   ul, ol {
     @include baseline(zeta, $bodytype, 2, 0, all);

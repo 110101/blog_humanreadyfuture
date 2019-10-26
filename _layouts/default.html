@@ -18,13 +18,13 @@
     {% include site-favicons.html %}
     {% include site-analytics.html %}
     {% include site-before-start.html %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   </head>
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
     {% include site-progress.html %}
     {% include site-cookiepolicy.html %}
     {% include site-icons.svg %}
     {% include site-header.html %}
-
     <main class="main  container">
 
       {{ content }}

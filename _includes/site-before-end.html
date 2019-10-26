@@ -1,11 +1,7 @@
 <!-- Overwrite this file with code you want before the closing body tag -->
 <script type="text/javascript">
-
-
+// day & night mode
 function brightnnight() {
-	//let currentMode = document.getElementById('style').getAttribute('href');
-
-
   let currentMode = document.documentElement.getAttribute('data-theme');
 	if (currentMode === "dark") {
 		document.documentElement.setAttribute('data-theme', 'light');
@@ -17,12 +13,142 @@ function brightnnight() {
 		window.localStorage.setItem('theme', 'dark');
 	}
 }
-
-function iwantcookies() {
-    document.getElementById('cookiebanner').style.visibility = 'hidden';
-}
-
-function dislikecookies() {
-    alert("no!")
-}
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150914856-1"></script>
+<script type="text/javascript">
+  // check for cookie by name
+  function checkforcookie(name) {
+    var status = false;
+    var cookie = name + "=";
+    var allcookies = document.cookie.split(';');
+      for(var i=0; i<allcookies.length; i++)
+      {
+        var c = allcookies[i].trim();
+        if (c.indexOf(cookie)==0)
+        {
+          status = true;
+        }
+      }
+      return status;
+    }
+
+  function clearCookie(name, domain, path){
+	try {
+    if (checkforcookie(name) == true)
+    {
+      var cookiestrin = name + "=;path=" + path + ";domain=" + domain + ";expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+      alert(cookiestrin);
+      document.cookie = cookiestrin;
+    }
+	}
+	catch(err) {
+    alert('Please delete cookies manually through your browser settings menu.');
+  }
+}
+
+  function cookieconsent() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-150914856-1');
+    alert('activated');
+  }
+
+  function cookierevoke () {
+    clearCookie('_ga','localhost','/');
+    clearCookie('_gat_gtag_UA_150914856_1','localhost','/');
+    clearCookie('_gid','localhost','/');
+    alert('revoked');
+  }
+
+  // create consent cookie
+  // Expire date one year
+  function setConsentCookie(value) {
+    var name = "cc_status";
+    var path = "localhost:4000"
+    var days = 360;
+    var d = new Date;
+    d.setTime(d.getTime() + 24*60*60*1000*days);
+    document.cookie = name + "=" + value + ";path=" + path + "/;expires=" + d.toGMTString();
+    alert('cookie');
+}
+
+  function iwantcookies() {
+    setConsentCookie("allow");
+    cookieconsent();
+    document.getElementById('cookiebanner').style.visibility = 'hidden';
+  }
+
+  // set consent cookie to deny
+  // delete GA cookies
+  // hide cookie bar
+  function dislikecookies() {
+    setConsentCookie("deny");
+    cookierevoke();
+    document.getElementById('cookiebanner').style.visibility = 'hidden';
+  }
+
+  // check for consent cookie
+  function onInit() {
+    if (checkforcookie("cc_status") == false)
+    {
+      document.getElementById('cookiebanner').style.visibility = 'visible';
+    }
+    //alert(check);
+  }
+
+  onInit();
+</script>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#00c7ac",
+      "text": "#000000"
+    },
+    "button": {
+      "background": "#000000",
+      "text": "#ffffff"
+    }
+  },
+  "type": "opt-in",
+  "content": {
+    "href": "/cookiepolicy/"
+  },
+  onInitialise: function (status) {
+   var type = this.options.type;
+   var didConsent = this.hasConsented();
+   if (type == 'opt-in' && didConsent) {
+    // enable cookies
+    GAconsent();
+   }
+   if (type == 'opt-out' && !didConsent) {
+    // disable cookies
+    //GArevoke();
+   }
+  },
+  onStatusChange: function(status, chosenBefore) {
+   var type = this.options.type;
+   var didConsent = this.hasConsented();
+   if (type == 'opt-in' && didConsent) {
+    // enable cookies
+    GAconsent();
+   }
+   if (type == 'opt-out' && !didConsent) {
+    // disable cookies
+    //GArevoke();
+   }
+  },
+  onRevokeChoice: function() {
+   var type = this.options.type;
+   var didConsent = this.hasConsented();
+   if (type == 'opt-in') {
+    // disable cookies
+    GArevoke();
+   }
+  }
+ });
+</script> -->

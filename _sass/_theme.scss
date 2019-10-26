@@ -40,6 +40,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: $focusColour;
+    visibility: hidden;
     z-index: 99999;
 }
 
@@ -296,6 +297,7 @@ body {
   color: $captionColour;
   a {
     color: $captionColour;
+    background-image: none;
     &:hover {
       color: $focusColour;
     }
@@ -344,9 +346,9 @@ body {
   margin-bottom: 3rem;
 }
 
+.menu {
 
-
-
+}
 
 // Main content
 .main {
@@ -383,6 +385,7 @@ body {
   &--nav {
     overflow: hidden;
     margin-bottom: var(--listHeight, 0);
+    margin-right: 1rem;
   }
   .item--post {
     margin-left: 0;

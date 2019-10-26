@@ -5,4 +5,4 @@ _site/
 # ignore single files
 Gemfile.lock
 .DS_Store
-.psd
+*.psd
