@@ -1,27 +1,13 @@
 <footer class="footer">
   <div class="container">
-
-    {% if site.navigation_footer %}
-        {% for item in site.navigation_footer %}
-
-          {% if item.url contains '://' %}
-            {% assign url = item.url %}
-          {% else %}
-            {% assign url = item.url | relative_url %}
-          {% endif %}
-
           <div class="toplink">
               <a href="" id="top"><i class="fas fa-chevron-circle-up"></i></a>
           </div>
           <div class="origin">
-              {{ item.title }}
+              <span>Crafted with &#9829; in Munich | Europe</span>
           </div>
           <div class="origin">
-              <span><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i class="fab fa-creative-commons-nd"></i> < {{ site.time | date: '%Y' }} <a href="/about/"> {{ item.copyright }}</a> | based on Jekyll Theme <a href="https://github.com/daviddarnes/alembic" target="_blank">alembic</a></span>
-
+              <span><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i><i class="fab fa-creative-commons-nd"></i> {{ site.time | date: '%Y' }} <a href="/about/"> {{ item.copyright }}</a> | based on Jekyll Theme</span>
           </div>
-        {% endfor %}
-
-    {% endif %}
   </div>
 </footer>

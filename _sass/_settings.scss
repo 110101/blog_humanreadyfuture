@@ -17,11 +17,11 @@ $breakpoints: (
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-  rootsize-0: 20,   // 24px line-height body text
+  rootsize-0: 18,   // 24px line-height body text
   rootsize-1: 20,
   rootsize-2: 20,   // 28px line-height body text
   rootsize-3: 20,   // 30px line-height body text
-  rootsize-4: 20,   // 34px line-height body text
+  rootsize-4: 16,   // 34px line-height body text
   rootsize-5: 20    // 38px line-height body text
 ) !default;
 
@@ -58,7 +58,7 @@ $gutterwidths: (
 
 // Background colours
 $backgroundColour: #fcfcfc !default;
-$backgroundColourDark: #111111;
+$darkbackgroundColour: #111111;
 $codeBackgroundColour: #eaeaea !default;
 
 //Text dark

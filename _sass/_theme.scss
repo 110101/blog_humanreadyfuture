@@ -1,15 +1,7 @@
 // Structural elements
 
 // Setting root sizes and base styles.
-html[data-theme="dark"]{
-  @include rootsize;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  background: $backgroundColourDark;
-  color: $bodyColourDark;
-}
-
-html[data-theme="light"]{
+html {
   @include rootsize;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;

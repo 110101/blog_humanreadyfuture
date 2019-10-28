@@ -17,12 +17,12 @@ $breakpoints: (
 // Root font-sizes for each breakpoint. Set to half desired line-height of body text.
 // ! Make sure to have as many sizes as breakpoints above.
 $rootsizes: (
-  rootsize-0: 20,   // 24px line-height body text
-  rootsize-1: 16,
-  rootsize-2: 13,   // 28px line-height body text
-  rootsize-3: 14,   // 30px line-height body text
+  rootsize-0: 18,   // 24px line-height body text
+  rootsize-1: 18,
+  rootsize-2: 17,   // 28px line-height body text
+  rootsize-3: 16,   // 30px line-height body text
   rootsize-4: 16,   // 34px line-height body text
-  rootsize-5: 19    // 38px line-height body text
+  rootsize-5: 14    // 38px line-height body text
 ) !default;
 
 // Set the optimum line-length for your text (based on typeface).
@@ -58,28 +58,26 @@ $gutterwidths: (
 
 // Background colours
 $backgroundColour: #101010 !default;
-$backgroundColourDark: #111111;
 $codeBackgroundColour: #eaeaea !default;
 
 //Text dark
-$bodyColour: #444444 !default;
-$bodyColourDark: #E0E0E0;
+$bodyColour: #F0F0F0 !default;
 
 // Text colours
 $logoColour: #F9F9F9;
 $headingColour: #F9F9F9 !default;
 $headingHover: #D0D0D0;
-$linkColour: #FF3D00 !default; //088AD8
+$linkColour: #00C7AC !default; //088AD8
 $hoverColour: #00C7AC !default; // 033E61 67796F
 $underlineColour: #00C7AC;
-$focusColour: #FFBB00 !default;
+$focusColour: #00C7AC !default;
 $focusColour2: #FF3D00 !default;
 $focusColour3: #FFBB00 !default;
-$captionColour: #C0C0C0 !default;
+$captionColour: #404040 !default;
 $captionColour2: #dfdfdf;
-$footer: #000000 !default;
+$footer: #202020 !default;
 $white: #ffffff !default;
-$borderColorHeader: #101010;
+$borderColorHeader: #202020;
 
 // Typography
 $bodytype: (
