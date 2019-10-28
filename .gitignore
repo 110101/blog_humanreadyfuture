@@ -1,6 +1,7 @@
 # ignore build folder in this repo
 _site/
 .sass-cache/
+scripts/
 
 # ignore single files
 Gemfile.lock

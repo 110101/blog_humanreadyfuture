@@ -85,10 +85,7 @@ url: "https://humanreadyfuture.com" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/110101/blog_humanreadyfuture"
 email: "110101lab@googlemail.com"
-# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-# google_analytics: ''
-# google_analytics_anonymize_ip: ''
-service_worker: false # Will turn off the service worker if set to false
+
 
 # 8. Site favicons & manifest icons
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
@@ -100,15 +97,6 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   180: '/assets/favicons/logo@180px.png'
   512: '/assets/favicons/logo@512px.png'
   1024: '/assets/favicons/logo@1024px.png'
-  a16: '/assets/favicons/apple/logo@16px.png'
-  a32: '/assets/favicons/apple/logo@32px.png'
-  a96: '/assets/favicons/apple/logo@96px.png'
-  a120: '/assets/favicons/apple/logo@120px.png'
-  a144: '/assets/favicons/apple/logo@144px.png'
-  a180: '/assets/favicons/apple/logo@180px.png'
-  a512: '/assets/favicons/apple/logo@512px.png'
-  a1024: '/assets/favicons/apple/logo@1024px.png'
-
 
 # 9. Site navigation
 navigation_header:
