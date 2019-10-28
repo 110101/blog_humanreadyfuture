@@ -7,10 +7,12 @@ function brightnnight() {
 		document.documentElement.setAttribute('data-theme', 'light');
 		window.localStorage.setItem('theme', 'light');
     document.getElementById('style').setAttribute('href', '/assets/styles.css');
-	} else {
+    collapseNav()
+  } else {
 		document.documentElement.setAttribute('data-theme', 'dark');
     document.getElementById('style').setAttribute('href', '/assets/styles_dark.css');
 		window.localStorage.setItem('theme', 'dark');
+    collapseNav()
 	}
 }
 </script>
