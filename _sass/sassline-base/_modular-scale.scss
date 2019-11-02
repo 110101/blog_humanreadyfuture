@@ -5,15 +5,15 @@
 $modular-scale: (
   // Major Third http://www.modularscale.com/?16,28&px&1.25&web&text
   scale-0: (
-    alpha:   28.0,
-    beta:    22.0,
-    gamma:   22.4,
-    delta:   20.0,
-    epsilon: 19.5,
-    zeta:    18.5,
-    eta:     18.3,
-    theta:   12.8,
-    iota:    11.5
+    alpha:   27.0, // h1, page title
+    beta:    23.0, // h2, post head line
+    gamma:   20.0, // logo, h3
+    delta:   20.0, // post meta, h4
+    epsilon: 19.5, // kein mal // h5
+    zeta:    18.5, // text standard
+    eta:     18.0, // text standard
+    theta:   14.0, // post caption
+    iota:    11.5 // nicht verwendet
   ),
   scale-1: (
     alpha:   27.0, // h1, page title
@@ -29,7 +29,7 @@ $modular-scale: (
   // Major Third http://www.modularscale.com/?17,30&px&1.25&web&text
   scale-2: (
     alpha:   27.0,
-    beta:    21.0,
+    beta:    23.0,
     gamma:   20.0,
     delta:   20.0,
     epsilon: 19.5,
@@ -40,9 +40,9 @@ $modular-scale: (
   ),
   // Major Third http://www.modularscale.com/?18,32&px&1.25&web&text
   scale-3: (
-    alpha:   29.0,
-    beta:    23.0,
-    gamma:   22.0,
+    alpha:   35.0,
+    beta:    30.0,
+    gamma:   25.0,
     delta:   22.0,
     epsilon: 21.5,
     zeta:    20.5,
@@ -54,7 +54,7 @@ $modular-scale: (
   scale-4: (
     alpha:   75.0,
     beta:    45.0,
-    gamma:   30.0,
+    gamma:   33.0,
     delta:   28.0,
     epsilon: 26.5,
     zeta:    18.0,

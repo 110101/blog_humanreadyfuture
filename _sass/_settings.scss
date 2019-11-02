@@ -14,39 +14,34 @@ $breakpoints: (
   break-5: 1600   // 1600px  ~ Large desktop up
 ) !default;
 
-// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
-// ! Make sure to have as many sizes as breakpoints above.
+// Root font-sizes
 $rootsizes: (
-  rootsize-0: 18,   // 24px line-height body text
-  rootsize-1: 18,
+  rootsize-0: 16,   // 24px line-height body text
+  rootsize-1: 17,
   rootsize-2: 17,   // 28px line-height body text
   rootsize-3: 16,   // 30px line-height body text
   rootsize-4: 16,   // 34px line-height body text
-  rootsize-5: 14    // 38px line-height body text
+  rootsize-5: 15    // 38px line-height body text
 ) !default;
 
-// Set the optimum line-length for your text (based on typeface).
-// Aim for 75-100 characters a line when possible, at smaller sizes type size is more important.
-// ! Make sure to have as many widths as breakpoints above.
-// Note: this was 'maxwidths' in previous versions.
+// line-length in px
 $measures: (
-  measure-0: 400,  // 500px wide
+  measure-0: 400,
   measure-1: 400,
-  measure-2: 550,  // 550px wide
-  measure-3: 600,  // 600px wide
-  measure-4: 680,  // 680px wide
-  measure-5: 750   // 750px wide
+  measure-2: 550,
+  measure-3: 600,
+  measure-4: 680,
+  measure-5: 750
 ) !default;
 
-// Set the max-widths for containers (based on design).
-// ! Make sure to have as many widths as breakpoints above.
+// max-widths for containers
 $maxwidths: (
-  width-0: 300,  // 500px wide
+  width-0: 300,
   width-1: 450,
-  width-2: 600,  // 600px wide
-  width-3: 800,  // 800px wide
-  width-4: 1100, // 110px wide
-  width-5: 1300  // 1300px wide
+  width-2: 600,
+  width-3: 800,
+  width-4: 1100,
+  width-5: 1300
 ) !default;
 
 // Gutter widths

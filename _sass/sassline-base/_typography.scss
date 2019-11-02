@@ -56,7 +56,7 @@ a {
 
   // Heading level 2.
   h2 {
-    @include sassline(beta, $headingtype, 3, 0.75, all);
+    @include sassline(gamma, $headingtype, 3, 0.75, all);
     color: $linkColour;
     font-weight: normal;
   }
