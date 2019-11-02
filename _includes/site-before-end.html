@@ -16,7 +16,7 @@ function brightnnight() {
 	}
 }
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150914856-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
 <script type="text/javascript">
   // check for cookie by name
   function checkforcookie(name) {
@@ -50,14 +50,15 @@ function brightnnight() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'UA-150914856-1');
-    gtag('config', 'UA-150914856-1', { 'anonymize_ip': true });
+    gtag('config', 'UA-XXXXXX-X');
+    gtag('config', 'UA-XXXXXX-X', { 'anonymize_ip': true });
   }
 
   function cookierevoke () {
-    clearCookie('_ga','.humanreadyfuture.com','/');
-    clearCookie('_gat_gtag_UA_150914856_1','.humanreadyfuture.com','/');
-    clearCookie('_gid','.humanreadyfuture.com','/');
+    window['ga-disable-UA-XXXXXX-1'] = true;
+    clearCookie('_ga','.localexample.net','/');
+    clearCookie('_gat_gtag_UA_XXXXXX_X','.localexample.net','/');
+    clearCookie('_gid','.localexample.net','/');
   }
 
   // create consent cookie
