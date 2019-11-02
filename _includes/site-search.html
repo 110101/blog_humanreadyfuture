@@ -11,12 +11,12 @@
 </div>
 
 <section>
-    <script src="{{ "/assets/simple-jekyll-search.min.js" | relative_url }}" type="text/javascript"></script>
+    <script src="{{ "/assets/script/simple-jekyll-search.min.js" | relative_url }}" type="text/javascript"></script>
     <script type="text/javascript">
         SimpleJekyllSearch({
             searchInput: document.getElementById('contact-form'),
             resultsContainer: document.getElementById('results-container'),
-            json: '{{ "/assets/search.json" | relative_url }}',
+            json: '{{ "/assets/script/search.json" | relative_url }}',
             searchResultTemplate: '<div class="typeset"><div class="heading"><a href="{url}"><h3>{title}</h3></a></div><div class="meta"><small class="small post-meta">{date}</small></div><div class="textcategories"><p>{excerpt}</p></div></div><hr> ',
             noResultsText: 'No results found',
             limit: 30,

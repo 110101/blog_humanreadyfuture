@@ -16,9 +16,7 @@
     <link id="style" rel="stylesheet" href="{{ "/assets/styles.css" | relative_url }}">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     {% include site-favicons.html %}
-    {% include site-analytics.html %}
     {% include site-before-start.html %}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
   </head>
   <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
     {% include site-progress.html %}
@@ -30,7 +28,6 @@
       {{ content }}
 
     </main>
-
     {% include site-footer.html %}
     {% include site-before-end.html %}
   </body>
