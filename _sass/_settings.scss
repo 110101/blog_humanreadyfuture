@@ -30,7 +30,7 @@ $measures: (
   measure-1: 400,
   measure-2: 550,
   measure-3: 600,
-  measure-4: 680,
+  measure-4: 900,
   measure-5: 750
 ) !default;
 
@@ -40,8 +40,8 @@ $maxwidths: (
   width-1: 450,
   width-2: 600,
   width-3: 800,
-  width-4: 1100,
-  width-5: 1300
+  width-4: 900,
+  width-5: 1200
 ) !default;
 
 // Gutter widths
@@ -53,12 +53,12 @@ $gutterwidths: (
 
 // Background colours
 $backgroundColour: #fcfcfc !default;
-$darkbackgroundColour: #111111;
+$darkbackgroundColour: #0b0024;
 $codeBackgroundColour: #eaeaea !default;
 
 //Text dark
 $bodyColour: #444444 !default;
-$bodyColourDark: #E0E0E0;
+$bodyColourDark: #0f0026;
 
 // Text colours
 $logoColour: #000000;
