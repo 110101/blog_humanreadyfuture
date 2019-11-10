@@ -273,6 +273,7 @@ body {
 .cattitle {
   float:left;
   margin-right: 1rem;
+  font-weight: bold;
   @include sassline($fontsize: zeta, $font: $bodytype, $lineheight: 1.6, $below: 0, $breakpoint: all);
 }
 
