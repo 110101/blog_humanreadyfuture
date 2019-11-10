@@ -197,7 +197,7 @@ body {
 }
 
 .shortabout {
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 
   h4 {
     font-weight: bold;
@@ -286,6 +286,8 @@ body {
 
 .category_heading{
   margin: 3rem 0rem 1.5rem 0rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $borderColorHeader;
 
   h4 {
     color: $linkColour;
@@ -684,6 +686,7 @@ label {
   }
   hr {
     width: 100%;
+    color: $borderColorHeader;
   }
   ul {
       padding-top: 0;
