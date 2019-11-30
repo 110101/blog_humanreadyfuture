@@ -1,5 +1,5 @@
 ---
-title: Gedanken zu
+title: Thoughts on
 layout: categories
 pagination:
   enabled: true
