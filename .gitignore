@@ -7,5 +7,5 @@ scripts/
 Gemfile.lock
 .DS_Store
 *.psd
-_includes/site-before-end.html
+site-before-end.html
 *.md
