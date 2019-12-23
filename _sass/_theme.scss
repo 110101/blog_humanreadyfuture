@@ -41,7 +41,7 @@ body {
   align-items: center;
   max-width: 1100px;
   margin: 0rem auto;
-  @include fontsize($fontsize: zeta, $breakpoint: 0);
+  @include fontsize($fontsize: theta, $breakpoint: 0);
   display: flex;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -156,7 +156,7 @@ body {
   a{
     // font-family: unquote(map-get($headingtype, font-family));
     // font-size: 1.75rem;
-    @include sassline($fontsize: gamma, $font: $headingtype, $lineheight: 1, $below: 0, $breakpoint: all);
+    @include sassline($fontsize: epsilon, $font: $headingtype, $lineheight: 1, $below: 0, $breakpoint: all);
     color: $logoColour;
   }
 

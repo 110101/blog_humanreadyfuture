@@ -59,6 +59,9 @@ permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
 timezone: Europe/London # Timezone for blog posts and alike
 highlighter: rouge
+title: "Human-Ready Future" # Site name or title, also used in jekyll-seo-tag
+url: "https://humanreadyfuture.com" # Site url, also used in jekyll-seo-tag
+baseurl: ""
 
 # 5. Collections
 collections:
@@ -79,10 +82,9 @@ defaults:
       image: "/assets/default-social-image.png" # Default image for sharing
 
 # 7. Site settings
-title: "Human-Ready Future" # Site name or title, also used in jekyll-seo-tag
+#title: "Human-Ready Future" # Site name or title, also used in jekyll-seo-tag
 # logo: "/assets/logos/logo.svg"  Site logo, also used in jekyll-seo-tag
-url: "https://humanreadyfuture.com" # Site url, also used in jekyll-seo-tag
-baseurl: ""
+#url: "https://humanreadyfuture.com" # Site url, also used in jekyll-seo-tag
 repo: "https://github.com/110101/blog_humanreadyfuture"
 email: "110101lab@googlemail.com"
 
@@ -99,16 +101,16 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 
 # 9. Site navigation
 navigation_header:
-- title: Über
+- title: About
   url: /about/
-- title: Gedanken
+- title: Thoughts
   url: /categories/
-- title: Suche
+- title: Search
   url: /search/
 
 navigation_footer:
 - title: Crafted with &#9829; in Munich | Europe
-  copyright: 110101 Lab - Malte K
+  copyright: 110101 Lab - Malte K.
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/110101lab
@@ -117,6 +119,5 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
 
 sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
   Twitter: true
-  GitHub: true
   LinkedIn: true
   Email: true

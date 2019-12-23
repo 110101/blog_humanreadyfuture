@@ -2,19 +2,19 @@
 {% if paginator.posts %}
   {% assign words = page.content | strip_html | number_of_words %}
   {% if words < 180 %}
-    &nbsp;&middot;&nbsp; weniger als 1 Minute Lesezeit
+    &nbsp;&middot;&nbsp; less than a monute read time
   {% elsif words < 360 %}
-    &nbsp;&middot;&nbsp; 1 Minute Lesezeit
+    &nbsp;&middot;&nbsp; 1 minute read time
   {% else %}
-    &nbsp;&middot;&nbsp; {{ words | divided_by:180 }} Minuten Lesezeit
+    &nbsp;&middot;&nbsp; {{ words | divided_by:180 }} minutes read time
   {% endif %}
 {% else %}
   {% assign words = content | strip_html | number_of_words %}
   {% if words < 180 %}
-    &nbsp;&middot;&nbsp; weniger als 1 Minute Lesezeit
+    &nbsp;&middot;&nbsp; less than a monute read time
   {% elsif words < 360 %}
-    &nbsp;&middot;&nbsp; 1 Minute Lesezeit
+    &nbsp;&middot;&nbsp; 1 minute read time
   {% else %}
-    &nbsp;&middot;&nbsp; {{ words | divided_by:180 }} Minuten Lesezeit
+    &nbsp;&middot;&nbsp; {{ words | divided_by:180 }} minutes read time
   {% endif %}
 {% endif %}
