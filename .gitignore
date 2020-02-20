@@ -4,7 +4,6 @@ _site/
 scripts/
 
 # ignore single files
-Gemfile.lock
 .DS_Store
 *.psd
 site-before-end.html
