@@ -21,20 +21,20 @@ exclude:
 plugins:
 # - jekyll-sitemap
 # - jekyll-paginate-v2
-- jekyll-paginate
+- jekyll-paginate-v2
 #- jekyll-seo-tag
 #- jekyll-feed
 #- jekyll-commonmark
 
 # 3. Gem settings
-# pagination:
-#   enabled: true
-#   per_page: 4
-#   permalink: '/page/:num/'
-#   title: ' - page :num'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
+pagination:
+  enabled: true
+  per_page: 4
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 jekyll-mentions: https://twitter.com
 twitter:
   username: 110101lab
