@@ -1,15 +1,3 @@
-# Site configuration
-# 1. Files excluded from Jekyll builds
-# 2. Installed Gems
-# 3. Gem settings
-# 4. Jekyll settings
-# 5. Collections
-# 6. Jekyll collections settings
-# 7. Site settings
-# 8. Site favicons & manifest icons
-# 9. Site navigation
-
-# 1. Files excluded from Jekyll builds
 exclude:
 - README.md
 - LICENSE
@@ -93,7 +81,7 @@ favicons: # size: path
 
 # 9. Site navigation
 navigation_header:
-- title: About
+- title: Contact
   url: /about/
 - title: Thoughts
   url: /categories/
