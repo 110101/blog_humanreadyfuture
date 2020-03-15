@@ -205,14 +205,27 @@ body {
   }
 }
 
+.about {
+  margin-bottom: 1rem;
+
+  h4 {
+    font-weight: bold;
+    color: $linkColour;
+  }
+}
+
 .thoughts {
   padding-bottom: 1rem;
   border-bottom: 1px solid $borderColorHeader;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   h4 {
     font-weight: bold;
   }
+}
+
+.thoughts_subline {
+  margin-bottom: 1rem;
 }
 
 .article {

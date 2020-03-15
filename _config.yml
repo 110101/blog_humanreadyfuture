@@ -81,7 +81,7 @@ favicons: # size: path
 
 # 9. Site navigation
 navigation_header:
-- title: Contact
+- title: About
   url: /about/
 - title: Thoughts
   url: /categories/
