@@ -33,7 +33,7 @@ pagination:
                     <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
                   </div>
                   <div class="meta">
-                    {% include post-meta.html %}
+                    {% include post-meta-short.html %}
                   </div>
                   <div class="textcategories">
                     {{ page.excerpt | markdownify | truncatewords: 300 }}

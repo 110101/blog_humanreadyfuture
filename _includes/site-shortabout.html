@@ -3,15 +3,37 @@
       <img class="aboutimage" src="/assets/postimages/1m1a0l1t0e1.jpg"><img>
       {% include nav-social.html %}
   </div>
-  <h4>Hey and Hello!</h4>
+  <div>
+  <h4 class="shortabout">Hey and Hello!</h4>
   <p>
     {% capture my_include %}{% include_relative shortabout.md %}{% endcapture %}
     {{ my_include | markdownify }}
   </p>
+  </div>
+  <div class="subabout">
+    <div class="icontitle">
+      <div class="hicon"><img height="25" width="25" src="/assets/postimages/focusicon.png"></div>
+      <h6>Focus</h6>
+      <div class="h_subunderline"></div>
+    </div>
+      {% capture my_include %}{% include_relative focus.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+  </div>
+  <div class="subabout">
+    <div class="icontitle">
+      <div class="hicon"><img height="25" width="25" src="/assets/postimages/progressicon.png"></div>
+      <h6>Approach</h6>
+      <div class="h_subunderline"></div>
+    </div>
+      {% capture my_include %}{% include_relative approach.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+  </div>
 </div>
 <div class="thoughts typeset">
-  <h4 class="">Thoughts</h4>
+  <h4>Projekts & Thoughts</h4>
+  <div class="h_underline"></div>
 </div>
-<div class="thoughts_subline typeset">
+<div class="topfixedporject"></div>
+<!-- <div class="thoughts_subline typeset">
   <small class="small post-meta">My views on ways to a human-ready future. Views are my own.</small>
-</div>
+</div> -->

@@ -107,8 +107,7 @@ body {
 //header container
 .container {
   width: 90%;
-  //@include maxwidth($breakpoint: 5);
-  max-width: 900px;
+  @include maxwidth($breakpoint: 4);
   margin: 0 auto;
 }
 
@@ -197,7 +196,7 @@ body {
 }
 
 .shortabout {
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 
   h4 {
     font-weight: bold;
@@ -214,14 +213,56 @@ body {
   }
 }
 
+.subabout {
+  margin-top: 1.5rem;
+}
+
+.hicon {
+    margin: 0rem 0rem 0.5rem 0rem;
+    // display: inline;
+    // // @include breakpoint('break-4') {
+    // //   display: inline !important;
+    // // }
+    // float: left;
+    // margin: 2px 0px 0px -40px;
+  }
+
+.icontitle {
+  margin: 0px auto;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  h6 {
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
 .thoughts {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid $borderColorHeader;
+  padding-bottom: 0rem;
+  // border-bottom: 1px solid $borderColorHeader;
   margin-bottom: 1rem;
 
   h4 {
-    font-weight: bold;
+    color: $linkColour;
   }
+}
+
+.h_underline {
+  background: $linkColour;
+  margin: -6px 0px 0px -20px;
+  height: 10px;
+  width: 350px;
+  display: block;
+}
+
+.h_subunderline {
+  background: $linkColour;
+  margin: 0px auto;
+  height: 2px;
+  width: 30px;
+  display: block;
 }
 
 .thoughts_subline {
@@ -363,6 +404,10 @@ body {
       color: $focusColour2;
       background-image: none;
     }
+  }
+  .lastelement {
+    background-color: $footer2;
+    height: 2rem;
   }
 }
 

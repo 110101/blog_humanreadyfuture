@@ -1,1 +1,5 @@
-I'm Malte, a tech product strategist/product manager. My passion is to to create new products with the help of technology. Especially enthusiastic about the future of mobility, because getting from A to B is a basic need which requires a 21st century solution. While believing in the power of technology to lead to a better, brighter future there is also a flip side.
+I am Malte, a digital strategist/product manager. My passion is to create new products that make a difference for people. With my background in engineering, I focus on solving problems with the help of technology.
+
+I am enthusiastic about autonomous driving as one key to the future of mobility because getting from A to B is a basic need that requires a 21st-century solution.
+
+While convinced that technology creates numerous opportunities, I believe that a too technocratic approach can lead to social challenges. It must be the goal to find the right balance to achieve a human-ready future.
