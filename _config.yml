@@ -84,7 +84,7 @@ navigation_header:
 - title: Contact
   url: /contact/
 - title: Projects & Thoughts
-  url: /categories/
+  url: '#projects'
 - title: Search
   url: /search/
 

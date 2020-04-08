@@ -25,19 +25,6 @@ $rootsizes: (
   rootsize-5: 14    // 38px line-height body text
 ) !default;
 
-// Set the optimum line-length for your text (based on typeface).
-// Aim for 75-100 characters a line when possible, at smaller sizes type size is more important.
-// ! Make sure to have as many widths as breakpoints above.
-// Note: this was 'maxwidths' in previous versions.
-$measures: (
-  measure-0: 400,  // 500px wide
-  measure-1: 400,
-  measure-2: 550,  // 550px wide
-  measure-3: 600,  // 600px wide
-  measure-4: 680,  // 680px wide
-  measure-5: 750   // 750px wide
-) !default;
-
 // Set the max-widths for containers (based on design).
 // ! Make sure to have as many widths as breakpoints above.
 $maxwidths: (
@@ -49,27 +36,20 @@ $maxwidths: (
   width-5: 1300  // 1300px wide
 ) !default;
 
-// Gutter widths
-$gutterwidths: (
-  small: 1rem,
-  medium: 2rem,
-  large: 4rem
-) !default;
-
 // Background colours
-$backgroundColour: #070014 !default;
+$backgroundColour: #070014 !default;  // 1C0A48
 $codeBackgroundColour: #eaeaea !default;
 
 //Text dark
-$bodyColour: #e0e0e0 !default;
+$textColour: #e0e0e0 !default;
 
 // Text colours
-$logoColour: #d0d0d0;
+$headingColour: #d0d0d0;
 $headingColour: #d0d0d0 !default;
-$headingHover: #ffffff;
-$linkColour: #00C7AC !default; //088AD8
-$hoverColour: #00C7AC !default; // 033E61 67796F
-$underlineColour: #00C7AC;
+$focusColour: #ffffff;
+$focusColour: #00C7AC !default; //088AD8
+$focusColour: #00C7AC !default; // 033E61 67796F
+$focusColour: #00C7AC;
 $focusColour: #00C7AC !default;
 $focusColour2: #FF3D00 !default;
 $focusColour3: #FFBB00 !default;

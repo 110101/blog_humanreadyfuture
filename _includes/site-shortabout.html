@@ -5,6 +5,7 @@
   </div>
   <div>
   <h4 class="shortabout">Hey and Hello!</h4>
+  <div class="h_underline"></div>
   <p>
     {% capture my_include %}{% include_relative shortabout.md %}{% endcapture %}
     {{ my_include | markdownify }}
@@ -29,11 +30,10 @@
       {{ my_include | markdownify }}
   </div>
 </div>
-<div class="thoughts typeset">
+<div id="projects" class="shortabout typeset">
   <h4>Projekts & Thoughts</h4>
   <div class="h_underline"></div>
 </div>
-<div class="topfixedporject"></div>
 <!-- <div class="thoughts_subline typeset">
   <small class="small post-meta">My views on ways to a human-ready future. Views are my own.</small>
 </div> -->

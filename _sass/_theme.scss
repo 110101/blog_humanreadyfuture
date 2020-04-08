@@ -6,7 +6,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background: $backgroundColour;
-  color: $bodyColour;
+  color: $textColour;
 }
 
 body {
@@ -156,11 +156,11 @@ body {
     // font-family: unquote(map-get($headingtype, font-family));
     // font-size: 1.75rem;
     @include sassline($fontsize: epsilon, $font: $headingtype, $lineheight: 1, $below: 0, $breakpoint: all);
-    color: $logoColour;
+    color: $headingColour;
   }
 
   a:hover {
-    color: $headingHover;
+    color: $focusColour;
     background-image: none;
   }
 }
@@ -178,11 +178,11 @@ body {
     font-weight: normal;
     font-size: 1rem;
     font-family: unquote(map-get($headingtype, font-family));
-    color: $logoColour;
+    color: $headingColour;
   }
 
   a:hover {
-    color: $hoverColour;
+    color: $focusColour;
   }
   &--social a {
     display: inline-block;
@@ -200,7 +200,7 @@ body {
 
   h4 {
     font-weight: bold;
-    color: $linkColour;
+    color: $focusColour;
   }
 }
 
@@ -209,7 +209,7 @@ body {
 
   h4 {
     font-weight: bold;
-    color: $linkColour;
+    color: $focusColour;
   }
 }
 
@@ -245,20 +245,20 @@ body {
   margin-bottom: 1rem;
 
   h4 {
-    color: $linkColour;
+    color: $focusColour;
   }
 }
 
 .h_underline {
-  background: $linkColour;
-  margin: -6px 0px 0px -20px;
-  height: 10px;
-  width: 350px;
+  background: #5F007C;
+  margin: 1.5rem 0px 0px 0px;
+  height: 2px;
+  width: 100px;
   display: block;
 }
 
 .h_subunderline {
-  background: $linkColour;
+  background: $focusColour;
   margin: 0px auto;
   height: 2px;
   width: 30px;
@@ -269,15 +269,39 @@ body {
   margin-bottom: 1rem;
 }
 
+.fixedproject {
+  padding: 1.5rem;
+  margin: 3rem 0rem 3rem 0rem;
+  border: 1px solid $footer2;
+
+  h2 {
+    color: $headingColour;
+  }
+  h2 {
+  a {
+    color: $headingColour;
+  }
+
+  a:hover {
+    color: $focusColour;
+    text-decoration: none;
+    background-image: none;
+     background-position: 0;
+     background-repeat: repeat-x;
+     background-size: 100% 0rem;
+  }
+  }
+}
+
 .article {
   a {
     font-family: unquote(map-get($headingtype, font-family));
-    color: $linkColour;
+    color: $focusColour;
   }
   a:hover {
-    color: $linkColour;
+    color: $focusColour;
     text-decoration: none;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$linkColour 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$focusColour 50%);
      background-position: 0 95%;
      background-repeat: repeat-x;
      background-size: 100% 0.15rem;
@@ -289,6 +313,11 @@ body {
   text-align: justify;
 }
 
+.text-post {
+  text-align: justify;
+  margin-top: 2rem;
+}
+
 .textcategories {
   margin: 0rem;
 }
@@ -297,13 +326,19 @@ body {
   color: $headingColour;
 }
 
+.post {
+  h1 {
+    color: $focusColour;
+  }
+}
+
 .heading {
   a {
     color: $headingColour;
   }
   a:hover {
     background-image: none;
-    color: $headingHover;
+    color: $focusColour;
   }
 }
 
@@ -320,7 +355,7 @@ body {
     color: $captionColour;
   }
   &a:hover {
-    color: $hoverColour;
+    color: $focusColour;
   }
 }
 
@@ -345,7 +380,7 @@ body {
   border-bottom: 1px solid $borderColorHeader;
 
   h4 {
-    color: $linkColour;
+    color: $focusColour;
   }
 }
 
@@ -356,6 +391,40 @@ body {
 
 .pagination--previous, .pagination-next {
   color: $captionColour2;
+}
+
+.contactflex {
+  @include flexbox;
+  @include flex-direction(column);
+  // @include justify-content(space-between);
+  // padding: 1.75rem 0;
+  @include breakpoint(break-3) {
+    @include flex-direction(row);
+  }
+}
+
+
+.contactmail {
+  width: 100%;
+  @include breakpoint(break-3) {
+    width: 50%;
+  }
+}
+
+.contactsocial {
+  width: 100%;
+  @include breakpoint(break-3) {
+    width: 50%;
+  }
+}
+
+.disclaimer {
+  text-align: center;
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.heart {
+  color: $captionColour;
 }
 
 .footer {
@@ -493,7 +562,7 @@ body {
   }
   &--current {
     a {
-      color: $linkColour;
+      color: $focusColour;
     }
   }
 }
@@ -531,6 +600,7 @@ img {
   &--left {
     float: left;
     padding-right: .8rem;
+    padding-top: 1rem;
   }
   &--right {
     float: right;
@@ -619,7 +689,7 @@ button,
   cursor: pointer;
   display: inline-block;
   color: $backgroundColour;
-  background: $linkColour;
+  background: $focusColour;
   transition: box-shadow .1s;
   will-change: box-shadow;
   box-shadow: inset 0 0 0 2rem transparent;
@@ -637,14 +707,14 @@ button,
     display: none;
   }
   background: none;
-  color: $linkColour;
+  color: $focusColour;
   margin-bottom: 0;
   min-height: 4rem;
   min-width: 4rem;
   &:hover,
   &:focus {
     box-shadow: none;
-    color: $hoverColour;
+    color: $focusColour;
   }
 }
 
@@ -674,7 +744,7 @@ select {
   width: 100%;
   border: 1px solid $captionColour;
   &:hover {
-    border-color: $bodyColour;
+    border-color: $textColour;
   }
 }
 
@@ -768,7 +838,7 @@ label {
   .nav--paginator {
     @include flexbox;
     @include justify-content(space-between);
-    color: $headingHover;
+    color: $focusColour;
     text-align: center;
 
   }

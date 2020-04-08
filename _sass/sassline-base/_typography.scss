@@ -15,14 +15,14 @@ body {
 // Links.
 a {
   font-family: unquote(map-get($bodytype, font-family));
-  color: $linkColour;
+  color: $focusColour;
   text-decoration: none;
   transition: color .2s, background-color .2s;
 
   &:hover, &:active, &:focus {
-    color: $hoverColour;
+    color: $focusColour;
     text-decoration: none;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$hoverColour 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$focusColour 50%);
      background-position: 0 93%;
      background-repeat: repeat-x;
      background-size: 100% 0.15rem;
@@ -50,14 +50,14 @@ a {
 
   // Heading level 1.
   h1 {
-    @include sassline(alpha, $headingtype, 6, 0, all);
+    @include sassline(alpha, $headingtype, 3.5, 1, all);
     font-weight: normal;
   }
 
   // Heading level 2.
   h2 {
     @include sassline(delta, $headingtype, 3, 0.75, all);
-    color: $linkColour;
+    color: $focusColour;
     font-weight: normal;
   }
 
@@ -235,7 +235,7 @@ a {
   blockquote {
 
     p {
-      border-left: 0.15rem solid $linkColour;
+      border-left: 0.15rem solid $focusColour;
       font-style: map-get($bodytype, italic);
       padding-left: 1rem;
 

@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     {% if page.collectionpage %}
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
       <title>{{ site.title }}</title>
-      <meta name="description" content="{{ collectiondata.description }}">
-
+    {% else %}
+      <title>{{ site.title }} - {{ page.title }}</title>
     {% endif %}
+    <meta name="description" content="{{ collectiondata.description }}">
     <link rel="stylesheet" href="/assets/css/all.css">
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>

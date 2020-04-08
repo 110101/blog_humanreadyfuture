@@ -9,7 +9,6 @@ $breakpoints-limit: length($breakpoints);
 // List of rootsizes, breakpoints, and max-widths.
 $sizes: map-values($rootsizes);
 $points: map-values($breakpoints);
-$line-widths: map-values($measures);
 $max-widths: map-values($maxwidths);
 
 
@@ -74,69 +73,6 @@ $max-widths: map-values($maxwidths);
         max-width: #{nth($max-widths, $i)}px;
       }
     }
-  }
-}
-
-// Set the measure for single columns, outputted in correct breakpoints.
-@mixin measure($breakpoint: 0) {
-  // Type of chosen variables.
-  $break-value: type-of($breakpoint);
-
-  // If specifying a breakpoint to use (and breakpoint exists).
-  @if $break-value == number and $breakpoint <= ($breakpoints-limit - 1) and $breakpoint >= 0 {
-
-    max-width: #{nth($line-widths, ($breakpoint + 1)) / nth($sizes, ($breakpoint + 1))}rem;
-
-  } @else if $breakpoint == all {
-    max-width: #{nth($line-widths, 1) / nth($sizes, 1)}rem;
-
-    // Loop through breakpoints.
-    @for $i from 2 through $breakpoints-limit {
-      @media screen and (min-width: nth($points, $i) / 16 * 1em ) {
-        max-width: #{nth($line-widths, $i) / nth($sizes, $i)}rem;
-      }
-    }
-  }
-}
-
-// Calculate percentage width of container to get optimal measure for main text columns.
-// Defaults to all breakpoints.
-// Note: will not output for base breakpoint as this comes from the 'measure' mixin.
-@mixin ideal-measure($breakpoint: 0, $gutter: 0, $main: true, $output: max-width) {
-  // Type of chosen variables.
-  $break-value: type-of($breakpoint);
-
-  // If specifying a breakpoint to use (and breakpoint exists and is larger than 0).
-  @if $break-value == number and $breakpoint <= ($breakpoints-limit - 1) and $breakpoint > 0 {
-
-    @if $gutter == small {
-      $gutter: map-get($gutterwidths, small) * 2 / 1rem;
-    } @else if $gutter == medium {
-      $gutter: map-get($gutterwidths, medium) * 2 / 1rem;
-    } @else if $gutter == large {
-      $gutter: map-get($gutterwidths, large) * 2 / 1rem;
-    } @else {
-      $gutter: 0;
-    }
-
-    $rootsize: map-get($rootsizes, rootsize-#{$breakpoint});
-    $ideal-measure: map-get($measures, measure-#{$breakpoint});
-    $gutter-size: ($gutter * $rootsize);
-    $container-width: map-get($maxwidths, width-#{$breakpoint});
-
-    $percentage: percentage(($ideal-measure + $gutter-size) / $container-width);
-
-    @if $percentage < 55 {
-      $percentage: 55%;
-    } @else if $percentage > 65 {
-      $percentage: 65%;
-    }
-
-    @if $main == false {
-      $percentage: 100 - $percentage;
-    }
-
-    #{$output}: $percentage;
   }
 }
 

@@ -23,4 +23,24 @@
 
   });
 
+  jQuery(document).ready(function() {
+
+    var btn = $('#projects_menu');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: $('#projects').offset().top }, '300');
+    });
+
+  });
+
+  jQuery(document).ready(function() {
+
+    var btn = $('#contact_menu');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: $('#contact').offset().top }, '300');
+    });
+
+  });
+
 </script>

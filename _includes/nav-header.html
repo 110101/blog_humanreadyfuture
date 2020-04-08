@@ -1,7 +1,7 @@
 {% if site.navigation_header %}
 <nav class="nav  nav--header">
   <ul class="list  list--nav">
-    {% for item in site.navigation_header %}
+    <!-- {% for item in site.navigation_header %}
 
       {% if item.url contains '://' %}
         {% assign url = item.url %}
@@ -14,7 +14,25 @@
       </li>
       <!-- <p>{{ item.url }}</p>
       <p>{{ page.url }}</p> -->
-    {% endfor %}
+    <!-- {% endfor %} -->
+    <li class="item item--nav">
+        {% if page.url == "/index.html" %}
+          <a id="projects_menu" href="">Projects & Thoughts</a>
+        {% else %}
+          <a href="{{ site.baseurl }}/#projects">Projects & Thoughts</a>
+        {% endif %}
+        <!-- <a href="/categories/">Projects & Thoughts</a> -->
+    </li>
+    <li class="item item--nav">
+      {% if page.url == "/index.html" %}
+        <a id="contact_menu" href="">Contact</a>
+      {% else %}
+        <a href="{{ site.baseurl }}/#contact">Contact</a>
+      {% endif %}
+    </li>
+    <li class="item item--nav">
+        <a href="/search/">Search</a>
+    </li>
     <li class="item item--nav bright_dark">
       <a onclick="brightnnight()"><i class="fas fa-adjust"></i></a>
     </li>
@@ -54,4 +72,16 @@
   window.addEventListener('resize', () => {
     collapseNav()
   })
+
+
+  //
+  jQuery(document).ready(function() {
+
+    var btn = $('#projects_menu');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      collapseNav();
+    });
+
+  });
 </script>
