@@ -5,6 +5,16 @@ pagination:
   enabled: true
 ---
 
+<div id="projects" class="shortabout typeset">
+  <h4>Projects</h4>
+  <div class="h_underline"></div>
+  <br>
+  <span>What I've been working on lately.</span>
+</div>
+<div class="thoughts_subline typeset">
+
+</div>
+
 {% if paginator.projects %}
   <section class="section  typeset">
     <ul class="list  list--posts">
@@ -49,5 +59,3 @@ pagination:
     </ul>
   </section>
 {% endif %}
-
-{% include site-inlinecontact.html %}

@@ -12,10 +12,12 @@ pagination:
 <div id="projects" class="shortabout typeset">
   <h4>Thoughts</h4>
   <div class="h_underline"></div>
+  <div class="thoughts_subline">
+    <small>My thoughts on a human-ready future. Views are my own.</small>
+  </div>
 </div>
-<div class="thoughts_subline typeset">
-  <small>My views on ways to a human-ready future. Views are my own.</small>
-</div>
+
+
 
 {% if paginator.posts %}
   <section class="section  typeset">
@@ -61,7 +63,5 @@ pagination:
     </ul>
   </section>
 {% endif %}
-
-{% include site-fixedproject.html %}
 
 {% include site-inlinecontact.html %}

@@ -1,19 +1,10 @@
 ---
-layout: default
+title: Disclaimer / Legal Notice
+layout: about
 ---
 
 <div class="about typeset">
 
-<div class="thoughts typeset">
-  <h4 class="">Disclaimer</h4>
-  <div class="h_underline"></div>
-</div>
-<div class="">
-  <p>
-    This private website reflects my personal opinion and views and does not represent the opinion of my employer.
-  </p>
-</div>
-<br>
 <div class="typeset">
   <div class="thoughts typeset">
     <h4 class="">Legal Notice</h4>
