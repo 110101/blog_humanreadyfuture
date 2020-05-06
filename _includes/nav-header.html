@@ -1,27 +1,15 @@
-{% if site.navigation_header %}
 <nav class="nav  nav--header">
   <ul class="list  list--nav">
-    <!-- {% for item in site.navigation_header %}
-
-      {% if item.url contains '://' %}
-        {% assign url = item.url %}
-      {% else %}
-        {% assign url = item.url | relative_url %}
-      {% endif %}
-
-      <li class="item  item--nav{% if item.url == page.url or (item.url == "/categories/" and page.path == 'categories.md') %}  item--current{% endif %}">
-        <a href="{{ url }}">{{ item.title }}</a>
-      </li>
-      <!-- <p>{{ item.url }}</p>
-      <p>{{ page.url }}</p> -->
-    <!-- {% endfor %} -->
     <li class="item item--nav">
         {% if page.url == "/index.html" %}
-          <a id="projects_menu" href="">Projects & Thoughts</a>
+          <a id="projects_menu" href="">Thoughts</a>
         {% else %}
-          <a href="{{ site.baseurl }}/#projects">Projects & Thoughts</a>
+          <a href="{{ site.baseurl }}/#projects">Thoughts</a>
         {% endif %}
         <!-- <a href="/categories/">Projects & Thoughts</a> -->
+    </li>
+    <li class="item item--nav">
+          <a href="/projects/">Projects</a>
     </li>
     <li class="item item--nav">
       {% if page.url == "/index.html" %}
@@ -41,8 +29,6 @@
     {% include icon.html id="nav" title="Menu" %}
   </button>
 </nav>
-{% endif %}
-
 <script type="text/javascript">
   // Get list and button
   const navList = document.querySelector('.header .list--nav')
@@ -50,7 +36,7 @@
 
   // Hide nav and apply toggle
   const collapseNav = () => {
-    if (document.body.clientWidth < 540) {
+    if (document.body.clientWidth < 650 ) {
       navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
     } else {
       navList.removeAttribute('style')
@@ -82,6 +68,13 @@
       e.preventDefault();
       collapseNav();
     });
+
+    var btn = $('#contact_menu');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      collapseNav();
+    });
+
 
   });
 </script>

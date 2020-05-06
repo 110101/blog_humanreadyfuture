@@ -54,20 +54,28 @@ body {
   // @include sassline($fontsize: eta, $font: $headingtype, $lineheight: 2, $below: 5, $breakpoint: all);
 }
 
+
+// Cookie banner
 .cookietext {
   text-align: justify;
   display: block;
   flex: 1 1 auto;
   margin-right: 4rem;
+  color: $cookie;
 
   a {
-    color: $headingColour;
+    color: $focusColour2;
     text-decoration: none;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$headingColour 50%);
+    padding: .2rem;
+  }
+
+  a:hover {
+    color: $cookie;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$cookie 50%);
      background-position: 0 93%;
      background-repeat: repeat-x;
      background-size: 100% 0.15rem;
-     padding: .2rem;
+
   }
 }
 
@@ -79,25 +87,31 @@ body {
 .btncookie {
   margin-right: 0.3rem;
   margin-bottom: 0rem;
-  background: $headingColour;
+  background: $cookie;
+  color: $codeBackgroundColour;
+
+    &:hover {
+    background: $focusColour2;
+    color: $codeBackgroundColour;
+  }
 }
 
 .btnlink {
   margin-right: 0.3rem;
   margin-bottom: 0rem;
   align-content: center;
-  color: $headingColour;
+
 
   a {
-    color: $headingColour;
+    color: $cookie;
     padding: .2rem;
     cursor: pointer;
   }
 
   a:hover {
-    color: $headingColour;
+    color: $cookie;
     text-decoration: none;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$headingColour 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$cookie 50%);
      background-position: 0 93%;
      background-repeat: repeat-x;
      background-size: 100% 0.15rem;
@@ -107,7 +121,7 @@ body {
 //header container
 .container {
   width: 90%;
-  @include maxwidth($breakpoint: 4);
+  @include maxwidth($breakpoint: 5);
   margin: 0 auto;
 }
 
@@ -272,7 +286,7 @@ body {
 .fixedproject {
   padding: 1.5rem;
   margin: 3rem 0rem 3rem 0rem;
-  border: 1px solid $footer2;
+  border: 1px solid $codeBackgroundColour;
 
   h2 {
     color: $headingColour;
@@ -693,17 +707,10 @@ button,
   transition: box-shadow .1s;
   will-change: box-shadow;
   box-shadow: inset 0 0 0 2rem transparent;
-  &:hover {
-    box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.25);
-  }
-  &:active,
-  &:focus {
-    box-shadow: inset 0 0 0 2rem rgba(0,0,0,0.25);
-  }
 }
 
 .button--nav {
-  @include breakpoint(break-1) {
+  @include breakpoint(break-2) {
     display: none;
   }
   background: none;

@@ -1,6 +1,6 @@
 <div class="fixedproject typeset">
 
-  {% capture my_include %}{% include_relative project1.md %}{% endcapture %}
-  {{ my_include | markdownify }}
+  {% capture my_include %}{% include_relative /_projects/2020-05-05-project01.md %}{% endcapture %}
+  {{ my_include.excerpt | markdownify | truncatewords: 300 }}
 
 </div>

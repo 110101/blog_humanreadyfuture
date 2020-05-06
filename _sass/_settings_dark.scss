@@ -1,64 +1,73 @@
-// SCSS variables
-// ---------------------------------------
-
-// Note: For the following Sass maps enter values as if they would be px units.
-
-// Breakpoint sizes from px to ems. Add more values here to add more breakpoints.
-// Change names if you prefer, it wont break the mixin as long as they are strings not just numbers.
+// breakpoints in "pixels"
 $breakpoints: (
   break-0: 0,     // 0px       Mobile first
   break-1: 540,   // smartphones
-  break-2: 640,   // 640px   ~ Small tablet up
+  break-2: 650,   // 640px   ~ Small tablet up
   break-3: 800,   // 800px   ~ Large tablet up
   break-4: 1024,  // 1024px  ~ Desktop up
   break-5: 1600   // 1600px  ~ Large desktop up
 ) !default;
 
-// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
-// ! Make sure to have as many sizes as breakpoints above.
+// Root font-sizes
 $rootsizes: (
-  rootsize-0: 18,   // 24px line-height body text
-  rootsize-1: 18,
+  rootsize-0: 16,   // 24px line-height body text
+  rootsize-1: 17,
   rootsize-2: 17,   // 28px line-height body text
   rootsize-3: 16,   // 30px line-height body text
   rootsize-4: 16,   // 34px line-height body text
-  rootsize-5: 14    // 38px line-height body text
+  rootsize-5: 15    // 38px line-height body text
 ) !default;
 
-// Set the max-widths for containers (based on design).
-// ! Make sure to have as many widths as breakpoints above.
+// max-widths for containers
 $maxwidths: (
-  width-0: 300,  // 500px wide
+  width-0: 300,
   width-1: 450,
-  width-2: 600,  // 600px wide
-  width-3: 800,  // 800px wide
-  width-4: 1100, // 110px wide
-  width-5: 1300  // 1300px wide
+  width-2: 600,
+  width-3: 800,
+  width-4: 900,
+  width-5: 1000
 ) !default;
 
 // Background colours
-$backgroundColour: #070014 !default;  // 1C0A48
+$backgroundColour: #070014 !default;
 $codeBackgroundColour: #eaeaea !default;
 
-//Text dark
-$textColour: #e0e0e0 !default;
-
 // Text colours
-$headingColour: #d0d0d0;
+$textColour: #e0e0e0 !default;
 $headingColour: #d0d0d0 !default;
-$focusColour: #ffffff;
-$focusColour: #00C7AC !default; //088AD8
-$focusColour: #00C7AC !default; // 033E61 67796F
-$focusColour: #00C7AC;
 $focusColour: #00C7AC !default;
-$focusColour2: #FF3D00 !default;
-$focusColour3: #FFBB00 !default;
+$focusColour2: #5F007C !default;
 $captionColour: #00493f !default;
 $captionColour2: #d0d0d0;
-$footer: #05000d !default;
+$footer: #05000d !default;  // f3f2f0
 $footer2: #000000 !default;
-$white: #ffffff !default;
 $borderColorHeader: #05000d;
+$cookie: #05000d;
+
+
+// // Background colours
+// $backgroundColour: #070014 !default;  // 1C0A48
+// $codeBackgroundColour: #eaeaea !default;
+//
+// //Text dark
+// $textColour: #e0e0e0 !default;
+//
+// // Text colours
+// $headingColour: #d0d0d0;
+// $headingColour: #d0d0d0 !default;
+// $focusColour: #ffffff;
+// $focusColour: #00C7AC !default; //088AD8
+// $focusColour: #00C7AC !default; // 033E61 67796F
+// $focusColour: #00C7AC;
+// $focusColour: #00C7AC !default;
+// $focusColour2: #FF3D00 !default;
+// $focusColour3: #FFBB00 !default;
+// $captionColour: #00493f !default;
+// $captionColour2: #d0d0d0;
+// $footer: #05000d !default;
+// $footer2: #000000 !default;
+// $white: #ffffff !default;
+// $borderColorHeader: #05000d;
 
 // Typography
 $bodytype: (

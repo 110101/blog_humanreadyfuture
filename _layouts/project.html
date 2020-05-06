@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+
+  <article class="article  article--post  content  typeset">
+    <div class="heading post">
+      <h1>{{ page.title }}</h1>
+    </div>
+    <div class="meta">
+      {% include post-meta.html %}
+    </div>
+    <div class="h_underline"></div>
+    <div class="text-post">
+    {{ content }}
+
+    {% include nav-share.html %}
+    </div>
+    <!-- {% include post-comments.html %} -->
+
+  </article>

@@ -7,8 +7,7 @@ exclude:
 
 # 2. Installed Gems
 plugins:
-# - jekyll-sitemap
-# - jekyll-paginate-v2
+#- jekyll-sitemap
 - jekyll-paginate-v2
 #- jekyll-seo-tag
 #- jekyll-feed
@@ -32,7 +31,7 @@ social:
   links:
     - https://twitter.com/110101lab
     - https://github.com/110101
-markdown: kramdown # Markdown parse settings, CommonMark performs slightly better an others in build time
+markdown: kramdown #kramdown # Markdown parse settings, CommonMark performs slightly better an others in build time
 # commonmark:
 #  options: ["SMART", "FOOTNOTES"]
 #  extensions: ["strikethrough", "autolink", "table"]
@@ -50,6 +49,10 @@ baseurl: ""
 
 # 5. Collections
 collections:
+  projects:
+    title: Projects
+    description: projects
+    output: true
   posts:
     title: Human-Ready Future
     description: thoughts about tech & society
@@ -67,7 +70,7 @@ defaults:
       image: "/assets/default-social-image.png" # Default image for sharing
 
 repo: "https://github.com/110101/blog_humanreadyfuture"
-email: "110101lab@googlemail.com"
+email: "malte.k@outlook.com"
 
 favicons: # size: path
   16: '/assets/favicons/logo@16px.png'
@@ -79,25 +82,16 @@ favicons: # size: path
   512: '/assets/favicons/logo@512px.png'
   1024: '/assets/favicons/logo@1024px.png'
 
-# 9. Site navigation
-navigation_header:
-- title: Contact
-  url: /contact/
-- title: Projects & Thoughts
-  url: '#projects'
-- title: Search
-  url: /search/
-
 navigation_footer:
 - title: Crafted with &#9829; in Munich | Europe
   copyright: 110101 Lab - Malte K.
 
-social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+social_links:
   Twitter: https://twitter.com/110101lab
-  LinkedIn: https://www.linkedin.com/in/malte-kassen/
+  LinkedIn: https://www.linkedin.com/in/malte-k/
   GitHub: https://github.com/110101
 
-sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
+sharing_links:
   Twitter: true
   LinkedIn: true
   Email: true

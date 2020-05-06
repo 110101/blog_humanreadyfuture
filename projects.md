@@ -1,26 +1,14 @@
 ---
 layout: default
-collectionpage: posts
+collectionpage: projects
 pagination:
   enabled: true
 ---
 
-{% include site-shortabout.html %}
-
-{% include site-fixedproject.html %}
-
-<div id="projects" class="shortabout typeset">
-  <h4>Thoughts</h4>
-  <div class="h_underline"></div>
-</div>
-<div class="thoughts_subline typeset">
-  <small>My views on ways to a human-ready future. Views are my own.</small>
-</div>
-
-{% if paginator.posts %}
+{% if paginator.projects %}
   <section class="section  typeset">
     <ul class="list  list--posts">
-      {% for page in paginator.posts %}
+      {% for page in paginator.projects %}
         <li class="item  item--post">
           <article class="article  article--post">
             <div class="heading">
@@ -46,7 +34,7 @@ pagination:
   <section class="section  typeset">
     <div id="else"></div>
     <ul class="list  list--posts">
-      {% for page in site.posts %}
+      {% for page in site.projects %}
         <li class="item  item--post">
           <article class="article  article--post">
             <div class="heading">
@@ -61,7 +49,5 @@ pagination:
     </ul>
   </section>
 {% endif %}
-
-{% include site-fixedproject.html %}
 
 {% include site-inlinecontact.html %}
