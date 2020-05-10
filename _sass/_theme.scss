@@ -23,7 +23,13 @@ body {
   position: fixed;
   width: 100%;
   height: 4px;
+  margin-left: 0;
   z-index: 1;
+  transition: margin-left 0.2s;
+  @include breakpoint('break-e') {
+    margin-left: 30%;
+    width: 70%;
+  }
 }
 
 // cookie policy cookiebanner
@@ -60,8 +66,10 @@ body {
   text-align: justify;
   display: block;
   flex: 1 1 auto;
-  margin-right: 4rem;
   color: $cookie;
+  @include breakpoint('break-2') {
+      margin-right: 4rem;
+  }
 
   a {
     color: $focusColour2;
@@ -128,15 +136,36 @@ body {
 
 // Header, feature and footer
 .header {
-  margin-bottom: 4rem;
   border-bottom: 1px solid $borderColorHeader;
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  background-color: $footer;
+  @include breakpoint('break-3') {
+    height: 100%;
+    width: 30%;
+    // max-width: 300px;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    //transition: 0.2s;
+    display: inline;
+    float: none;
+    border-right: 1px solid $borderColorHeader;
+    background-color: $footer;
+    overflow: hidden;
+  }
 
   .nav {
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
   }
-  .logo {
-    @include flex(0 0 auto);
-  }
+
   .container {
     @include flexbox;
     @include flex-direction(row);
@@ -148,22 +177,201 @@ body {
   }
 }
 
-.header .nav {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
+.headertext {
+  float: left;
+  @include breakpoint('break-0') {
+    margin: 0;
+  }
+  @include breakpoint('break-2') {
+    margin: 0.25rem 1rem 0rem 1rem;
+  }
+  @include breakpoint('break-3') {
+    margin: 0.25rem 1rem 0rem 1rem;
+    float: none;
+  }
 }
 
+.menu_toggle {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $footer;
+  overflow: auto;
+  // -webkit-transition: all .2s ease-in-out;
+  // -moz-transition: all .2s ease-in-out;
+  // -ms-transition: all .2s ease-in-out;
+  // -o-transition: all .2s ease-in-out;
+  // transition: all .2s ease-in-out;
+  // -webkit-transition: opacity .3s ease-in-out;
+  // -moz-transition: opacity .3s ease-in-out;
+  // -ms-transition: opacity .3s ease-in-out;
+  // -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  // -webkit-transition: visibility .3s ease-in-out;
+  // -moz-transition: visibility .3s ease-in-out;
+  // -ms-transition: visibility .3s ease-in-out;
+  // -o-transition: visibility .3s ease-in-out;
+  // transition: visibility .3s ease-in-out;
+  // transition: right .3s ease-in-out;
+  // transition: opacity .1s ease-in-out;
+  // transition: visibility .1s ease-in-out;
+
+  // z-index: 9998;
+  // position: absolute;
+  // top: 0;
+  // visibility: hidden;
+  // width: 100%;
+  // right: -100%;
+  // transition: right .3s, visibility 0s .3s;
+  // height: 100%;
+  // background-color: $footer;
+  @include breakpoint(break-3) {
+    position: static;
+    visibility: visible;
+    margin: 2rem 0rem 0.5rem 0rem;
+    background-color: none;
+    overflow: hidden;
+    opacity: 1;
+  }
+
+  a {
+    padding: .2rem;
+    font-weight: normal;
+    font-size: 1.125rem;
+    font-family: unquote(map-get($headingtype, font-family));
+    color: $headingColour;
+  }
+
+  a:hover {
+    color: $focusColour;
+  }
+  &--social a {
+    display: inline-block;
+    line-height: 1;
+  }
+  &--social a:hover {
+    display: inline-block;
+    line-height: 1;
+    background-image: none !important;
+  }
+}
+
+.menu_open {
+  visibility: visible;
+  opacity: 1;
+  // right: 0;
+}
+
+.menu_closed {
+  visibility: hidden;
+  opacity: 0;
+  // position: absolute;
+  @include breakpoint('break-3') {
+    visibility: visible;
+    position: inherit;
+    opacity: 1;
+  }
+}
+
+.menu-toggle {
+  text-align: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  @include breakpoint('break-3') {
+    display: none;
+  }
+}
+
+.headercontent {
+  //transition: 0.3s;
+  margin: 0px auto;
+  width: 90%;
+  overflow: hidden;
+  padding: 1rem 1rem 1rem 1rem;
+  @include breakpoint('break-3') {
+    margin: 0px auto;
+    min-width: 240px;
+    width: 80%;
+    flex: unset;
+    text-align: center;
+  }
+}
+
+.headersubline {
+  @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.5, $below: 0.0, $breakpoint: all);
+  color: $focusColour2;
+  @include breakpoint('break-3') {
+    @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.5, $below: 0.5, $breakpoint: 'all');
+    margin: 1rem 0rem 1rem 0rem;
+  }
+}
+
+.sidebarbuttons {
+  margin-bottom: 0rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  @include breakpoint('break-3') {
+    margin-bottom: 3rem;
+    position: relative;
+    display: none;
+  }
+}
+
+.sbbutton2 {
+  text-align: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+}
+
+.headerimg {
+  @include breakpoint('break-0') {
+    display: none;
+  }
+  @include breakpoint('break-2') {
+  width: 80px;
+  height: 80px;
+  float: left;
+  display: block;
+  }
+  @include breakpoint('break-3') {
+    width: 125px;
+    height: 125px;
+    float: none;
+    margin: 0px auto;
+    display: block;
+  }
+}
+
+.aboutintro {
+  text-align: center;
+}
+
+.aboutimage {
+  -webkit-border-radius: 50%;
+  width: 100%;
+}
+
+
 .logo {
-  display: inline-block;
-  line-height: 0;
-  max-height: 4rem;
-  @include flexbox;
-  @include align-items(center);
-  img {
-    max-height: 5rem;
+  // max-height: 4rem;
+  // @include breakpoint('break-0') {
+  //   margin: 0;
+  // }
+  margin: 0;
+  @include breakpoint('break-3') {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   a{
@@ -177,6 +385,17 @@ body {
     color: $focusColour;
     background-image: none;
   }
+}
+
+.h_subunderline_header {
+    background: $focusColour;
+    margin: 0px;
+    height: 2px;
+    width: 30px;
+    display: block;
+    @include breakpoint('break-3') {
+      margin: 0px auto;
+    }
 }
 
 .logopre{
@@ -208,6 +427,27 @@ body {
     background-image: none !important;
   }
 }
+
+.lightswitch {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 0.75rem;
+
+  a {
+    padding: .2rem;
+    font-weight: normal;
+    font-size: 1.125rem;
+    font-family: unquote(map-get($headingtype, font-family));
+    color: $headingColour;
+  }
+
+  a:hover {
+    color: $focusColour;
+    background-image: none;
+  }
+}
+
+// ----
 
 .shortabout {
   margin-bottom: 3rem;
@@ -380,14 +620,6 @@ body {
   @include sassline($fontsize: zeta, $font: $bodytype, $lineheight: 1.6, $below: 0, $breakpoint: all);
 }
 
-.aboutintro {
-  text-align: center;
-}
-
-.aboutimage {
-  -webkit-border-radius: 50%;
-}
-
 .category_heading{
   margin: 3rem 0rem 1.5rem 0rem;
   padding-bottom: 1rem;
@@ -444,6 +676,7 @@ body {
 .footer {
   background: $footer;
   color: $captionColour;
+  margin: 4rem -5rem -5rem -5rem;
   a {
     color: $captionColour;
     background-image: none;
@@ -499,24 +732,31 @@ body {
   margin-bottom: 3rem;
 }
 
-.menu {
-
-}
-
 // Main content
 .main {
   // @include flexbox;
   // @include flex-direction(column);
-  @include flex(1, 0, auto);
-  @include justify-content(flex-start);
-  margin-bottom: 1.6rem;
-  @include breakpoint(break-1) {
-    @include justify-content(center);
-    @include flex-direction(row);
+  // @include flex(1, 0, auto);
+  // @include justify-content(flex-start);
+  width: 90%;
+  padding: 1rem;
+  margin: 0px auto;
+  @include breakpoint('break-3') {
+    width: 70%;
+    padding: 5rem;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: 30%;
   }
+  // @include breakpoint(break-1) {
+  //   //@include justify-content(center);
+  //   //@include flex-direction(row);
+  //
+  // }
 }
 
-.header,
+
 .feature,
 .footer {
   @include flex(0, 0, auto);
@@ -537,8 +777,10 @@ body {
   list-style: none;
   &--nav {
     overflow: hidden;
-    margin-bottom: var(--listHeight, 0);
-    margin-right: 1rem;
+    margin-top: 4rem;
+    @include breakpoint(break-3) {
+      margin-top: 0;
+    }
   }
   .item--post {
     margin-left: 0;
@@ -566,9 +808,8 @@ body {
 
 .item {
   &--nav {
-    @include breakpoint(break-1) {
-      margin-left: .4rem;
-      display: inline-block;
+    @include breakpoint(break-0) {
+      text-align: center;
     }
     &:first-of-type {
       margin-left: 0;
