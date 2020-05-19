@@ -18,7 +18,7 @@
     {% include site-favicons.html %}
     {% include site-before-start.html %}
   </head>
-  <body class="layout-{{ page.layout }}{% if page.title %}  {{ page.title | slugify }}{% endif %}">
+  <body>
     {% include site-progress.html %}
     {% include site-cookiepolicy.html %}
     {% include site-icons.svg %}
@@ -27,9 +27,9 @@
 
       {{ content }}
 
-    {% include site-footer.html %}
-    </main>
 
+    </main>
+    {% include site-footer.html %}
     {% include site-before-end.html %}
   </body>
 

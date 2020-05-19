@@ -1,5 +1,21 @@
 <!-- Overwrite this file with code you want before the closing body tag -->
 <script type="text/javascript">
+  // jQuery(document).ready(function() {
+  //
+  //   var btn = $('#projects_menu');
+  //   btn.on('click', function(e) {
+  //     e.preventDefault();
+  //     // collapseNav();
+  //   });
+  //
+  //   var btn = $('#contact_menu');
+  //   btn.on('click', function(e) {
+  //     e.preventDefault();
+  //     //  collapseNav();
+  //   });
+  // });
+
+
 // day & night mode
 function brightnnight() {
   let currentMode = document.documentElement.getAttribute('data-theme');
@@ -7,12 +23,10 @@ function brightnnight() {
 		document.documentElement.setAttribute('data-theme', 'light');
 		window.localStorage.setItem('theme', 'light');
     document.getElementById('style').setAttribute('href', '/assets/styles.css');
-    collapseNav()
   } else {
 		document.documentElement.setAttribute('data-theme', 'dark');
     document.getElementById('style').setAttribute('href', '/assets/styles_dark.css');
 		window.localStorage.setItem('theme', 'dark');
-    collapseNav()
 	}
 }
 </script>
@@ -102,5 +116,10 @@ function brightnnight() {
       dislikecookies();
     }
   }
+
+  function scrollToTop() {
+    $(window).scrollTop(0);
+  }
+
   onInit();
 </script>

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div id="projects" class="shortabout typeset">
+  <h4>Human-Ready Future</h4>
+  <div class="h_underline"></div>
+  <p>
+    {{ content }}
+  </p>
+
+<article class="article  article--post  content  typeset">
+    {% for page in site.categories.humanreadyfuture %}
+    <ul class="list  list--posts">
+        <li class="item  item--category">
+        <div class="heading">
+          <h2><a href="{{ site.baseurl }}{{ page.url }}">{{page.title}}</a></h2>
+        </div>
+        <div class="meta">
+          <small class="small post-meta">
+            {% assign date_format = site.date_format | default: "%d %b %Y" %}
+            <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>
+          </small>
+
+          <small class="small post-meta">
+            {% include read-time.html %}
+          </small>
+        </div>
+      </li>
+    </ul>
+    {% endfor %}
+</article>
+</div>
+      <!-- no pagination in the begining of the project -->
+      <!-- {% include post-pagination.html %} -->

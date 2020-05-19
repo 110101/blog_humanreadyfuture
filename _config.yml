@@ -43,7 +43,7 @@ permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more -->
 timezone: Europe/London
 highlighter: rouge
-title: "Human-Ready Future"
+title: "Hey, Malte."
 url: "https://humanreadyfuture.com"
 baseurl: ""
 
@@ -54,11 +54,11 @@ collections:
     description: projects
     output: true
   posts:
-    title: Human-Ready Future
-    description: thoughts about tech & society
+    title: Thoughts
+    description: Thoughts on tech & society
     output: true
     feature_text: |
-      Welcome to Human-Ready Future
+      Hey, Malte.
     feature_image: "/assets/default-social-image.png"
 
 # 6. Jekyll sitemap settings
@@ -84,7 +84,7 @@ favicons: # size: path
 
 navigation_footer:
 - title: Crafted with &#9829; in Munich | Europe
-  copyright: 110101 Lab - Malte K.
+  copyright: 110101 Lab - Malte Kassen
 
 social_links:
   Twitter: https://twitter.com/110101lab

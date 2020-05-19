@@ -1,6 +1,7 @@
 ---
-title: Thoughts on
+title: Thoughts on ...
 layout: categories
+collectionpage: posts
 pagination:
   enabled: true
 ---

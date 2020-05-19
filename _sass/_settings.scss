@@ -30,7 +30,7 @@ $maxwidths: (
 
 
 // Background colours
-$backgroundColour: #fcfcfc !default;
+$backgroundColour: #fafafa !default; //f8f8f8
 $codeBackgroundColour: #eaeaea !default;
 
 // Text colours
@@ -38,12 +38,25 @@ $textColour: #444444 !default;
 $headingColour: #000000 !default;
 $focusColour: #00C7AC !default;
 $focusColour2: #5F007C !default;
+$focusColour3: #5F007C !default; // header sub headlibe
 $captionColour: #a8adac !default;
 $captionColour2: #dfdfdf;
-$footer: #f6f7f6 !default;  // f3f2f0
-$footer2: #D9D9D9 !default;
+$footer: #ffffff !default;  // f3f2f0
 $borderColorHeader: #EFEFEF;
 $cookie: #05000d !default;
+
+// // Text colours
+// $textColour: #444444 !default;
+// $headingColour: #000000 !default;
+// $focusColour: #00C7AC !default;
+// $focusColour2: #5F007C !default;
+// $focusColour3: #999999 !default;
+// $captionColour: #a8adac !default;
+// $captionColour2: #dfdfdf;
+// $footer: #f6f7f6 !default;  // f3f2f0
+// $borderColorHeader: #EFEFEF;
+// $cookie: #05000d !default;
+
 
 // Typography
 $bodytype: (
