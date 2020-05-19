@@ -14,7 +14,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && apk add nodejs jpegoptim jpeg pngquant gifsicle && bundle install && bundle update && jekyll build"
+        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && apk add nodejs jpegoptim jpeg pngquant gifsicle && bundle update && bundle exec && jekyll build"
     - uses: chrislennon/action-aws-cli@v1.1
     - name: push site to s3
       run: aws s3 sync _site/ s3://${{ secrets.S3_BUCKET }} --delete --metadata-directive REPLACE  --cache-control max-age=60,public  && aws cloudfront create-invalidation --distribution-id ${{ secrets.CF_ID }} --paths "/*"
