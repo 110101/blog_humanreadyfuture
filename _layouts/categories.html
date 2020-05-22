@@ -18,23 +18,29 @@ pagination:
   {% include nav-share.html %}
   </div> -->
   {% if paginator.posts %}
-    <section class="section  typeset">
+    <section class="section shortabout ypeset">
 
       {% for category in site.categories %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
-    <p></p>
-
-    <h3 class="category-head">{{ category_name }}</h3>
-    <a name="{{ category_name | slugize }}"></a>
+    <h4>{{ category_name }}</h4>
+    <div class="h_underline"></div>
     {% for post in site.categories[category_name] %}
-    <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-    </article>
+        <article class="archive-item">
+          <div class="archive"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
+          <div class="meta">
+            <small class="small post-meta">
+              {% assign date_format = site.date_format | default: "%d %b %Y" %}
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="time">{{ post.date | date: date_format }}</time>
+            </small>
+
+            <small class="small post-meta">
+              {% include read-time.html %}
+            </small>
+        </article>
+      {% endfor %}
+      </div>
     {% endfor %}
-  </div>
-{% endfor %}
       <!-- no pagination in the begining of the project -->
       <!-- {% include post-pagination.html %} -->
     </section>

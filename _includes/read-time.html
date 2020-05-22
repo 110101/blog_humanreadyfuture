@@ -2,7 +2,7 @@
 {% if paginator.posts %}
   {% assign words = page.content | strip_html | number_of_words %}
   {% if words < 180 %}
-    &nbsp;&middot;&nbsp; less than a monute read time
+    &nbsp;&middot;&nbsp; less than a minute read time
   {% elsif words < 360 %}
     &nbsp;&middot;&nbsp; 1 minute read time
   {% else %}
@@ -11,7 +11,7 @@
 {% else %}
   {% assign words = content | strip_html | number_of_words %}
   {% if words < 180 %}
-    &nbsp;&middot;&nbsp; less than a monute read time
+    &nbsp;&middot;&nbsp; less than a minute read time
   {% elsif words < 360 %}
     &nbsp;&middot;&nbsp; 1 minute read time
   {% else %}
