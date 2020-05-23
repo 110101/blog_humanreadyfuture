@@ -1,6 +1,7 @@
 # ignore build folder in this repo
 _site/
 .sass-cache/
+.jekyll-cache/
 scripts/
 
 # ignore single files
