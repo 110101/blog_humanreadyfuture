@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 
-gem "jekyll", "~> 3.8.6"
+gem "jekyll", "~> 4.0.1"
 # gem 'github-pages'
 # If you have any plugins, put them here!
 
