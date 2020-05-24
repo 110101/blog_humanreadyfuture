@@ -18,11 +18,12 @@ pagination:
   {% include nav-share.html %}
   </div> -->
   {% if paginator.posts %}
-    <section class="section shortabout ypeset">
-
+  <section class="section shortabout typeset">
+    <div id="{{ page.category | downcase }}">
       {% for category in site.categories %}
   <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="{{ category_name | downcase }}"></div>
     <h4>{{ category_name }}</h4>
     <div class="h_underline"></div>
     {% for post in site.categories[category_name] %}
@@ -43,6 +44,7 @@ pagination:
     {% endfor %}
       <!-- no pagination in the begining of the project -->
       <!-- {% include post-pagination.html %} -->
+      </div>
     </section>
   {% else %}
 
