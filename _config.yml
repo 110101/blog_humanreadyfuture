@@ -43,7 +43,7 @@ permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
 excerpt_separator: <!-- more -->
 timezone: Europe/London
 highlighter: rouge
-title: "Hello Malte."
+title: "Hello, I'm Malte."
 url: "https://hellomalte.com"
 baseurl: ""
 
