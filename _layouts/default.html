@@ -7,7 +7,7 @@
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
       <title>{{ site.title }}</title>
     {% else %}
-      <title>{{ site.title }} - {{ page.title }}</title>
+      <title>{{ site.title }}</title>
     {% endif %}
     <meta name="description" content="{{ collectiondata.description }}">
     <link rel="stylesheet" href="/assets/css/all.css">
