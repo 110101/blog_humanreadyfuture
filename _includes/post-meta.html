@@ -14,7 +14,12 @@
  </small>
 <small class="small post-meta">
   {% assign date_format = site.date_format | default: "%d %b %Y" %}
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>
+  {%- if page.date_create -%}
+    <time datetime="{{ page.date_create | date_to_xmlschema }}" class="time">{{ page.date_create | date: date_format }}</time>
+  {%- else -%}
+    <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>
+  {%- endif -%}
+
 </small>
 
 <small class="small post-meta">

@@ -1,6 +1,7 @@
 ---
 title: Mapping the coolest areas of a city
 layout: post
+date_create: 2019-10-23 20:00:00 +000
 categories:
 - Data
 ---
