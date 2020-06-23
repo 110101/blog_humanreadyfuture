@@ -1,2 +1,1 @@
-I am Malte, a tech product strategist/product manager, with a background in engineering. My passion is to create new products that make a difference for people.
-I think and write about the interaction between technology, society and ethics and how a _human-ready_ future could emerge.
+I am Malte, a tech product strategist/product manager, with a background in engineering. My passion is to create new products that make a difference in everyday life. I think and write about the interaction between technology, society and ethics and how a _human-ready future_ can be achieved.

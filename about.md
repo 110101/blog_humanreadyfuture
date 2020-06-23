@@ -7,7 +7,11 @@ layout: about
   <div class="h_underline"></div>
 </div>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Hello, I am Malte, a tech product strategist/product manager. My curiosity to understand how things work and the believe that the future will be better with the help of technology drive my enthusiasm for technology.
+
+As a product strategist/manager I can put my knowledge and talents best at work, where user/stakeholder needs, technology and business meets to create new products that make a difference.
+
+I am a graduated electrical engineer with roots in hardware development. Over the time I extended my skills to software development, business and product to have a more holistic view onto tech as I believe that technology alone doesn't fix things, people do fix things. In conclusion products can only be truly great when they support the users as well as the society and its ethical values. <a href="/humanreadyfuture/">#humanreadyfuture</a>
 
 <div class="subabout">
   <div class="icontitle">

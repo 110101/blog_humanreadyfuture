@@ -349,6 +349,11 @@ body {
     margin: 0px auto;
     display: block;
   }
+
+  a:hover {
+    background: none;
+    text-decoration: none;
+  }
 }
 
 .aboutintro {
@@ -546,7 +551,7 @@ body {
 
 .fixedproject {
   padding: 1.5rem;
-  margin: 3rem 0rem 3rem 0rem;
+  margin: 5rem 0rem 5rem 0rem;
   border: 1px solid $codeBackgroundColour;
 
   h2 {
@@ -688,7 +693,7 @@ body {
 .contactflex {
   @include flexbox;
   @include flex-direction(column);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   @include breakpoint(break-3) {
     @include flex-direction(row);
   }
