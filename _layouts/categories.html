@@ -30,14 +30,8 @@ pagination:
         <article class="archive-item">
           <div class="archive"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></div>
           <div class="meta">
-            <small class="small post-meta">
-              {% assign date_format = site.date_format | default: "%d %b %Y" %}
-              <time datetime="{{ post.date | date_to_xmlschema }}" class="time">{{ post.date | date: date_format }}</time>
-            </small>
-
-            <small class="small post-meta">
-              {% include read-time.html %}
-            </small>
+            {% include post-meta.html %}
+          </div>
         </article>
       {% endfor %}
       </div>

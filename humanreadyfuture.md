@@ -6,4 +6,6 @@ pagination:
   enabled: true
 ---
 
-human-ready Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+As an engineer and tech geek i am convinced of the opportunities created by new technology. But I am also worried about the risks that arise, if technology is not used with good intentions. Just think of Orwell's 1984, look at the history where tech was used in a bad way or today where it's more relevant than ever. Most recent examples are the political power of social networks or biased facial recognition algorithms. To prevent negative consequences and to achieve a human-ready future a code of ethics must be used established for the development of new technologies.
+</br>
+{ Views are my own.}

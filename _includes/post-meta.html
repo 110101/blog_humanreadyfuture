@@ -1,12 +1,14 @@
 {% if page.categories %}
   {% capture categories %}
     {% for category in page.categories %}
-      <span class="label  label--category"><a href="{{ site.baseurl }}/categories/#{{ category | downcase }}">{{ category }}</a></span>{% if forloop.last == false %},{% endif %}
+      <!-- <span class="label  label--category"><a href="{{ site.baseurl }}/categories/#{{ category | downcase }}">{{ category }}</a></span>{% if forloop.last == false %},{% endif %} -->
+      <span class="label  label--category">{{ category }}</span>{% if forloop.last == false %},{% endif %}
     {% endfor %}
   {% endcapture %}
  {% elsif page.category %}
   {% capture categories %}
-    <span class="label  label--category"><a href="{{ site.baseurl }}/categories/#{{ page.category | downcase }}">{{ page.category }}</a></span>
+    <!-- <span class="label  label--category"><a href="{{ site.baseurl }}/categories/#{{ page.category | downcase }}">{{ page.category }}</a></span> -->
+    <span class="label  label--category">{{ page.category }}</span>
   {% endcapture %}
  {% endif %}
  <small class="small post-meta">
@@ -19,7 +21,6 @@
   {%- else -%}
     <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>
   {%- endif -%}
-
 </small>
 
 <small class="small post-meta">

@@ -16,14 +16,7 @@ layout: default
           <h2><a href="{{ site.baseurl }}{{ page.url }}">{{page.title}}</a></h2>
         </div>
         <div class="meta">
-          <small class="small post-meta">
-            {% assign date_format = site.date_format | default: "%d %b %Y" %}
-            <time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date: date_format }}</time>
-          </small>
-
-          <small class="small post-meta">
-            {% include read-time.html %}
-          </small>
+          {% include post-meta.html %}
         </div>
       </li>
     </ul>
