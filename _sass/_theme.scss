@@ -574,7 +574,10 @@ body {
 
   .inner_fixedproject {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    @include breakpoint('break-4') {
+      flex-direction: row;
+    }
   }
 
   .inner_text {
@@ -595,7 +598,6 @@ body {
      background-position: 0 95%;
      background-repeat: repeat-x;
      background-size: 100% 0.15rem;
-     // padding: 0rem 0rem 0.15rem 0rem;
   }
 }
 
@@ -787,10 +789,6 @@ body {
 
 // Main content
 .main {
-  // @include flexbox;
-  // @include flex-direction(column);
-  // @include flex(1, 0, auto);
-  // @include justify-content(flex-start);
   width: 90%;
   padding: 1rem;
   margin: 0px auto;
@@ -802,13 +800,7 @@ body {
     margin-bottom: 0px;
     margin-left: 30%;
   }
-  // @include breakpoint(break-1) {
-  //   //@include justify-content(center);
-  //   //@include flex-direction(row);
-  //
-  // }
 }
-
 
 .feature,
 .footer {

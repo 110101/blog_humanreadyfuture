@@ -5,18 +5,6 @@ pagination:
 ---
 
 <article class="article  article--post  content  typeset">
-  <!-- <div class="heading post">
-    <h1>{{ page.title }}</h1>
-  </div>
-  <div class="meta">
-    {% include post-meta.html %}
-  </div>
-  <div class="h_underline"></div>
-  <div class="text-post">
-  {{ content }}
-
-  {% include nav-share.html %}
-  </div> -->
   {% if paginator.posts %}
   <section class="section shortabout typeset">
     <div id="{{ page.category | downcase }}">
@@ -41,7 +29,6 @@ pagination:
       </div>
     </section>
   {% else %}
-
     <section class="section  typeset">
       <div id="else"></div>
       <ul class="list  list--posts">
@@ -53,12 +40,10 @@ pagination:
               </div>
               {% include post-meta.html %}
               {{ page.excerpt | markdownify | truncatewords: 300 }}
-
             </article>
           </li>
         {% endfor %}
       </ul>
     </section>
   {% endif %}
-
 </article>
