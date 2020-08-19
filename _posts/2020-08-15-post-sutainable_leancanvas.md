@@ -1,7 +1,7 @@
 ---
 title: Thinking sustainable and lean business canvas
 layout: post
-date_create: 2025-05-05
+date_create: 2020-08-15
 categories:
 - humanreadyfuture  
 ---
