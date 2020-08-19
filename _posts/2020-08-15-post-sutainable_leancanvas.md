@@ -15,4 +15,4 @@ I added a single extra box to the lean business canvas to make the environmental
 
 <a href="/assets/content/LeanCanvas_EI.pdf" target="_blank">Download sustainability lean business canvas</a>
 
-Feel free to use the adapted lean canvas (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">creative commons</a>).
+Feel free to use and adapted lean canvas (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">creative commons</a>). Based on the original Lean Business Canvas by <a href="https://www.strategyzer.com/canvas/business-model-canvas" target="_blank">Strategyzer</a>.
