@@ -1,5 +1,5 @@
 ---
-title: Thinking sustainable and lean business canvas
+title: Sustainability And Lean Business Canvas
 layout: post
 date_create: 2020-08-15
 categories:
