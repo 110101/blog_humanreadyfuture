@@ -1,25 +1,13 @@
 <header class="header">
-    <div id="zero" class="sidebarbuttons">
-      <a class="sbbutton2" onclick="headersize()">
-        {% include icon.html id="nav" title="Menu" %}
-      </a>
-    </div>
+
     <div class="headercontent">
-      <div class="headerimg">
-        <a href="/"><img class="aboutimage" src="/assets/postimages/1m1a0l1t0e1.jpg"></img></a>
-      </div>
-      <div class="headertext">
         <div class="logo">
           <a href="/"><span class="logostatem">Malte </span><span class="logopre">Kassen</span><span></span></a>
         </div>
-      <div class="h_subunderline_header"></div>
-      <div class="headersubline"><p>tech product strategist/manager</p></div>
-      </div>
-      <nav class="menu_toggle menu_closed">
-        <div class="menu-toggle" onclick="headersize()">
-          <i class="fa fa-times" aria-hidden="true"></i>
-          <!-- {% include icon.html id="times" title="Menu" %} -->
-        </div>
+      <!-- <div class="h_subunderline_header"></div> -->
+
+      <div class="menubox">
+        <nav class="menu_toggle menu_closed">
         <ul class="list  list--nav">
             <li class="item item--nav">
                 {% if page.url == "/index.html" %}
@@ -38,29 +26,59 @@
                 <a href="/search/">Search</a>
             </li>
           </ul>
+          </div>
           <div class="lightswitch">
             <a onclick="brightnnight()"><i class="fas fa-adjust"></i></a>
           </div>
-          <div class="messagebox">
+          <div id="zero" class="sidebarbuttons">
+            <a class="sbbutton2" onclick="headersize()">
+              {% include icon.html id="nav" title="Menu" %}
+            </a>
+          </div>
+          <div class="large_menu is_closed">
+            <div class="menu-toggle" onclick="headersize()">
+              <i class="fa fa-times" aria-hidden="true"></i>
+              <!-- {% include icon.html id="times" title="Menu" %} -->
+            </div>
+              <ul class="lmenu_list">
+                  <li class="lmenu_list--item">
+                      {% if page.url == "/index.html" %}
+                        <a id="projects_menu" onclick="headersize()" href="#projects">Thoughts</a>
+                      {% else %}
+                        <a href="{{ site.baseurl }}/#projects">Thoughts</a>
+                      {% endif %}
+                  </li>
+                  <li class="lmenu_list--item">
+                        <a href="/projects/">Projects</a>
+                  </li>
+                  <li class="lmenu_list--item">
+                    <a href="/about/">About</a>
+                  </li>
+                  <li class="lmenu_list--item">
+                      <a href="/search/">Search</a>
+                  </li>
+                  <li class="lmenu_list--item2">
+                      <a class="large_menu_lightswitch" onclick="brightnnight()"><i class="fas fa-adjust"></i></a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <!-- <div class="messagebox">
             <a href="{{ site.baseurl }}/humanreadyfuture/">#humanreadyfuture</a>
           </div>
-          {% include nav-social.html %}
-        </div>
-
+          {% include nav-social.html %} -->
   <script type="text/javascript">
     // header side
     function headersize(){
-      const body = document.getElementById('body')
-      const menu = document.querySelector('.menu_toggle')
-      const header = document.querySelector('.header')
+      const menu = document.querySelector('.large_menu')
 
       if (document.documentElement.clientWidth < 800) {
-        if (menu.classList.contains('menu_closed') == true) {
-          menu.classList.remove('menu_closed');
-          menu.classList.add('menu_open');
+        if (menu.classList.contains('is_closed') == true) {
+          menu.classList.remove('is_closed');
+          menu.classList.add('is_opened');
         } else {
-          menu.classList.remove('menu_open');
-          menu.classList.add('menu_closed');
+          menu.classList.remove('is_opened');
+          menu.classList.add('is_closed');
         }
       }
     }
