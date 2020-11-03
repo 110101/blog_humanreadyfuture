@@ -4,7 +4,7 @@ layout: about
 ---
 <div class="shortabout typeset">
   <h4>About</h4>
-  <div class="h_underline"></div>
+  <div class="h_underline_main"></div>
 </div>
 
 Hello, I am Malte, a tech product strategist/product manager. My curiosity to understand how things work and the believe that the future will be better with the help of technology drive my passion for new technologies.

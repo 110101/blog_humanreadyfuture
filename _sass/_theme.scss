@@ -37,7 +37,7 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: $focusColour3;
+    background-color: $focusColour4;
     visibility: hidden;
     z-index: 99999;
 }
@@ -353,8 +353,8 @@ body {
 }
 
 .headerimg {
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     float: none;
     margin: 0px auto;
     margin-bottom: 1.5rem;
@@ -374,7 +374,7 @@ body {
 .aboutimage {
   -webkit-border-radius: 50%;
   width: 100%;
-  border: 2px solid $focusColour;
+  border: 1px solid $focusColour;
 }
 
 
@@ -395,7 +395,7 @@ body {
   }
 
   a:hover {
-    color: $focusColour;
+    color: $focusColour3;
     background-image: none;
   }
 }
@@ -498,7 +498,7 @@ body {
   }
 
   a:hover {
-    color: $focusColour;
+    color: $focusColour3;
     background-image: none;
   }
 }
@@ -518,8 +518,20 @@ body {
   }
 }
 
+.shortabout_intro {
+  p {
+    text-align: center;
+  }
+}
+
+.texthigh {
+  color: $focusColour3;
+  font-weight: bold;
+}
+
 .about {
   margin-bottom: 1rem;
+  overflow: hidden;
 
   h4 {
     font-weight: bold;
@@ -563,10 +575,18 @@ body {
   }
 }
 
+.h_underline_main {
+  background: $focusColour3;
+  margin-top: 1.5rem;
+  height: 1px;
+  width: 100%;
+  display: block;
+}
+
 .h_underline {
   background: $focusColour3;
   margin-top: 1.5rem;
-  height: 2px;
+  height: 1px;
   width: 100px;
   display: block;
 }
@@ -813,7 +833,7 @@ body {
     margin-top: 1rem;
 
     a:hover {
-      color: $focusColour2;
+      color: $focusColour3;
       background-image: none;
     }
   }
@@ -920,6 +940,10 @@ body {
 
   &--item {
     margin: 1rem 0rem 1rem 0px;
+
+    a:hover {
+      color: $focusColour3;
+    }
   }
 
   &--item2 {
