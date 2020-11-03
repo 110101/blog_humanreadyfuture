@@ -1,21 +1,10 @@
 <div class="shortabout typeset">
   <div>
 
-  <div>
+  <div class="shortabout_intro">
     <div class="headerimg">
       <a href="/"><img class="aboutimage" src="/assets/postimages/1m1a0l1t0e1.jpg"></img></a>
     </div>
-    <!-- <h4 class="shortabout">Hey and Hello!</h4>
-    <div class="h_underline"></div> -->
-    <!-- <div class="headertext">
-      <!-- <div class="logo">
-        <a href="/"><span class="logostatem">Malte </span><span class="logopre">Kassen</span><span></span></a>
-      </div> -->
-    <!-- <div class="logo">Hey and Hello!</div>
-    <div class="h_subunderline_header"></div> -->
-    <!-- <div class="headersubline"><p>tech product strategist/manager</p></div>
-    </div> -->
-  </div>
     {% capture my_include %}{% include_relative shortabout.md %}{% endcapture %}
     {{ my_include | markdownify }}
   </div>
@@ -25,4 +14,5 @@
   <div class="nav_shortabout">
   {% include nav-social.html %}
   </div>
+</div>
 </div>
