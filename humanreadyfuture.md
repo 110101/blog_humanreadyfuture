@@ -10,4 +10,4 @@ As an engineer and tech geek i am convinced of the opportunities created by new 
 </br>
 I think and write about the interaction between technology, society and a code of ethics for the development of new technologies.
 </br>
-{ Views are my own.}
+<div class="thoughts_subline_hrf">{ Views are my own.}</div>
