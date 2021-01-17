@@ -70,7 +70,7 @@ defaults:
       image: "/assets/default-social-image.png" # Default image for sharing
 
 repo: "https://github.com/110101/blog_humanreadyfuture"
-email: "malte.k@outlook.com"
+email: "mail@hellomalte.com"
 
 favicons: # size: path
   16: '/assets/favicons/logo@16px.png'

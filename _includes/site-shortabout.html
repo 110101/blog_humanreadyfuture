@@ -5,11 +5,11 @@
     <div class="headerimg">
       <a href="/"><img class="aboutimage" src="/assets/postimages/1m1a0l1t0e1.jpg"></img></a>
     </div>
-    {% capture my_include %}{% include_relative shortabout.md %}{% endcapture %}
+    {% capture my_include %}{% include_relative /_content/shortabout.md %}{% endcapture %}
     {{ my_include | markdownify }}
   </div>
   <div class="messagebox">
-    <a href="{{ site.baseurl }}/humanreadyfuture/">#humanreadyfuture</a>
+    <a id="hrf_bttn1" onclick="headersize()" href="#hrf">#humanreadyfuture</a>
   </div>
   <div class="nav_shortabout">
   {% include nav-social.html %}

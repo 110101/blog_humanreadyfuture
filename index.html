@@ -6,12 +6,22 @@ pagination:
 ---
 
 {% include site-shortabout.html %}
-<!-- {% include site-fixedproject.html %} -->
-<div id="projects" class="shortabout typeset">
-  <h4>Thoughts</h4>
-  <div class="h_underline_main"></div>
-  <div class="thoughts_subline">
-    <small>Views are my own.</small>
+<div id="projects">
+  <div class="shortabout typeset">
+    <h4>Thoughts</h4>
+    <div class="h_underline_main"></div>
+  </div>
+  <div class="subabout">
+    <div id="hrf"></div>
+    <p><span class="text_highlight_color_bold">human-ready future:</span>
+    As an engineer and tech enthusiast I am convinced of the opportunities created by new technology. But I am also worried about the risks that arise, if technology is not used with good intentions. Just think of Orwell's 1984, look at the history where tech was used in a bad way or today where it's more relevant than ever. Most recent examples are the political power of social networks or biased facial recognition algorithms.
+    </br>
+    I think and write about the interaction between technology, society and a code of ethics for the development of new technologies.
+    </br>
+    </p>
+    <div class="thoughts_subline">
+      <small>{ Views are my own. }</small>
+    </div>
   </div>
 </div>
 {% if paginator.posts %}
@@ -20,16 +30,15 @@ pagination:
       {% for page in paginator.posts %}
         <li class="item  item--post">
           <article class="article  article--post">
-            <div class="heading">
+            <div class="heading post">
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             </div>
             <div class="meta">
               {% include post-meta.html %}
             </div>
-            <div class="text">
-              {{ page.excerpt | markdownify | truncatewords: 300 }}
+            <div class="text-post">
+              {{ page.excerpt | markdownify | truncatewords: 140 }}
             </div>
-
             <a href="{{ site.baseurl }}{{ page.url }}">read more</a>
           </article>
         </li>
@@ -49,11 +58,50 @@ pagination:
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             </div>
             {% include post-meta.html %}
-            {{ page.excerpt | markdownify | truncatewords: 300 }}
-
+            {{ page.excerpt | markdownify | truncatewords: 140 }}
           </article>
         </li>
       {% endfor %}
     </ul>
   </section>
 {% endif %}
+
+<div class="fixedproject typeset highlight">
+  <div class="inner_fixedproject">
+    {% include figure.html image="/assets/playlist_logo_m.jpg" max-width="250px"%}
+    <p class="inner_text">
+      I collected inspiring, food for thought podcasts or just good Interviews and talks about product and tech ethics on my <a href="https://open.spotify.com/playlist/4bX7ethycbtwsmT0d0UIwx?si=uS7tD8AtSlSSOv6e0mTGHQ" target="_blank">Spotify</a> and <a href="https://youtube.com/playlist?list=PLZSYQkdvr21m91l5lbngGUe0WhdrzbbPh" target="_blank">Youtube</a> Playlists.
+      </br>
+      Primarily just for me to keep up with all the great content I come across, but maybe it is interesting for you as well.
+    </p>
+  </div>
+</div>
+
+<div id="about">
+  <div class="shortabout typeset">
+    <h4>About</h4>
+    <div class="h_underline_main"></div>
+  </div>
+  <div class="subabout typeset">
+    <p>
+      {% capture my_include %}{% include_relative /_content/about.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    <div class="icontitle">
+      <div class="hicon"><img height="25" width="25" src="/assets/postimages/focusicon.png"></div>
+      <h6>Focus</h6>
+      <div class="h_subunderline"></div>
+    </div>
+      {% capture my_include %}{% include_relative /_content/focus.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+
+    <div class="icontitle">
+      <div class="hicon"><img height="25" width="25" src="/assets/postimages/progressicon.png"></div>
+      <h6>Approach</h6>
+      <div class="h_subunderline"></div>
+    </div>
+      {% capture my_include %}{% include_relative /_content/approach.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+  </div>
+</div>
+{% include site-fixedproject.html %}
+{% include site-inlinecontact.html %}

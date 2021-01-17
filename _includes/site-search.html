@@ -17,8 +17,8 @@
             searchInput: document.getElementById('contact-form'),
             resultsContainer: document.getElementById('results-container'),
             json: '{{ "/assets/script/search.json" | relative_url }}',
-            searchResultTemplate: '<div class="typeset"><div class="heading"><a href="{url}"><h2>{title}</h2></a></div><div class="meta"><small class="small post-meta">{date}</small></div><div class="textcategories"><p>{excerpt}</p></div></div>',
-            noResultsText: 'Nichts gefunden. Probiere es mit einem andren Suchbegriff.',
+            searchResultTemplate: '<div class="typeset"><div class="heading"><a href="{url}"><h2>{title}</h2></a></div><div class="meta"><small class="small post-meta">{date}</small></div><div class="textcategories"><p>{excerpt}</p></div></div><div class="h_underline"></div>',
+            noResultsText: 'Nothing found. Please try it again.',
             limit: 30,
             fuzzy: false,
             exclude: []

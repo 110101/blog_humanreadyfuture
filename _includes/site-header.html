@@ -1,11 +1,8 @@
 <header class="header">
-
     <div class="headercontent">
         <div class="logo">
           <a href="/"><span class="logostatem">Malte </span><span class="logopre">Kassen</span><span></span></a>
         </div>
-      <!-- <div class="h_subunderline_header"></div> -->
-
       <div class="menubox">
         <nav class="menu_toggle menu_closed">
         <ul class="list  list--nav">
@@ -17,10 +14,14 @@
                 {% endif %}
             </li>
             <li class="item item--nav">
-                  <a href="/projects/">Projects</a>
+              {% if page.url == "/index.html" %}
+                <a id="about_menu" onclick="headersize()" href="#about">About</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/#about">About</a>
+              {% endif %}
             </li>
             <li class="item item--nav">
-              <a href="/about/">About</a>
+                  <a href="/projects/">Projects</a>
             </li>
             <li class="item item--nav">
                 <a href="/search/">Search</a>
@@ -49,10 +50,14 @@
                       {% endif %}
                   </li>
                   <li class="lmenu_list--item">
-                        <a href="/projects/">Projects</a>
+                    {% if page.url == "/index.html" %}
+                      <a id="about_menu" onclick="headersize()" href="#about">About</a>
+                    {% else %}
+                      <a href="{{ site.baseurl }}/#about">About</a>
+                    {% endif %}
                   </li>
                   <li class="lmenu_list--item">
-                    <a href="/about/">About</a>
+                        <a href="/projects/">Projects</a>
                   </li>
                   <li class="lmenu_list--item">
                       <a href="/search/">Search</a>

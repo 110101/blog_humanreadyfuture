@@ -39,7 +39,7 @@ pagination:
                 <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
               </div>
               {% include post-meta.html %}
-              {{ page.excerpt | markdownify | truncatewords: 300 }}
+              {{ page.excerpt | markdownify | truncatewords: 140 }}
             </article>
           </li>
         {% endfor %}
