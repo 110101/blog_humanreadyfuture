@@ -27,17 +27,27 @@
     var btn = $('#projects_menu');
     btn.on('click', function(e) {
       e.preventDefault();
-      $('html, body').animate({scrollTop: $('#projects').offset().top }, '300');
+      $('html, body').animate({scrollTop: $('#projects').offset().top -100 }, '300');
     });
-  });
 
-  jQuery(document).ready(function() {
-
-    var btn = $('#contact_menu');
+    var btn = $('#about_menu');
     btn.on('click', function(e) {
       e.preventDefault();
-      $('html, body').animate({scrollTop: $('#contact').offset().top }, '300');
+      $('html, body').animate({scrollTop: $('#about').offset().top -100 }, '300');
+    });
+
+    var btn = $('#hrf_bttn');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: $('#hrf').offset().top -100 }, '300');
+    });
+
+    var btn = $('#hrf_bttn1');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: $('#hrf').offset().top -100 }, '300');
     });
   });
+
 
 </script>

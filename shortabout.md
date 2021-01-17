@@ -1,1 +1,0 @@
-**Hey and Hello!** I am **Malte**, a tech product strategist/product manager. I think and write about the interaction between technology, society and ethics and how a <a href="/humanreadyfuture/">_human-ready future_</a> can be achieved.

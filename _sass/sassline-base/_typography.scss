@@ -41,7 +41,14 @@ a {
   }
 
   // Headings. OpenType ligatures, discretionary ligatures and lining figures enabled if available.
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5 {
+    color: $headingColour;
+    font-family: unquote(map-get($headingtype, font-family));
+    font-style: normal;
+    font-weight: map-get($headingtype, normal);
+  }
+
+  h6 {
     color: $headingColour;
     font-family: unquote(map-get($headingtype, font-family));
     font-style: normal;
@@ -69,7 +76,8 @@ a {
 
   // Heading level 4.
   h4, {
-    @include sassline(delta, $headingtype, 2, 0, all);
+    @include sassline(gamma, $headingtype, 2, 0, all);
+    letter-spacing: 0.3rem;
   }
 
   // Lists.

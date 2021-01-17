@@ -1,15 +1,14 @@
 ---
 title: Disclaimer / Legal Notice
-layout: about
+layout: contact
 ---
 
 <div class="about typeset">
-
-<div class="typeset">
-  <div class="thoughts typeset">
-    <h4 class="">Legal Notice</h4>
-    <div class="h_underline"></div>
+  <div class="shortabout">
+    <h4>Legal Notice</h4>
+    <div class="h_underline_main"></div>
   </div>
+
   <!-- <p>
     <h6>Information according to §5 TMG</h6>
     Malte Kassen
@@ -61,9 +60,7 @@ layout: about
       <h6>Changes To This Privacy Policy</h6>
       This Privacy Policy is effective as of (add date) and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
     </p>
-  </div>
   <p>
   <h6>Liability for Links</h6>
     This website contains links to external websites of third parties, on whose contents I have no influence. Therefore, I cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal infringements at the time of linking. Illegal contents were not recognizable at the time of linking. However, it is unreasonable to expect a permanent control of the contents of the linked pages without concrete evidence of a violation of the law. If I become aware of any legal infringements, I will remove such links immediately.
   </p>
-</div>
