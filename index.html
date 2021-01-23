@@ -69,11 +69,12 @@ pagination:
 <div class="fixedproject typeset highlight">
   <div class="inner_fixedproject">
     {% include figure.html image="/assets/playlist_logo_m.jpg" max-width="250px"%}
-    <p class="inner_text">
-      I collected inspiring, food for thought podcasts or just good Interviews and talks about product and tech ethics on my <a href="https://open.spotify.com/playlist/4bX7ethycbtwsmT0d0UIwx?si=uS7tD8AtSlSSOv6e0mTGHQ" target="_blank">Spotify</a> and <a href="https://youtube.com/playlist?list=PLZSYQkdvr21m91l5lbngGUe0WhdrzbbPh" target="_blank">Youtube</a> Playlists.
+    <div class="inner_text">
+      <span class="inner_text_2">I collected inspiring, food for thought podcasts or just good Interviews and talks about product and tech ethics on my <a href="https://open.spotify.com/playlist/4bX7ethycbtwsmT0d0UIwx?si=uS7tD8AtSlSSOv6e0mTGHQ" target="_blank">Spotify</a> and <a href="https://youtube.com/playlist?list=PLZSYQkdvr21m91l5lbngGUe0WhdrzbbPh" target="_blank">Youtube</a> Playlists.
       </br>
       Primarily just for me to keep up with all the great content I come across, but maybe it is interesting for you as well.
-    </p>
+      </span>
+    </div>
   </div>
 </div>
 
@@ -103,5 +104,14 @@ pagination:
       {{ my_include | markdownify }}
   </div>
 </div>
-{% include site-fixedproject.html %}
+<div class="fixedproject typeset">
+  <div class="inner_fixedproject">
+    <a href="https://www.d-64.org" class="figure" target="_blank">{% include figure.html image="/assets/D64logo.png" max-width="300px" %}</a>
+    <div class="inner_text">
+      <span class="inner_text_2">
+        I am a member of D-64 - Zentrum für Digitalen Fortschritt e. V. A german think tank with focus on digitalization and society.
+      </span>
+    </div>
+  </div>
+</div>
 {% include site-inlinecontact.html %}

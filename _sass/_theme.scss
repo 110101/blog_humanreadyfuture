@@ -651,6 +651,7 @@ body {
   .inner_fixedproject {
     display: flex;
     flex-direction: column;
+    text-align: justify;
     @include breakpoint('break-4') {
       flex-direction: row;
     }
@@ -659,10 +660,14 @@ body {
   .inner_text {
     margin: 1rem 0 0 0rem;
     @include breakpoint('break-4') {
-      margin: 1rem 0 0 1rem;
+      margin: 0rem 0 0 1rem;
     }
     padding: 0;
   }
+
+    .inner_text_2 {
+      vertical-align: middle;
+    }
 }
 
 .highlight {
