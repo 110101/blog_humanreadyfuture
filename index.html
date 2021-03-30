@@ -6,8 +6,10 @@ pagination:
 ---
 
 {% include site-shortabout.html %}
+
 <div id="projects">
   <div class="shortabout typeset">
+    <!-- Thoughts -->
     <h4>Thoughts</h4>
     <div class="h_underline_main"></div>
   </div>
@@ -65,6 +67,67 @@ pagination:
     </ul>
   </section>
 {% endif %}
+
+<article class="article  article--post  content  typeset">
+    <div id="projects" class="shortabout typeset">
+      <h4>Projects</h4>
+      <div class="h_underline_main"></div>
+      <br>
+      <span>Side projects I've been working on lately.</span>
+    </div>
+    {% if paginator.projects %}
+      <section class="section  typeset">
+        <ul class="list  list--posts">
+          {% for page in paginator.projects %}
+            <li class="item  item--post">
+              <article class="article  article--post">
+                <div class="heading">
+                  <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+                </div>
+                <div class="meta">
+                  {% include post-meta.html %}
+                </div>
+                <!-- {% if page.teaser %} -->
+                <div class="text">
+                  <h4>Teaser Image </h4>
+                </div>
+                <!-- {% endif %} -->
+                <div class="text">
+                  {{ page.excerpt | markdownify | truncatewords: 300 }}
+                </div>
+                <a href="{{ site.baseurl }}{{ page.url }}">read more</a>
+              </article>
+            </li>
+          {% endfor %}
+        </ul>
+        <!-- no pagination in the begining of the project -->
+        <!-- {% include post-pagination.html %} -->
+      </section>
+    {% else %}
+
+      <section class="section  typeset">
+        <div id="else"></div>
+        <ul class="list  list--posts">
+          {% for page in site.projects %}
+            <li class="item  item--post">
+              <article class="article  article--post">
+                <div class="heading">
+                  <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+                </div>
+                <div class="meta">
+                  {% include post-meta.html %}
+                </div>
+                <div ckass="text">
+                  {{ page.excerpt | markdownify | truncatewords: 300 }}
+                </div>
+
+              </article>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+</article>
 
 <div class="fixedproject typeset highlight">
   <div class="inner_fixedproject">

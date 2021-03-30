@@ -17,6 +17,10 @@ layout: default
                   <div class="heading">
                     <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
                   </div>
+                  {% if page.teaser %}
+                  <a href="{{ site.baseurl }}{{ page.url }}"><img src="{{ page.teaser }}"
+                    alt="{{ post.title }}" width="575" height="216"></a>
+                  {% endif %}
                   <div class="meta">
                     {% include post-meta.html %}
                   </div>
