@@ -6,13 +6,15 @@
       <div class="menubox">
         <nav class="menu_toggle menu_closed">
         <ul class="list  list--nav">
+            <!-- Projects -->
             <li class="item item--nav">
                 {% if page.url == "/index.html" %}
-                  <a id="projects_menu" onclick="headersize()" href="#projects">Thoughts</a>
+                  <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
                 {% else %}
-                  <a href="{{ site.baseurl }}/#projects">Thoughts</a>
+                  <a href="{{ site.baseurl }}/#projects">Projects</a>
                 {% endif %}
             </li>
+            <!-- About -->
             <li class="item item--nav">
               {% if page.url == "/index.html" %}
                 <a id="about_menu" onclick="headersize()" href="#about">About</a>
@@ -20,14 +22,21 @@
                 <a href="{{ site.baseurl }}/#about">About</a>
               {% endif %}
             </li>
+            <!-- Contact -->
             <li class="item item--nav">
-                  <a href="/projects/">Projects</a>
+              {% if page.url == "/index.html" %}
+                <a id="contact_menu" onclick="headersize()" href="#contact">Contact</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/#contact">Contact</a>
+              {% endif %}
             </li>
+            <!-- Search -->
             <li class="item item--nav">
                 <a href="/search/">Search</a>
             </li>
           </ul>
-          </div>
+        </div>
+        <!-- lightswitch -->
           <div class="lightswitch">
             <a onclick="brightnnight()"><i class="fas fa-adjust"></i></a>
           </div>

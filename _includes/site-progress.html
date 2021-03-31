@@ -30,6 +30,12 @@
       $('html, body').animate({scrollTop: $('#projects').offset().top -100 }, '300');
     });
 
+    var btn = $('#contact_menu');
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: $('#contact').offset().top -100 }, '300');
+    });
+
     var btn = $('#about_menu');
     btn.on('click', function(e) {
       e.preventDefault();

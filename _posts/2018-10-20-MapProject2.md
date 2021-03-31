@@ -1,16 +1,20 @@
 ---
-title: Mapping the coolest areas of a city
+title: D 64
 layout: post
-date_create: 2019-10-23 20:00:00 +000
+date_create: 2021-12-13 20:00:00 +000
+teaser: /assets/teaserimg/D64logo.png
+order: right
+flag: low
+flaglink: https://www.d-64.org
+flaglinktext: learn more
 categories:
 - Data
 ---
 
-What is the coolest area in a city determined by trend indicators and data? And which area could be the next hipster hot spot? This question came into my mind when I was walking through Munich and I was seeing lots of new organic stores, coffee shops, and trendy restaurants popping up (replacing burger restaurants with Vietnamese ones) and lots of reconstruction work going on in certain areas of the city. Is there a way to determine the coolness of a neighborhood by data? I create a working prototype to give it a try.  
-
-{% include figure.html image="/assets/projectimages/MapProject.jpg" %}
+I am a member of D-64 - Zentrum für Digitalen Fortschritt e. V. A german think tank with focus on digitalization and society.
 
 <!-- more -->
+
 **The Concept:**<br>
 I want to collect the needed data indicators for at least the biggest cities in Europe (as a starting point), process them, and create an algorithm to calculate the coolest area of a city and show the results as a heat map overlay on a map. The map shall be shown on a responsive website to work on as many devices as possible. Why? Just for curiosity and if it's working well maybe for a decision where you want to move. The PoC for Munich should validate my hypotheses that the number of coffee shops, organic stores combined with the rental fees are indicators for the coolness of a neighborhood. My tool of choice for this project is python with its extensive libraries for data analytics.
 

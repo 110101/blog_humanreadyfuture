@@ -1,1 +1,1 @@
-**Hey and Hello!** I am **Malte**, a tech product strategist/product manager. I think and write about the interaction between technology, society and ethics, and how a <a id="hrf_bttn" onclick="headersize()" href="#hrf">_human-ready future_</a> can be achieved.
+**Hey and Hello!** I am **Malte**, a tech product strategist/product manager. I think and write about the interaction between technology, society and ethics, and how a _human-ready future_ can be achieved.
