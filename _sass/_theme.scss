@@ -56,10 +56,7 @@ body {
     flex-direction: row;
 
   }
-
-  // @include sassline($fontsize: eta, $font: $headingtype, $lineheight: 2, $below: 5, $breakpoint: all);
 }
-
 
 // Cookie banner
 .cookietext {
@@ -109,7 +106,6 @@ body {
   margin-bottom: 0rem;
   align-content: center;
 
-
   a {
     color: $cookie;
     padding: .2rem;
@@ -129,7 +125,6 @@ body {
 //footer container
 .container {
   width: 80%;
-  // @include maxwidth($breakpoint: 5);
   margin: 0 auto;
 }
 
@@ -137,7 +132,6 @@ body {
 // Header, feature and footer
 .header {
   border-bottom: 1px solid $borderColorHeader;
-  // box-shadow: 0 2px 9px -1px rgba(0,0,0,0.04);
   position: relative;
   float: left;
   clear: both;
@@ -190,7 +184,6 @@ body {
 }
 
 .menu_toggle {
-  // position: fixed;
   z-index: 1000;
   top: 0;
   right: 0;
@@ -199,26 +192,14 @@ body {
   overflow: auto;
   background-color: $backgroundColour;
   letter-spacing: 0.5px;
-  // -webkit-transition: all .2s ease-in-out;
-  // -moz-transition: all .2s ease-in-out;
-  // -ms-transition: all .2s ease-in-out;
-  // -o-transition: all .2s ease-in-out;
-  // transition: all .2s ease-in-out;
-  // -webkit-transition: opacity .3s ease-in-out;
-  // -moz-transition: opacity .3s ease-in-out;
-  // -ms-transition: opacity .3s ease-in-out;
-  // -o-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -ms-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
-  // -webkit-transition: visibility .3s ease-in-out;
-  // -moz-transition: visibility .3s ease-in-out;
-  // -ms-transition: visibility .3s ease-in-out;
-  // -o-transition: visibility .3s ease-in-out;
-  // transition: visibility .3s ease-in-out;
-
   @include breakpoint(break-3) {
     position: static;
     visibility: visible;
-    // margin: 2.5rem 0rem 0.5rem 0rem;
     background-color: $footer;
     overflow: hidden;
     opacity: 1;
@@ -249,13 +230,11 @@ body {
 .menu_open {
   visibility: visible;
   opacity: 1;
-  // right: 0;
 }
 
 .menu_closed {
   visibility: hidden;
   opacity: 0;
-  // position: absolute;
   @include breakpoint('break-3') {
     visibility: visible;
     position: inherit;
@@ -300,7 +279,6 @@ body {
 }
 
 .headercontent {
-  //transition: 0.3s;
   margin: 0px auto;
   width: 90%;
   overflow: hidden;
@@ -326,14 +304,9 @@ body {
 }
 
 .sidebarbuttons {
-  // margin-bottom: 0rem;
-  // position: absolute;
-  // right: 0;
-  // top: 0;
   cursor: pointer;
   @include breakpoint('break-3') {
     margin-bottom: 3rem;
-    // position: relative;
     display: none;
   }
 
@@ -344,12 +317,8 @@ body {
 }
 
 .sbbutton2 {
-  // text-align: center;
-  // position: absolute;
   width: 40px;
   height: 40px;
-  // top: 10px;
-  // right: 10px;
 }
 
 .headerimg {
@@ -360,11 +329,10 @@ body {
     margin-bottom: 1.5rem;
     display: block;
 
-
-  a:hover {
-    background: none;
-    text-decoration: none;
-  }
+    a:hover {
+      background: none;
+      text-decoration: none;
+    }
 }
 
 .aboutintro {
@@ -384,12 +352,9 @@ body {
   @include fontsize($fontsize: epsilon, $breakpoint: all);
   @include breakpoint('break-3') {
     margin-bottom: 0px;
-
   }
 
-  a{
-    // font-family: unquote(map-get($headingtype, font-family));
-    // font-size: 1.75rem;
+  a {
     @include fontsize($fontsize: epsilon, $breakpoint: all);
     color: $headingColour;
   }
@@ -410,16 +375,38 @@ body {
   }
 }
 
+.teaserimg-left {
+  width: 100%;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  @include breakpoint('break-4') {
+    margin: 0.5rem 0rem 0rem 1.5rem;
+    width: 150%;
+  }
+}
+
+#about {
+    margin-top: 3rem;
+}
+
+#contact {
+  margin-top: 3rem;
+}
+
+.teaserimg-right {
+  width: 100%;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  @include breakpoint('break-4') {
+    margin: 0.5rem 1.5rem 0rem 0rem;
+  }
+}
+
 
 .h_subunderline_header {
     background: $focusColour3;
-    margin: 0px;
+    margin: 1rem 0rem 0.5rem 0rem;
     height: 1px;
     width: 30px;
     display: block;
-    @include breakpoint('break-3') {
-      margin: 0px auto;
-    }
 }
 
 .logopre{
@@ -458,14 +445,12 @@ body {
 
 .messagebox {
   visibility: hidden;
-  // @include breakpoint('break-3') {
-    margin: 0px auto;
-    visibility: visible;
-    color: $captionColour;
-    font-size: 0.9rem;
-    text-align: center;
-    @include fontsize($fontsize: theta, $breakpoint: 3);
-  // }
+  margin: 0px auto;
+  visibility: visible;
+  color: $captionColour;
+  font-size: 0.9rem;
+  text-align: center;
+  @include fontsize($fontsize: theta, $breakpoint: 3);
 
   a {
       color: $captionColour;
@@ -545,12 +530,6 @@ body {
 
 .hicon {
     margin: 1.5rem 0rem 0rem 0rem;
-    // display: inline;
-    // // @include breakpoint('break-4') {
-    // //   display: inline !important;
-    // // }
-    // float: left;
-    // margin: 2px 0px 0px -40px;
   }
 
 .icontitle {
@@ -577,7 +556,6 @@ body {
 
 .thoughts {
   padding-bottom: 0rem;
-  // border-bottom: 1px solid $borderColorHeader;
   margin-bottom: 1rem;
 
   h4 {
@@ -624,55 +602,74 @@ body {
   color: $captionColour;
 }
 
-.fixedproject {
-  padding: 1.5rem;
-  margin: 5rem 0rem 5rem 0rem;
-  border: 1px solid $borderColorHeader;
-  overflow: hidden;
-
-  h2 {
-    color: $headingColour;
+.projectbox_left {
+  display: flex;
+  flex-direction: column-reverse;
+  @include breakpoint('break-4') {
+    flex-direction: row;
   }
-
-  a {
-    color: $headingColour;
-    // min-width: 250px;
-  }
-
-  a:hover {
-    color: $focusColour;
-    text-decoration: none;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$focusColour 50%);
-     background-position: 0 93%;
-     background-repeat: repeat-x;
-     background-size: 100% 0.15rem;
-  }
-
-  .inner_fixedproject {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    @include breakpoint('break-4') {
-      flex-direction: row;
-    }
-  }
-
-  .inner_text {
-    margin: 1rem 0 0 0rem;
-    @include breakpoint('break-4') {
-      margin: 0rem 0 0 1rem;
-    }
-    padding: 0;
-  }
-
-    .inner_text_2 {
-      vertical-align: middle;
-    }
 }
+
+.projectbox_right {
+  display: flex;
+  flex-direction: column-reverse;
+  @include breakpoint('break-4') {
+    flex-direction: row-reverse;
+  }
+}
+
+// .fixedproject {
+//   padding: 1.5rem;
+//   margin: 5rem 0rem 5rem 0rem;
+//   border: 1px solid $borderColorHeader;
+//   overflow: hidden;
+//
+//   h2 {
+//     color: $headingColour;
+//   }
+//
+//   a {
+//     color: $headingColour;
+//   }
+//
+//   a:hover {
+//     color: $focusColour;
+//     text-decoration: none;
+//     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$focusColour 50%);
+//      background-position: 0 93%;
+//      background-repeat: repeat-x;
+//      background-size: 100% 0.15rem;
+//   }
+//
+//   .inner_fixedproject {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: justify;
+//     @include breakpoint('break-4') {
+//       flex-direction: row;
+//     }
+//   }
+//
+//   .inner_text {
+//     margin: 1rem 0 0 0rem;
+//     @include breakpoint('break-4') {
+//       margin: 0rem 0 0 1rem;
+//     }
+//     padding: 0;
+//   }
+//
+//     .inner_text_2 {
+//       vertical-align: middle;
+//     }
+// }
 
 .highlight {
   background-color: $focusColour4;
   border-color: $captionColour;
+
+  h2 {
+    color: $focusColour3;
+  }
 
   a {
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, $focusColour3 50%);
@@ -686,6 +683,96 @@ body {
   }
 }
 
+.fstyle_high {
+  background-color: $focusColour4;
+  padding: 2rem;
+  border: 1px solid $captionColour;
+  margin-bottom: 4rem;
+
+  h2 {
+    color: $footer;
+    font-weight: bold;
+  }
+
+  .h_subunderline_header {
+    background: $footer;
+  }
+
+  a {
+    color: $footer;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, $focusColour3 50%);
+     background-position: 0 95%;
+     background-repeat: repeat-x;
+     background-size: 100% 0.15rem;
+  }
+
+  a:hover {
+    color: $focusColour3;
+  }
+}
+
+.fstyle_true {
+  padding: 2rem;
+  border: 1px solid $captionColour;
+  margin-bottom: 4rem;
+
+  h2 {
+    color: $focusColour3;
+    font-weight: bold;
+  }
+
+  a {
+    color: $footer;
+    background-color: $focusColour;
+    padding: 0.5rem;
+  }
+
+  a:hover {
+    color: $footer;
+    background-color: $focusColour3;
+    transition: 0.1s;
+  }
+}
+
+.flink_left {
+  padding: 1rem;
+  margin-left: 0;
+  margin-right: auto;
+  width: 150px;
+  overflow: hidden;
+
+  a {
+    color: $footer;
+    background-color: $focusColour3;
+  }
+
+  a:hover {
+    color: $focusColour;
+    background-color: $footer;
+    transition: 0.1s;
+  }
+}
+
+.flink_right {
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: 0;
+  width: 150px;
+  overflow: hidden;
+
+  a {
+    color: $footer;
+    background-color: $focusColour3;
+  }
+
+  a:hover {
+    color: $focusColour3;
+    background-color: $focusColour;
+    transition: 0.1s;
+  }
+}
+
+
 .article {
   a {
     font-family: unquote(map-get($headingtype, font-family));
@@ -695,9 +782,9 @@ body {
     color: $focusColour;
     text-decoration: none;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$focusColour 50%);
-     background-position: 0 95%;
-     background-repeat: repeat-x;
-     background-size: 100% 0.15rem;
+    background-position: 0 95%;
+    background-repeat: repeat-x;
+    background-size: 100% 0.15rem;
   }
 }
 
@@ -707,7 +794,6 @@ body {
 
 .text-post {
   text-align: justify;
-  // margin-top: 1rem;
 }
 
 .textcategories {
@@ -783,11 +869,6 @@ body {
   }
 }
 
-.imprint-link {
-  text-align: center;
-  margin: 1.5rem 0rem 0rem 0rem;
-}
-
 .pagination--previous, .pagination-next {
   color: $captionColour2;
 }
@@ -801,7 +882,6 @@ body {
     @include flex-direction(row);
   }
 }
-
 
 .contactmail {
   width: 100%;

@@ -9,9 +9,10 @@ exclude:
 plugins:
 #- jekyll-sitemap
 - jekyll-paginate-v2
+- jekyll-twitter-plugin
 #- jekyll-seo-tag
 #- jekyll-feed
-#- jekyll-commonmark
+- kramdown
 
 # 3. Gem settings
 pagination:
@@ -20,7 +21,7 @@ pagination:
   permalink: '/page/:num/'
   title: ' - page :num'
   limit: 0
-  sort_field: 'date'
+  sort_field: 'date_create'
   sort_reverse: true
 jekyll-mentions: https://twitter.com
 twitter:
@@ -49,17 +50,10 @@ baseurl: ""
 
 # 5. Collections
 collections:
-  projects:
-    title: Projects
-    description: projects
-    output: true
   posts:
-    title: Thoughts
-    description: Thoughts on tech & society
+    title: Projects
+    description: my side-projects
     output: true
-    feature_text: |
-      Hey, Malte.
-    feature_image: "/assets/default-social-image.png"
 
 # 6. Jekyll sitemap settings
 defaults:
@@ -90,6 +84,7 @@ social_links:
   Twitter: https://twitter.com/110101lab
   LinkedIn: https://www.linkedin.com/in/malte-k/
   GitHub: https://github.com/110101
+  Medium: https://www.humanreadyfuture.com/
 
 sharing_links:
   Twitter: true

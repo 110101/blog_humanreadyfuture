@@ -6,67 +6,105 @@ pagination:
 ---
 
 {% include site-shortabout.html %}
+
 <div id="projects">
   <div class="shortabout typeset">
-    <h4>Thoughts</h4>
+    <!-- Thoughts -->
+    <h4>Projects</h4>
     <div class="h_underline_main"></div>
+    <span>Side projects I've been working on lately.</span>
   </div>
-  <div class="subabout">
-    <div id="hrf"></div>
-    <p><span class="text_highlight_color_bold">#human-ready future:</span>
-    As an engineer and tech enthusiast I am convinced of the opportunities created by new technology. But I am also see the flip side with the risks that arise, if technology is not used with good intentions. If you look at the history where tech was not always used in a good way and today it's more relevant than ever. Most recent examples are the political power of social networks or biased machine learning algorithms.
-    </br>
-    I think and write about the interaction between technology, society and a code of ethics for the development of new technologies.
-    </br>
-    </p>
-    <div class="thoughts_subline">
-      <small>{ Views are my own. }</small>
-    </div>
-  </div>
-</div>
-{% if paginator.posts %}
-  <section class="section  typeset">
-    <ul class="list  list--posts">
-      {% for page in paginator.posts %}
-        <li class="item  item--post">
-          <article class="article  article--post">
-            <div class="heading post">
-              <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-            </div>
-            <div class="meta">
-              {% include post-meta.html %}
-            </div>
-            <div class="text-post">
-              {{ page.excerpt | markdownify | truncatewords: 140 }}
-            </div>
-            <a href="{{ site.baseurl }}{{ page.url }}">read more</a>
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
-    <!-- no pagination in the begining of the project -->
-    <!-- {% include post-pagination.html %} -->
-  </section>
-{% else %}
-  <section class="section  typeset">
-    <div id="else"></div>
-    <ul class="list  list--posts">
-      {% for page in site.posts %}
-        <li class="item  item--post">
-          <article class="article  article--post">
-            <div class="heading">
-              <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-            </div>
-            {% include post-meta.html %}
-            {{ page.excerpt | markdownify | truncatewords: 140 }}
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
-{% endif %}
+  {% if paginator.posts %}
+    <section class="section  typeset">
+      <ul class="list  list--posts">
+        {% for page in paginator.posts %}
+          {% if page.flag %}
+          <li class="item  item--post">
+            <div class="fstyle_{{ page.flag }}"> <!-- highlight class for additional styling -->
+                <div class="heading">
+                  <h2>{{ page.title }}</h2>
+                  <div class="h_subunderline_header"></div>
+                </div>
+                <div class="projectbox_{{ page.order }}">
+                <div class="text">
+                  {{ page.excerpt | markdownify | truncatewords: 300 }}
+                </div>
+                {% if page.teaser %}
+                <div class="teaserimg-{{ page.order }}">
+                  <p><img src="{{ page.teaser }}"></img></p>
+                </div>
+                </div>
+                {% endif %}
 
-<div class="fixedproject typeset highlight">
+              {% if page.flaglink %}
+                <div class="flink_{{ page.order }}">
+                  <a href="{{ page.flaglink }}" target="_blank">{{ page.flaglinktext }}</a>
+                </div>
+              {% endif %}
+            </div>
+          {% else %}
+          <li class="item  item--post">
+              <article class="article  article--post">
+                <div class="heading">
+                  <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+                  <div class="h_subunderline_header"></div>
+                </div>
+                <div class="projectbox_{{ page.order }}">
+                <div class="text">
+                  {{ page.excerpt | markdownify | truncatewords: 300 }}
+                </div>
+                {% if page.teaser %}
+                <div class="teaserimg-{{ page.order }}">
+                  <p><img src="{{ page.teaser }}"></img></p>
+                </div>
+                </div>
+                {% endif %}
+                <a href="{{ site.baseurl }}{{ page.url }}">more</a>
+                <!-- <div class="meta">
+                  {% include post-meta.html %}
+                </div> -->
+              </article>
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <!-- {% include post-pagination.html %} -->
+    </section>
+  {% else %}
+    <section class="section  typeset">
+      <div id="else"></div>
+      <ul class="list  list--posts">
+        {% for page in site.posts %}
+        <li class="item  item--post">
+          <div class=""> <!-- highlight class for additional styling -->
+            <article class="article  article--post">
+              <div class="heading">
+                <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+                <div class="h_subunderline_header"></div>
+              </div>
+              <div class="projectbox_{{ page.order }}">
+              <div class="text">
+                {{ page.excerpt | markdownify | truncatewords: 300 }}
+              </div>
+              {% if page.teaser %}
+              <div class="teaserimg-{{ page.order }}">
+                <p><img src="{{ page.teaser }}"></img></p>
+              </div>
+              </div>
+              {% endif %}
+              <a href="{{ site.baseurl }}{{ page.url }}">more</a>
+              <!-- <div class="meta">
+                {% include post-meta.html %}
+              </div >-->
+            </article>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</div>
+<!-- <div class="fixedproject typeset highlight">
   <div class="inner_fixedproject">
     {% include figure.html image="/assets/playlist_logo_m.jpg" max-width="250px"%}
     <div class="inner_text">
@@ -76,7 +114,8 @@ pagination:
       </span>
     </div>
   </div>
-</div>
+</div> -->
+
 
 <div id="about">
   <div class="shortabout typeset">
@@ -102,16 +141,16 @@ pagination:
     </div>
       {% capture my_include %}{% include_relative /_content/approach.md %}{% endcapture %}
       {{ my_include | markdownify }}
+    <div class="icontitle">
+        <div class="hicon"><img height="25" width="25" src="/assets/postimages/skillsicon.png"></div>
+        <h6>Skills</h6>
+        <div class="h_subunderline"></div>
+      </div>
+      {% capture my_include %}{% include_relative /_content/skills.md %}{% endcapture %}
+      {{ my_include | markdownify }}
   </div>
 </div>
-<div class="fixedproject typeset">
-  <div class="inner_fixedproject">
-    <a href="https://www.d-64.org" class="figure" target="_blank">{% include figure.html image="/assets/D64logo.png" max-width="300px" %}</a>
-    <div class="inner_text">
-      <span class="inner_text_2">
-        I am a member of D-64 - Zentrum für Digitalen Fortschritt e. V. A german think tank with focus on digitalization and society.
-      </span>
-    </div>
-  </div>
+
+<div id="contact">
+  {% include site-inlinecontact.html %}
 </div>
-{% include site-inlinecontact.html %}
