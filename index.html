@@ -21,7 +21,6 @@ pagination:
           {% if page.flag %}
           <li class="item  item--post">
             <div class="fstyle_{{ page.flag }}"> <!-- highlight class for additional styling -->
-              <article class="article  article--post">
                 <div class="heading">
                   <h2>{{ page.title }}</h2>
                   <div class="h_subunderline_header"></div>
@@ -42,7 +41,6 @@ pagination:
                   <a href="{{ page.flaglink }}" target="_blank">{{ page.flaglinktext }}</a>
                 </div>
               {% endif %}
-              </article>
             </div>
           {% else %}
           <li class="item  item--post">
@@ -62,9 +60,9 @@ pagination:
                 </div>
                 {% endif %}
                 <a href="{{ site.baseurl }}{{ page.url }}">more</a>
-                <div class="meta">
+                <!-- <div class="meta">
                   {% include post-meta.html %}
-                </div>
+                </div> -->
               </article>
           </li>
           {% endif %}
@@ -95,9 +93,9 @@ pagination:
               </div>
               {% endif %}
               <a href="{{ site.baseurl }}{{ page.url }}">more</a>
-              <div class="meta">
+              <!-- <div class="meta">
                 {% include post-meta.html %}
-              </div>
+              </div >-->
             </article>
           </div>
         </li>
@@ -142,6 +140,13 @@ pagination:
       <div class="h_subunderline"></div>
     </div>
       {% capture my_include %}{% include_relative /_content/approach.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    <div class="icontitle">
+        <div class="hicon"><img height="25" width="25" src="/assets/postimages/skillsicon.png"></div>
+        <h6>Skills</h6>
+        <div class="h_subunderline"></div>
+      </div>
+      {% capture my_include %}{% include_relative /_content/skills.md %}{% endcapture %}
       {{ my_include | markdownify }}
   </div>
 </div>

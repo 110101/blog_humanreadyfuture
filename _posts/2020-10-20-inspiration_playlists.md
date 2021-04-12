@@ -3,10 +3,7 @@ title: HUMAN-READY FUTURE
 layout: post
 date_create: 2021-08-15
 teaser: /assets/teaserimg/hrf_medium_thumb.png
-order: left
-flag: high
-flaglink: https://www.humanreadyfuture.com
-flaglinktext: Human-Ready Future
+order: right
 categories:
 - humanreadyfuture  
 ---

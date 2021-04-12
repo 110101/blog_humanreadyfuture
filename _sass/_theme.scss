@@ -711,13 +711,13 @@ body {
   }
 }
 
-.fstyle_low {
+.fstyle_true {
   padding: 2rem;
   border: 1px solid $captionColour;
   margin-bottom: 4rem;
 
   h2 {
-    color: $headingColour;
+    color: $focusColour3;
     font-weight: bold;
   }
 
@@ -743,14 +743,13 @@ body {
 
   a {
     color: $footer;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, $focusColour3 50%);
-     background-position: 0 95%;
-     background-repeat: repeat-x;
-     background-size: 100% 0.15rem;
+    background-color: $focusColour3;
   }
 
   a:hover {
-    color: $focusColour3;
+    color: $focusColour;
+    background-color: $footer;
+    transition: 0.1s;
   }
 }
 

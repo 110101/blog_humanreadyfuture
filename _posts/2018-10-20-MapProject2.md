@@ -1,10 +1,10 @@
 ---
 title: D 64
 layout: post
-date_create: 2021-12-13 20:00:00 +000
+date_create: 2000-12-13 20:00:00 +000
 teaser: /assets/teaserimg/D64logo.png
 order: right
-flag: low
+flag: true
 flaglink: https://www.d-64.org
 flaglinktext: learn more
 categories:

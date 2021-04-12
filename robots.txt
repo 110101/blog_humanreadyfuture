@@ -1,8 +1,5 @@
 ---
 ---
 User-agent: *
-Disallow: /about
-Disallow: /about/
-Disallow: /about/index.html
-Disallow: /imprint/
-Disallow: /imprint/index.html
+Disallow: /disclaimer/
+Disallow: /disclaimer/index.html

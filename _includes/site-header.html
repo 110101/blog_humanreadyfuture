@@ -8,11 +8,11 @@
         <ul class="list  list--nav">
             <!-- Projects -->
             <li class="item item--nav">
-                {% if page.url == "/index.html" %}
-                  <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
-                {% else %}
-                  <a href="{{ site.baseurl }}/#projects">Projects</a>
-                {% endif %}
+              {% if page.url == "/index.html" %}
+                <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/#projects">Projects</a>
+              {% endif %}
             </li>
             <!-- About -->
             <li class="item item--nav">
@@ -45,6 +45,7 @@
               {% include icon.html id="nav" title="Menu" %}
             </a>
           </div>
+          <!-- small menu -->
           <div class="large_menu is_closed">
             <div class="menu-toggle" onclick="headersize()">
               <i class="fa fa-times" aria-hidden="true"></i>
@@ -52,11 +53,11 @@
             </div>
               <ul class="lmenu_list">
                   <li class="lmenu_list--item">
-                      {% if page.url == "/index.html" %}
-                        <a id="projects_menu" onclick="headersize()" href="#projects">Thoughts</a>
-                      {% else %}
-                        <a href="{{ site.baseurl }}/#projects">Thoughts</a>
-                      {% endif %}
+                    {% if page.url == "/index.html" %}
+                      <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
+                    {% else %}
+                      <a href="{{ site.baseurl }}/#projects">Projects</a>
+                    {% endif %}
                   </li>
                   <li class="lmenu_list--item">
                     {% if page.url == "/index.html" %}
@@ -66,7 +67,11 @@
                     {% endif %}
                   </li>
                   <li class="lmenu_list--item">
-                        <a href="/projects/">Projects</a>
+                    {% if page.url == "/index.html" %}
+                      <a id="contact_menu" onclick="headersize()" href="#contact">Contact</a>
+                    {% else %}
+                      <a href="{{ site.baseurl }}/#contact">Contact</a>
+                    {% endif %}
                   </li>
                   <li class="lmenu_list--item">
                       <a href="/search/">Search</a>
