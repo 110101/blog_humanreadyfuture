@@ -1,2 +1,2 @@
 **Hey and Hello!** <br>
-I am **Malte**, a tech product strategist/product manager, loving to create products with an impact.
+I am Malte, a passionate tech product strategist and product thinker, loving to create products with impact.
