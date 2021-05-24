@@ -8,10 +8,15 @@ pagination:
 {% include site-shortabout.html %}
 
 <div id="about">
-  <div class="shortabout typeset">
+  <div class="icontitle typeset">
+    <div class="hicon"><img height="25" width="25" src="/assets/postimages/focusicon.png"></div>
+    <h5>About</h5>
+    <div class="h_subunderline"></div>
+  </div>
+  <!-- <div class="shortabout typeset">
     <h4>About</h4>
     <div class="h_underline_main"></div>
-  </div>
+  </div> -->
   <div class="subabout typeset">
       {% capture my_include %}{% include_relative /_content/about.md %}{% endcapture %}
       {{ my_include | markdownify }}

@@ -48,11 +48,10 @@ a {
     font-weight: map-get($headingtype, normal);
   }
 
-  h6 {
+  h5 {
     color: $headingColour;
-    font-family: unquote(map-get($headingtype, font-family));
-    font-style: normal;
-    font-weight: map-get($headingtype, bold);
+    @include sassline(gamma, $headingtype, 2, 0, all);
+    letter-spacing: 0.3rem;
   }
 
   // Heading level 1.
