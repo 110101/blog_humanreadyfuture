@@ -7,10 +7,43 @@ pagination:
 
 {% include site-shortabout.html %}
 
+<div id="about">
+  <div class="shortabout typeset">
+    <h4>About</h4>
+    <div class="h_underline_main"></div>
+  </div>
+  <div class="subabout typeset">
+      {% capture my_include %}{% include_relative /_content/about.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    <div class="icontitle">
+      <div class="hicon"><img height="25" width="25" src="/assets/postimages/focusicon.png"></div>
+      <h6>Focus</h6>
+      <div class="h_subunderline"></div>
+    </div>
+      {% capture my_include %}{% include_relative /_content/focus.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+
+    <div class="icontitle">
+      <div class="hicon"><img height="25" width="25" src="/assets/postimages/progressicon.png"></div>
+      <h6>Approach</h6>
+      <div class="h_subunderline"></div>
+    </div>
+      {% capture my_include %}{% include_relative /_content/approach.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+    <div class="icontitle">
+        <div class="hicon"><img height="25" width="25" src="/assets/postimages/skillsicon.png"></div>
+        <h6>Skills</h6>
+        <div class="h_subunderline"></div>
+      </div>
+      {% capture my_include %}{% include_relative /_content/skills.md %}{% endcapture %}
+      {{ my_include | markdownify }}
+  </div>
+</div>
+
 <div id="projects">
   <div class="shortabout typeset">
     <!-- Thoughts -->
-    <h4>Projects & Thoughts</h4>
+    <h4>Projects & Ideas</h4>
     <div class="h_underline_main"></div>
     <span>Side projects I've been working on lately.</span>
   </div>
@@ -21,10 +54,10 @@ pagination:
           {% if page.flag %}
           <li class="item  item--post">
             <div class="fstyle_{{ page.flag }}"> <!-- highlight class for additional styling -->
-                <div class="heading">
+                <!-- <div class="heading">
                   <h2>{{ page.title }}</h2>
                   <div class="h_subunderline_header"></div>
-                </div>
+                </div> -->
                 <div class="projectbox_{{ page.order }}">
                 <div class="text">
                   {{ page.excerpt | markdownify | truncatewords: 300 }}
@@ -116,40 +149,6 @@ pagination:
   </div>
 </div> -->
 
-
-<div id="about">
-  <div class="shortabout typeset">
-    <h4>About</h4>
-    <div class="h_underline_main"></div>
-  </div>
-  <div class="subabout typeset">
-    <p>
-      {% capture my_include %}{% include_relative /_content/about.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-    <div class="icontitle">
-      <div class="hicon"><img height="25" width="25" src="/assets/postimages/focusicon.png"></div>
-      <h6>Focus</h6>
-      <div class="h_subunderline"></div>
-    </div>
-      {% capture my_include %}{% include_relative /_content/focus.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-
-    <div class="icontitle">
-      <div class="hicon"><img height="25" width="25" src="/assets/postimages/progressicon.png"></div>
-      <h6>Approach</h6>
-      <div class="h_subunderline"></div>
-    </div>
-      {% capture my_include %}{% include_relative /_content/approach.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-    <div class="icontitle">
-        <div class="hicon"><img height="25" width="25" src="/assets/postimages/skillsicon.png"></div>
-        <h6>Skills</h6>
-        <div class="h_subunderline"></div>
-      </div>
-      {% capture my_include %}{% include_relative /_content/skills.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-  </div>
-</div>
 
 <div id="contact">
   {% include site-inlinecontact.html %}

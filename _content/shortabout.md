@@ -1,1 +1,2 @@
-**Hey and Hello!** I am **Malte**, a tech product strategist/product manager, loving to create meaningful products. I think and write about technology, society and ethics in technology how a _human-ready future_ can be maintained.
+**Hey and Hello!** <br>
+I am **Malte**, a tech product strategist/product manager, loving to create products with an impact.

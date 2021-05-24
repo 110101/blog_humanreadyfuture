@@ -6,20 +6,20 @@
       <div class="menubox">
         <nav class="menu_toggle menu_closed">
         <ul class="list  list--nav">
-            <!-- Projects -->
-            <li class="item item--nav">
-              {% if page.url == "/index.html" %}
-                <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
-              {% else %}
-                <a href="{{ site.baseurl }}/#projects">Projects</a>
-              {% endif %}
-            </li>
             <!-- About -->
             <li class="item item--nav">
               {% if page.url == "/index.html" %}
                 <a id="about_menu" onclick="headersize()" href="#about">About</a>
               {% else %}
                 <a href="{{ site.baseurl }}/#about">About</a>
+              {% endif %}
+            </li>
+            <!-- Projects -->
+            <li class="item item--nav">
+              {% if page.url == "/index.html" %}
+                <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
+              {% else %}
+                <a href="{{ site.baseurl }}/#projects">Projects</a>
               {% endif %}
             </li>
             <!-- Contact -->
@@ -54,16 +54,16 @@
               <ul class="lmenu_list">
                   <li class="lmenu_list--item">
                     {% if page.url == "/index.html" %}
-                      <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
+                      <a id="about_menu" onclick="headersize()" href="#about">About</a>
                     {% else %}
-                      <a href="{{ site.baseurl }}/#projects">Projects</a>
+                      <a href="{{ site.baseurl }}/#about">About</a>
                     {% endif %}
                   </li>
                   <li class="lmenu_list--item">
                     {% if page.url == "/index.html" %}
-                      <a id="about_menu" onclick="headersize()" href="#about">About</a>
+                      <a id="projects_menu" onclick="headersize()" href="#projects">Projects</a>
                     {% else %}
-                      <a href="{{ site.baseurl }}/#about">About</a>
+                      <a href="{{ site.baseurl }}/#projects">Projects</a>
                     {% endif %}
                   </li>
                   <li class="lmenu_list--item">
