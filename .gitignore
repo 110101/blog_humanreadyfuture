@@ -8,4 +8,3 @@ assets/templates/
 # ignore single files
 .DS_Store
 *.psd
-site-before-end.html
