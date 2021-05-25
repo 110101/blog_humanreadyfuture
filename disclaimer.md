@@ -1,6 +1,6 @@
 ---
 title: Disclaimer / Legal Notice
-layout: contact
+layout: page
 ---
 
 <div class="about typeset">

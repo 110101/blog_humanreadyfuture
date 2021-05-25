@@ -49,7 +49,6 @@
           <div class="large_menu is_closed">
             <div class="menu-toggle" onclick="headersize()">
               <i class="fa fa-times" aria-hidden="true"></i>
-              <!-- {% include icon.html id="times" title="Menu" %} -->
             </div>
               <ul class="lmenu_list">
                   <li class="lmenu_list--item">
@@ -82,24 +81,19 @@
                 </ul>
             </div>
           </div>
-          <!-- <div class="messagebox">
-            <a href="{{ site.baseurl }}/humanreadyfuture/">#humanreadyfuture</a>
-          </div>
-          {% include nav-social.html %} -->
+
   <script type="text/javascript">
     // header side
     function headersize(){
       const menu = document.querySelector('.large_menu')
 
-      //if (document.documentElement.clientWidth < 800) {
-        if (menu.classList.contains('is_closed') == true) {
-          menu.classList.remove('is_closed');
-          menu.classList.add('is_opened');
-        } else {
-          menu.classList.remove('is_opened');
-          menu.classList.add('is_closed');
-        }
-      //}
+      if (menu.classList.contains('is_closed') == true) {
+        menu.classList.remove('is_closed');
+        menu.classList.add('is_opened');
+      } else {
+        menu.classList.remove('is_opened');
+        menu.classList.add('is_closed');
+      }
     }
   </script>
 </header>
