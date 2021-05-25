@@ -3,7 +3,7 @@ $breakpoints: (
   break-0: 0,     // 0px       Mobile first
   break-1: 540,   // smartphones
   break-2: 650,   // 640px   ~ Small tablet up
-  break-3: 800,   // 800px   ~ Large tablet up
+  break-3: 900,   // 800px   ~ Large tablet up
   break-4: 1024,  // 1024px  ~ Desktop up
   break-5: 1600   // 1600px  ~ Large desktop up
 ) !default;
@@ -21,11 +21,11 @@ $rootsizes: (
 // max-widths for containers
 $maxwidths: (
   width-0: 300,
-  width-1: 450,
-  width-2: 600,
-  width-3: 800,
-  width-4: 900,
-  width-5: 1000
+  width-1: 540,
+  width-2: 650,
+  width-3: 900,
+  width-4: 1500,
+  width-5: 1500
 ) !default;
 
 

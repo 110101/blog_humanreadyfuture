@@ -1,3 +1,0 @@
-I am inspired by the future and what could be. Approaching challenges with a creative, open mind-set yet staying focused I spot the relevant patterns to set the right priorities and define the strategy to develop and launch great products. Achieving the project goals and releasing a product motivates me during realization. I improve and learn with every project and get inspiration from different cultures and everything I find out there.
-
-To stay balanced while being busy I shred the trails on my bike, enjoy great design and get an energy push out of music and a good coffee.

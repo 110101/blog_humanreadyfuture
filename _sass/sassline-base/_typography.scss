@@ -50,7 +50,7 @@ a {
 
   h5 {
     color: $headingColour;
-    @include sassline(gamma, $headingtype, 2, 0, all);
+    @include sassline(gamma, $headingtype, 2.5, 0.25, all);
     letter-spacing: 0.3rem;
   }
 

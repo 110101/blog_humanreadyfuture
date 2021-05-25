@@ -1,3 +1,0 @@
-Getting from A to B is a basic need that requires a 21st-century solution. That's why I am enthusiastic about automated driving as one part of future mobility. With 7+ years of experience I am an expert in automated driving and its underlying technology. If you think about future mobility you come across further challenges such as the future of cities, the future of work and how the society will look like in general - topics that also highly fascinate me.
-
-Beyond that I geek out about data. Not only because automated driving is heavily based on it, but also because I like to find insights in data, reduce bias and make data driven product decisions.

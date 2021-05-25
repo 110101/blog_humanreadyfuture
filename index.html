@@ -13,44 +13,18 @@ pagination:
     <h5>About</h5>
     <div class="h_subunderline"></div>
   </div>
-  <!-- <div class="shortabout typeset">
-    <h4>About</h4>
-    <div class="h_underline_main"></div>
-  </div> -->
   <div class="subabout typeset">
       {% capture my_include %}{% include_relative /_content/about.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-    <div class="icontitle">
-      <div class="hicon"><img height="25" width="25" src="/assets/postimages/focusicon.png"></div>
-      <h6>Focus</h6>
-      <div class="h_subunderline"></div>
-    </div>
-      {% capture my_include %}{% include_relative /_content/focus.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-
-    <div class="icontitle">
-      <div class="hicon"><img height="25" width="25" src="/assets/postimages/progressicon.png"></div>
-      <h6>Approach</h6>
-      <div class="h_subunderline"></div>
-    </div>
-      {% capture my_include %}{% include_relative /_content/approach.md %}{% endcapture %}
-      {{ my_include | markdownify }}
-    <div class="icontitle">
-        <div class="hicon"><img height="25" width="25" src="/assets/postimages/skillsicon.png"></div>
-        <h6>Skills</h6>
-        <div class="h_subunderline"></div>
-      </div>
-      {% capture my_include %}{% include_relative /_content/skills.md %}{% endcapture %}
       {{ my_include | markdownify }}
   </div>
 </div>
 
 <div id="projects">
-  <div class="shortabout typeset">
-    <!-- Thoughts -->
-    <h4>Projects & Ideas</h4>
-    <div class="h_underline_main"></div>
-    <span>Side projects I've been working on lately.</span>
+  <div class="icontitle typeset">
+    <div class="hicon"><img height="25" width="25" src="/assets/postimages/skillsicon.png"></div>
+    <h5>Projects & Ideas</h5>
+    <div class="h_subunderline"></div>
+    <div class="thoughts_subline_hrf">Side projects I've been working on lately.</div>
   </div>
   {% if paginator.posts %}
     <section class="section  typeset">
@@ -59,10 +33,6 @@ pagination:
           {% if page.flag %}
           <li class="item  item--post">
             <div class="fstyle_{{ page.flag }}"> <!-- highlight class for additional styling -->
-                <!-- <div class="heading">
-                  <h2>{{ page.title }}</h2>
-                  <div class="h_subunderline_header"></div>
-                </div> -->
                 <div class="projectbox_{{ page.order }}">
                 <div class="text">
                   {{ page.excerpt | markdownify | truncatewords: 300 }}
@@ -114,7 +84,7 @@ pagination:
       <ul class="list  list--posts">
         {% for page in site.posts %}
         <li class="item  item--post">
-          <div class=""> <!-- highlight class for additional styling -->
+          <div class="fstyle_{{ page.flag }}"> <!-- highlight class for additional styling -->
             <article class="article  article--post">
               <div class="heading">
                 <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
@@ -133,7 +103,7 @@ pagination:
               <a href="{{ site.baseurl }}{{ page.url }}">more</a>
               <!-- <div class="meta">
                 {% include post-meta.html %}
-              </div >-->
+              </div > -->
             </article>
           </div>
         </li>
@@ -142,19 +112,12 @@ pagination:
     </section>
   {% endif %}
 </div>
-<!-- <div class="fixedproject typeset highlight">
-  <div class="inner_fixedproject">
-    {% include figure.html image="/assets/playlist_logo_m.jpg" max-width="250px"%}
-    <div class="inner_text">
-      <span class="inner_text_2">I collected inspiring, food for thought podcasts or just good Interviews and talks about product and tech ethics on my <a href="https://open.spotify.com/playlist/4bX7ethycbtwsmT0d0UIwx?si=uS7tD8AtSlSSOv6e0mTGHQ" target="_blank">Spotify</a> and <a href="https://youtube.com/playlist?list=PLZSYQkdvr21m91l5lbngGUe0WhdrzbbPh" target="_blank">Youtube</a> Playlists.
-      </br>
-      Primarily just for me to keep up with all the great content I come across, but maybe it is interesting for you as well.
-      </span>
-    </div>
-  </div>
-</div> -->
-
 
 <div id="contact">
+  <div class="icontitle typeset">
+    <div class="hicon"><img height="25" width="25" src="/assets/postimages/progressicon.png"></div>
+    <h5>Contact</h5>
+    <div class="h_subunderline"></div>
+  </div>
   {% include site-inlinecontact.html %}
 </div>

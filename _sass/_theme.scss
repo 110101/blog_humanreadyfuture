@@ -19,7 +19,7 @@ body {
 
 // reading progress bar at top of page
 .progress {
-  background: linear-gradient(to right, $focusColour var(--scroll), $footer 0);
+  background: linear-gradient(to right, $focusColour var(--scroll), transparent 0);
   background-repeat: no-repeat;
   position: fixed;
   width: 100%;
@@ -27,8 +27,8 @@ body {
   margin-left: 0;
   z-index: 1;
   transition: margin-left 0.2s;
-  @include breakpoint('break-3') {
-
+  @include breakpoint('break-4') {
+      background: linear-gradient(to right, $focusColour var(--scroll), $footer 0);
   }
 }
 
@@ -130,16 +130,16 @@ body {
 
 
 // Header, feature and footer
-.header {
+header {
   border-bottom: 1px solid $borderColorHeader;
   position: relative;
   float: left;
   clear: both;
   width: 100%;
   background-color: $footer;
-  @include breakpoint('break-3') {
-    width: 100%;
+  @include breakpoint('break-4') {
     position: fixed;
+      width: 100%;
     z-index: 99;
     top: 5px;
     left: 0;
@@ -197,7 +197,7 @@ body {
   -ms-transition: opacity .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
-  @include breakpoint(break-3) {
+  @include breakpoint('break-3') {
     position: static;
     visibility: visible;
     background-color: $footer;
@@ -227,20 +227,20 @@ body {
   }
 }
 
-.menu_open {
-  visibility: visible;
-  opacity: 1;
-}
-
-.menu_closed {
-  visibility: hidden;
-  opacity: 0;
-  @include breakpoint('break-3') {
-    visibility: visible;
-    position: inherit;
-    opacity: 1;
-  }
-}
+// .menu_open {
+//   visibility: visible;
+//   opacity: 1;
+// }
+//
+// .menu_closed {
+//   visibility: hidden;
+//   opacity: 0;
+//   @include breakpoint('break-3') {
+//     visibility: visible;
+//     position: inherit;
+//     opacity: 1;
+//   }
+// }
 
 .menu-toggle {
   text-align: center;
@@ -286,10 +286,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  @include breakpoint('break-3') {
+  @include breakpoint('break-4') {
     height: 50px;
     width: 80%;
-    min-width: 240px;
+    @include maxwidth($breakpoint: all);
     padding: 0rem 5rem 0rem 5rem;
   }
 }
@@ -586,7 +586,7 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
   height: 1px;
-  width: 30px;
+  // width: 30px;
   display: block;
 }
 
@@ -873,6 +873,7 @@ body {
   @include flexbox;
   @include flex-direction(column);
   margin-bottom: 5rem;
+  margin-top: 2rem;
   text-align: center;
   @include breakpoint(break-3) {
     @include flex-direction(row);
@@ -881,8 +882,10 @@ body {
 
 .contactmail {
   width: 100%;
+  margin-bottom: 1.5rem;
   @include breakpoint(break-3) {
     width: 50%;
+
   }
 }
 
@@ -969,12 +972,13 @@ body {
   width: 90%;
   padding: 2rem 1rem 0rem 1rem;
   margin: 0px auto;
-  @include breakpoint('break-3') {
+  @include breakpoint('break-4') {
     width: 80%;
     padding: 10rem 5rem 0rem 5rem;
     margin-top: 0px;
     margin-right: auto;
     margin-bottom: 0px;
+    @include maxwidth($breakpoint: all);
     // margin-left: 30%;
   }
 }
@@ -1323,7 +1327,7 @@ label {
     color: $borderColorHeader;
   }
   ul {
-      padding-top: 0;
+      margin-top: 2rem;
   }
   li {
     > p {
