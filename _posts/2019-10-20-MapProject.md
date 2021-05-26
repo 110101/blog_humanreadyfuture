@@ -3,7 +3,8 @@ title: Mapping the coolest areas of a city
 layout: post
 date_create: 2019-10-23 20:00:00 +000
 teaser: /assets/teaserimg/MapProject.jpg
-order: left
+order: right
+fstyle: high
 categories:
 - Data
 ---

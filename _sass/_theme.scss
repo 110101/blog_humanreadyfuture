@@ -158,32 +158,32 @@ header {
     overflow: hidden;
   }
 
-  .container {
-    @include flexbox;
-    @include flex-direction(row);
-    @include justify-content(space-between);
-    padding: 1.75rem 0;
-    @include breakpoint(break-1) {
-      @include align-items(center);
-    }
-  }
+  // .container {
+  //   @include flexbox;
+  //   @include flex-direction(row);
+  //   @include justify-content(space-between);
+  //   padding: 1.75rem 0;
+  //   @include breakpoint(break-1) {
+  //     @include align-items(center);
+  //   }
+  // }
 }
 
-.headertext {
-  float: left;
-  @include breakpoint('break-0') {
-    margin: 0.5rem 0rem 0rem 0rem;
-  }
-  @include breakpoint('break-2') {
-    margin: 0.5rem 1rem 0rem 1rem;
-  }
-  @include breakpoint('break-3') {
-    margin: 0.5rem 1rem 0rem 1rem;
-    float: none;
-  }
-}
+// .headertext {
+//   float: left;
+//   @include breakpoint('break-0') {
+//     margin: 0.5rem 0rem 0rem 0rem;
+//   }
+//   @include breakpoint('break-2') {
+//     margin: 0.5rem 1rem 0rem 1rem;
+//   }
+//   @include breakpoint('break-3') {
+//     margin: 0.5rem 1rem 0rem 1rem;
+//     float: none;
+//   }
+// }
 
-.menu_toggle {
+.menuinnerbox {
   z-index: 1000;
   top: 0;
   right: 0;
@@ -294,16 +294,16 @@ header {
   }
 }
 
-.headersubline {
-  @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.3, $below: 0.0, $breakpoint: all);
-  color: $focusColour;
-  @include breakpoint('break-3') {
-    @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.5, $below: 0.5, $breakpoint: 'all');
-    margin: 1rem 0rem 1rem 0rem;
-  }
-}
+// .headersubline {
+//   @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.3, $below: 0.0, $breakpoint: all);
+//   color: $focusColour;
+//   @include breakpoint('break-3') {
+//     @include sassline($fontsize: theta, $font: $bodytype, $lineheight: 1.5, $below: 0.5, $breakpoint: 'all');
+//     margin: 1rem 0rem 1rem 0rem;
+//   }
+// }
 
-.sidebarbuttons {
+.burgermenu {
   cursor: pointer;
   @include breakpoint('break-3') {
     margin-bottom: 3rem;
@@ -316,10 +316,10 @@ header {
   }
 }
 
-.sbbutton2 {
-  width: 40px;
-  height: 40px;
-}
+// .sbbutton2 {
+//   width: 40px;
+//   height: 40px;
+// }
 
 .headerimg {
     width: 150px;
@@ -335,9 +335,9 @@ header {
     }
 }
 
-.aboutintro {
-  text-align: center;
-}
+// .aboutintro {
+//   text-align: center;
+// }
 
 .aboutimage {
   -webkit-border-radius: 50%;
@@ -388,17 +388,12 @@ header {
     margin-bottom: 4rem;
 }
 
-#contact {
-
-}
-
 .teaserimg-right {
   margin: auto;
   @include breakpoint('break-4') {
     margin: 0.5rem 1.5rem 0rem 0rem;
   }
 }
-
 
 .h_subunderline_header {
     background: $focusColour3;
@@ -508,10 +503,10 @@ header {
   }
 }
 
-.texthigh {
-  color: $focusColour3;
-  font-weight: bold;
-}
+// .texthigh {
+//   color: $focusColour3;
+//   font-weight: bold;
+// }
 
 .about {
   margin-bottom: 1rem;
@@ -553,14 +548,14 @@ header {
   color: $focusColour;
 }
 
-.thoughts {
-  padding-bottom: 0rem;
-  margin-bottom: 1rem;
-
-  h4 {
-    color: $focusColour;
-  }
-}
+// .thoughts {
+//   padding-bottom: 0rem;
+//   margin-bottom: 1rem;
+//
+//   h4 {
+//     color: $focusColour;
+//   }
+// }
 
 .h_underline_main {
   background: $focusColour3;
@@ -590,11 +585,11 @@ header {
   display: block;
 }
 
-.thoughts_subline {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  color: $captionColour;
-}
+// .thoughts_subline {
+//   margin-top: 0.5rem;
+//   margin-bottom: 1.5rem;
+//   color: $captionColour;
+// }
 
 .thoughts_subline_hrf {
   margin-top: 0.5rem;
@@ -622,7 +617,31 @@ header {
   }
 }
 
-// .fixedproject {
+.fixedproject {
+  background-color: $focusColour;
+  height: 120px;
+  width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+
+  a:hover {
+    text-decoration: none;
+    background-image: none;
+  }
+}
+
+.playlistimg {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.playlisttext {
+  margin: 0.5rem 1rem 0.5rem 1.5rem;
+  overflow: hidden;
+}
 //   padding: 1.5rem;
 //   margin: 5rem 0rem 5rem 0rem;
 //   border: 1px solid $borderColorHeader;

@@ -4,7 +4,7 @@
           <a href="/"><span class="logostatem">Malte </span><span class="logopre">Kassen</span><span></span></a>
         </div>
       <div class="menubox">
-        <nav class="menu_toggle">
+        <nav class="menuinnerbox">
         <ul class="list  list--nav">
             <!-- About -->
             <li class="item item--nav">
@@ -40,7 +40,7 @@
           <div class="lightswitch">
             <a onclick="brightnnight()"><i class="fas fa-adjust"></i></a>
           </div>
-          <div id="zero" class="sidebarbuttons">
+          <div id="zero" class="burgermenu">
             <a class="sbbutton2" onclick="headersize()">
               {% include icon.html id="nav" title="Menu" %}
             </a>
@@ -87,12 +87,14 @@
     function headersize(){
       const menu = document.querySelector('.large_menu')
 
-      if (menu.classList.contains('is_closed') == true) {
-        menu.classList.remove('is_closed');
-        menu.classList.add('is_opened');
-      } else {
-        menu.classList.remove('is_opened');
-        menu.classList.add('is_closed');
+      if (document.documentElement.clientWidth < 900) {
+        if (menu.classList.contains('is_closed') == true) {
+          menu.classList.remove('is_closed');
+          menu.classList.add('is_opened');
+        } else {
+          menu.classList.remove('is_opened');
+          menu.classList.add('is_closed');
+        }
       }
     }
   </script>
