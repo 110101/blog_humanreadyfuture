@@ -94,7 +94,9 @@ body {
   margin-bottom: 0rem;
   background: $cookie;
   color: $codeBackgroundColour;
-
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
     &:hover {
     background: $focusColour2;
     color: $codeBackgroundColour;
@@ -183,6 +185,11 @@ header {
 //   }
 // }
 
+.share {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .menuinnerbox {
   z-index: 1000;
   top: 0;
@@ -226,6 +233,8 @@ header {
     background-image: none !important;
   }
 }
+
+
 
 // .menu_open {
 //   visibility: visible;
@@ -612,12 +621,17 @@ header {
 }
 
 .fixedproject {
-  background-color: $focusColour;
-  height: 120px;
-  width: 100%;
-  margin-bottom: 3rem;
+  border: 1px solid $focusColour;
+  // box-shadow: 5px 5px $textColour;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @include breakpoint('break-3') {
+    height: 122px;
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+  }
 
   a:hover {
     text-decoration: none;
@@ -625,16 +639,36 @@ header {
   }
 }
 
+.playlistimgbackground {
+  width: 100%;
+  height: 200px;
+  background-color: $focusColour;
+  @include breakpoint('break-3'){
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
 .playlistimg {
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  margin: 0px auto;
+  @include breakpoint('break-3') {
+    flex-shrink: 0;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .playlisttext {
-  margin: 0.5rem 1rem 0.5rem 1.5rem;
-  overflow: hidden;
+  margin: 1rem 2rem 2rem 2rem;
+  @include breakpoint('break-3') {
+    margin: 0.5rem 1rem 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+  }
 }
 //   padding: 1.5rem;
 //   margin: 5rem 0rem 5rem 0rem;
@@ -1088,7 +1122,7 @@ header {
       background-image: none;
     }
 
-    a:hover {
+    &:hover {
       color: $focusColour2;
     }
   }
@@ -1172,115 +1206,118 @@ video {
   width: 100%;
 }
 
-
-// Form elements and buttons
-.form {
-  position: relative;
-  &__legend {
-    font-style: italic;
-    color: $captionColour;
-    position: absolute;
-    overflow: hidden;
-    right: 0;
-    clip: rect(0 0 0 0);
-  }
-}
-
-button,
-.button,
-input[type="text"],
-input[type="email"],
-input[type="search"],
-input[type="submit"],
-input[type="color"],
-textarea,
-select {
-  padding: .2rem 0.6rem;
-  margin-bottom: .6rem;
-  transition: color .1s, background-color .1s, border .1s;
-  line-height: inherit;
-  border: none;
+.sharebutton {
   box-shadow: none;
-  border-radius: 0;
   -webkit-appearance: none;
-  .icon {
-    margin: 0 0 .35rem;
+}
+
+.share a {
+    text-decoration: none;
+    background-image: none;
+    color: $textColour;
+    margin: 0.25rem;
+    &:hover {
+      background-image: none;
+      color: $focusColour;
+      transition: color .2s;
   }
 }
 
-input[type="search"] {
-  margin-bottom: 2rem;
-}
 
-input[type="submit"],
-button,
-.button {
-  cursor: pointer;
-  display: inline-block;
-  color: $backgroundColour;
-  background: $focusColour;
-  transition: box-shadow .1s;
-  will-change: box-shadow;
-  box-shadow: inset 0 0 0 2rem transparent;
-}
+// // Form elements and buttons
+// .form {
+//   position: relative;
+//   &__legend {
+//     font-style: italic;
+//     color: $captionColour;
+//     position: absolute;
+//     overflow: hidden;
+//     right: 0;
+//     clip: rect(0 0 0 0);
+//   }
+// }
+//
+// button,
+// .button,
+// input[type="text"],
+// input[type="email"],
+// input[type="search"],
+// input[type="submit"],
+// input[type="color"],
+// textarea,
+// select {
+//   padding: .2rem 0.6rem;
+//   margin-bottom: .6rem;
+//   transition: color .1s, background-color .1s, border .1s;
+//   line-height: inherit;
+//   border: none;
+//   box-shadow: none;
+//   border-radius: 0;
+//   -webkit-appearance: none;
+//   .icon {
+//     margin: 0 0 .35rem;
+//   }
+// }
+//
+// input[type="search"] {
+//   margin-bottom: 2rem;
+// }
+//
+// input[type="submit"],
+// button,
+// .button {
+//   cursor: pointer;
+//   display: inline-block;
+//   color: $backgroundColour;
+//   background: $focusColour;
+//   transition: box-shadow .1s;
+//   will-change: box-shadow;
+//   box-shadow: inset 0 0 0 2rem transparent;
+// }
+//
+// }
+//
+// a,
+// button,
+// .button,
+// input,
+// textarea,
+// select {
+//   &:focus,
+//   &:hover:focus {
+//     outline: solid .12rem $focusColour;
+//     outline-offset: -.12rem;
+//   }
+// }
+//
+// a:hover:focus {
+//   outline: none;
+// }
+//
+// input[type="text"],
+// input[type="email"],
+// input[type="search"],
+// input[type="color"],
+// textarea,
+// select {
+//   width: 100%;
+//   border: 1px solid $captionColour;
+//   &:hover {
+//     border-color: $textColour;
+//   }
+// }
+//
+// select {
+//   background: $codeBackgroundColour;
+// }
+//
+// textarea {
+//     resize: vertical;
+// }
 
-.button--nav {
-  @include breakpoint(break-2) {
-    display: none;
-  }
-  background: none;
-  color: $focusColour;
-  margin-bottom: 0;
-  min-height: 4rem;
-  min-width: 4rem;
-  &:hover,
-  &:focus {
-    box-shadow: none;
-    color: $focusColour;
-  }
-}
-
-a,
-button,
-.button,
-input,
-textarea,
-select {
-  &:focus,
-  &:hover:focus {
-    outline: solid .12rem $focusColour;
-    outline-offset: -.12rem;
-  }
-}
-
-a:hover:focus {
-  outline: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="search"],
-input[type="color"],
-textarea,
-select {
-  width: 100%;
-  border: 1px solid $captionColour;
-  &:hover {
-    border-color: $textColour;
-  }
-}
-
-select {
-  background: $codeBackgroundColour;
-}
-
-textarea {
-    resize: vertical;
-}
-
-label {
-  @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
-}
+// label {
+//   @include baseline($fontsize: zeta, $font: $bodytype, $lineheight: 2, $below: 2, $breakpoint: all);
+// }
 
 // code {
 //   padding: .12rem .2rem;
@@ -1294,22 +1331,22 @@ label {
 //   , $breakpoint: all);
 // }
 
-.required {
-  color: red;
-}
-
-::-webkit-input-placeholder {
-  opacity: 0.5;
-}
-::-moz-placeholder {
-  opacity: 0.5;
-}
-:-ms-input-placeholder {
-  opacity: 0.5;
-}
-:-moz-placeholder {
-  opacity: 0.5;
-}
+// .required {
+//   color: red;
+// }
+//
+// ::-webkit-input-placeholder {
+//   opacity: 0.5;
+// }
+// ::-moz-placeholder {
+//   opacity: 0.5;
+// }
+// :-ms-input-placeholder {
+//   opacity: 0.5;
+// }
+// :-moz-placeholder {
+//   opacity: 0.5;
+// }
 
 ::selection {
   background: $headingColour;

@@ -3,16 +3,15 @@
     {% if network[1] != blank %}
       {% assign name = network[0] %}
       {% assign id = network[0] | downcase | remove: " " %}
-      {% assign url = "https://www.humanreadyfuture.com" | append: site.baseurl | append: page.url %}
-      {% assign color = network[1] %}
+      {% assign url = "https://www.hellomalte.com" | append: site.baseurl | append: page.url %}
 
       {% capture share_link %}
-        {%- if id contains "twitter" %}https://twitter.com/intent/tweet/?url={{ url }}&text={{ page.title | uri_escape }}{% if site.twitter.username %}&via={{ site.twitter.username }}{% endif %}{% endif -%}
-        {%- if id contains "linkedin" %}https://www.linkedin.com/shareArticle?mini=true&url={{ url }}&source={{ site.title }}&title={{ page.title }}{% endif -%}
-        {%- if id contains "email" %}mailto:?subject={{ page.title }}&body={{ url | prepend: "Hey, check out this: "}}{% endif -%}
+        {%- if id contains "twitter" %}https://twitter.com/intent/tweet/?url={{ url }}&text=Interesting read: {{ page.title | uri_escape }}{% if site.twitter.username %}&via={{ site.twitter.username }}{% endif %}{% endif -%}
+        {%- if id contains "linkedin" %}https://www.linkedin.com/shareArticle?mini=true&url={{ url }}&title={{ page.title }}{% endif -%}
+        {%- if id contains "email" %}mailto:?subject={{ page.title }}&body={{ url | prepend: "Hey, interesting read:  "}}{% endif -%}
       {% endcapture %}
 
-      {% include button.html text=name icon=id link=share_link color=color %}
+      {% include button.html text=name icon=id link=share_link %}
     {% endif %}
   {% endfor %}
 </div>
