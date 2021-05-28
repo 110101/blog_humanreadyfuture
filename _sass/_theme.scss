@@ -489,6 +489,10 @@ header {
     color: $focusColour3;
     background-image: none;
   }
+
+  a:visited {
+    color: $headingColour;
+  }
 }
 
 .large_menu_lightswitch {
@@ -1239,25 +1243,25 @@ video {
 //
 // button,
 // .button,
-// input[type="text"],
-// input[type="email"],
-// input[type="search"],
-// input[type="submit"],
-// input[type="color"],
-// textarea,
-// select {
-//   padding: .2rem 0.6rem;
-//   margin-bottom: .6rem;
-//   transition: color .1s, background-color .1s, border .1s;
-//   line-height: inherit;
-//   border: none;
-//   box-shadow: none;
-//   border-radius: 0;
-//   -webkit-appearance: none;
-//   .icon {
-//     margin: 0 0 .35rem;
-//   }
-// }
+
+input[type="search"],
+textarea,
+select {
+  padding: .2rem 0.6rem;
+  margin-bottom: 2.5rem;
+  transition: color .1s, background-color .1s, border .1s;
+  line-height: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  width: 100%;
+  border: 1px solid $captionColour;
+  -webkit-appearance: none;
+  &:hover {
+    border-color: $textColour;
+  }
+
+}
 //
 // input[type="search"] {
 //   margin-bottom: 2rem;
@@ -1294,18 +1298,12 @@ video {
 //   outline: none;
 // }
 //
-// input[type="text"],
-// input[type="email"],
-// input[type="search"],
-// input[type="color"],
-// textarea,
-// select {
-//   width: 100%;
-//   border: 1px solid $captionColour;
-//   &:hover {
-//     border-color: $textColour;
-//   }
-// }
+
+input[type="search"],
+textarea,
+select {
+
+}
 //
 // select {
 //   background: $codeBackgroundColour;
